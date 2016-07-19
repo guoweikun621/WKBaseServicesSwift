@@ -12,6 +12,7 @@
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
 		C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C845752A1D3CCCF2007C936A /* Assets.xcassets */; };
 		C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */; };
+		C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		C845752A1D3CCCF2007C936A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C845752D1D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C845752F1D3CCCF2007C936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C84575361D3CD052007C936A /* WKBaseServicesSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKBaseServicesSwift.h; sourceTree = "<group>"; };
+		C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 		C84575221D3CCCF2007C936A /* WKBaseServicesSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C84575351D3CD031007C936A /* WKBaseServicesSwift */,
 				C84575231D3CCCF2007C936A /* AppDelegate.swift */,
 				C84575251D3CCCF2007C936A /* ViewController.swift */,
 				C84575271D3CCCF2007C936A /* Main.storyboard */,
@@ -62,6 +66,47 @@
 				C845752F1D3CCCF2007C936A /* Info.plist */,
 			);
 			path = WKBaseServicesSwift;
+			sourceTree = "<group>";
+		};
+		C84575351D3CD031007C936A /* WKBaseServicesSwift */ = {
+			isa = PBXGroup;
+			children = (
+				C84575371D3CD0E3007C936A /* Category */,
+				C84575381D3CD0E3007C936A /* Common */,
+				C84575391D3CD0E3007C936A /* Controller */,
+				C845753A1D3CD0E3007C936A /* View */,
+				C84575361D3CD052007C936A /* WKBaseServicesSwift.h */,
+			);
+			path = WKBaseServicesSwift;
+			sourceTree = "<group>";
+		};
+		C84575371D3CD0E3007C936A /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C84575381D3CD0E3007C936A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C84575391D3CD0E3007C936A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C845753A1D3CD0E3007C936A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */,
 				C84575261D3CCCF2007C936A /* ViewController.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
 			);
@@ -292,6 +338,7 @@
 				C84575341D3CCCF2007C936A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,16 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func testAction(sender: AnyObject) {
+//        let alert = UIAlertController.initWithMessage("test message", confirmHandler: { (alertAction: UIAlertAction) in
+//            
+//        }) { (alertAction: UIAlertAction) in
+//                
+//        }
+//        let alert = UIAlertController.init(title: "提示", message: "convenience init", confirmHandler: { (alertAction: UIAlertAction) in
+//            print("confirm acion");
+//        }) { (alertAction: UIAlertAction) in
+//            print("cancel action");
+//        }
+        let alert = UIAlertController.init(message: "tips message");
+        
+        self.presentViewController(alert, animated: true, completion: nil);
     }
-
-
 }
 
