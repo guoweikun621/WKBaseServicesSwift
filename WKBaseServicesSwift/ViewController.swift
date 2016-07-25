@@ -17,17 +17,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func testAction(sender: AnyObject) {
-//        let alert = UIAlertController.initWithMessage("test message", confirmHandler: { (alertAction: UIAlertAction) in
-//            
-//        }) { (alertAction: UIAlertAction) in
-//                
-//        }
-//        let alert = UIAlertController.init(title: "提示", message: "convenience init", confirmHandler: { (alertAction: UIAlertAction) in
-//            print("confirm acion");
-//        }) { (alertAction: UIAlertAction) in
-//            print("cancel action");
-//        }
-        let alert = UIAlertController.init(message: "tips message");
+        let alert = UIAlertController.init(message: "tips message", preferredStyle: .Alert);
         
         self.presentViewController(alert, animated: true, completion: nil);
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C81EC68D1D3DEDB800FC625E /* StringCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC68C1D3DEDB800FC625E /* StringCategory.swift */; };
+		C81EC68F1D3DEE5C00FC625E /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */; };
+		C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */; };
+		C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC6921D3DF19500FC625E /* UIViewCategory.swift */; };
 		C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575231D3CCCF2007C936A /* AppDelegate.swift */; };
 		C84575261D3CCCF2007C936A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575251D3CCCF2007C936A /* ViewController.swift */; };
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C81EC68C1D3DEDB800FC625E /* StringCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCategory.swift; sourceTree = "<group>"; };
+		C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
+		C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
+		C81EC6921D3DF19500FC625E /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
 		C84575201D3CCCF2007C936A /* WKBaseServicesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKBaseServicesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84575231D3CCCF2007C936A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84575251D3CCCF2007C936A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +91,9 @@
 		C84575371D3CD0E3007C936A /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C81EC68C1D3DEDB800FC625E /* StringCategory.swift */,
+				C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */,
+				C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -105,6 +116,7 @@
 		C845753A1D3CD0E3007C936A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C81EC6921D3DF19500FC625E /* UIViewCategory.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -180,9 +192,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C81EC68D1D3DEDB800FC625E /* StringCategory.swift in Sources */,
+				C81EC68F1D3DEE5C00FC625E /* NSDateCategory.swift in Sources */,
 				C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */,
 				C84575261D3CCCF2007C936A /* ViewController.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
+				C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */,
+				C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

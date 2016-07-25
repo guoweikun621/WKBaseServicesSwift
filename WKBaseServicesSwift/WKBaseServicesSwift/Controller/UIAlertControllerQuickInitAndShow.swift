@@ -20,14 +20,14 @@ extension UIAlertController {
      
      - returns: UIAlertController
      */
-    public convenience init(title: String?, message: String?, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
-        self.init(title: title, message: message, preferredStyle: .Alert);
+    public convenience init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
+        self.init(title: title, message: message, preferredStyle: preferredStyle);
         self.addAction(UIAlertAction.init(title: "取消", style: .Cancel, handler: cancelHandler));
         self.addAction(UIAlertAction.init(title: "确定", style: .Default, handler: confirmHandler));
     }
     
     /**
-     便利构造器
+     便利构造器 Alert
      
      - parameter message:        提示信息
      - parameter confirmHandler: 确定事件
@@ -35,19 +35,19 @@ extension UIAlertController {
      
      - returns: UIAlertController
      */
-    public convenience init(message: String?, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
-        self.init(title: "提示", message: message, confirmHandler: confirmHandler, cancelHandler: cancelHandler);
+    public convenience init(message: String?, preferredStyle: UIAlertControllerStyle, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
+        self.init(title: "提示", message: message, preferredStyle: preferredStyle, confirmHandler: confirmHandler, cancelHandler: cancelHandler);
     }
     
     /**
-     无事件响应的构造器
+     无事件响应的构造器 Alert
      
      - parameter message: 提示信息
      
      - returns: UIAlertController
      */
-    public convenience init(message: String?) {
-        self.init(title: "提示", message: message, preferredStyle: .Alert);
+    public convenience init(message: String?, preferredStyle: UIAlertControllerStyle) {
+        self.init(title: "提示", message: message, preferredStyle: preferredStyle);
         self.addAction(UIAlertAction.init(title: "确定", style: .Default, handler: nil));
     }
 }
