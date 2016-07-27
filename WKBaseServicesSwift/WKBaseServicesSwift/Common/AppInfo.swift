@@ -45,6 +45,15 @@ public class Device {
     public static func scale() -> CGFloat {
         return UIScreen.mainScreen().scale
     }
+    
+    /**
+     设备屏幕size
+     
+     - returns: CGSize
+     */
+    public static func size() -> CGSize {
+        return UIScreen.mainScreen().bounds.size
+    }
 }
 
 

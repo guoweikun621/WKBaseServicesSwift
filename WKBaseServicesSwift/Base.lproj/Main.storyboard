@@ -34,32 +34,62 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.59999999999999998" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-BC-CJd">
+                                <rect key="frame" x="20" y="357" width="240" height="128"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zm3-yf-S2O">
                                 <rect key="frame" x="20" y="63" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="1" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hhp-BC-CJd" firstAttribute="leading" secondItem="aLp-mE-M3M" secondAttribute="leading" id="4A3-kH-QA4"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EiY-1I-c3z"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="leading" secondItem="aLp-mE-M3M" secondAttribute="leading" id="TAo-xh-BtY"/>
+                            <constraint firstItem="hhp-BC-CJd" firstAttribute="trailing" secondItem="aLp-mE-M3M" secondAttribute="trailing" id="UfX-vc-IBd"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="top" secondItem="CJL-Gw-QBy" secondAttribute="bottom" constant="13" id="bvf-5p-FUA"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jNs-UL-bFx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hhp-BC-CJd" secondAttribute="bottom" constant="115" id="lb3-UG-Vwn"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="leading" secondItem="zm3-yf-S2O" secondAttribute="leading" id="lem-eO-bJt"/>
                             <constraint firstItem="aLp-mE-M3M" firstAttribute="top" secondItem="zm3-yf-S2O" secondAttribute="bottom" constant="22" id="own-2a-FUc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aLp-mE-M3M" secondAttribute="bottom" constant="259" id="qq6-1l-SiR"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="trailing" secondItem="aLp-mE-M3M" secondAttribute="trailing" id="uRa-s7-imZ"/>
+                            <constraint firstItem="hhp-BC-CJd" firstAttribute="top" secondItem="aLp-mE-M3M" secondAttribute="bottom" constant="16" id="zNG-lV-zZv"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="demoView" destination="zm3-yf-S2O" id="YrH-A6-2cc"/>
+                        <outlet property="imageView" destination="hhp-BC-CJd" id="qVa-PW-AJo"/>
                         <outlet property="textView" destination="aLp-mE-M3M" id="Ede-dJ-QPX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="101"/>
+            <point key="canvasLocation" x="-1" y="60"/>
         </scene>
     </scenes>
 </document>

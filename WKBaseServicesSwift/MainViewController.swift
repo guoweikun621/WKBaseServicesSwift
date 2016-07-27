@@ -12,6 +12,7 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var demoView: UIView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -21,11 +22,15 @@ class MainViewController: UIViewController {
         demoView.addTopLine(UIColor.grayColor(), leading: 15, tailing: 15)
         demoView.addBottomLine(UIColor.redColor(), leading: 15, tailing: 15)
 
-        let dn = NSDecimalNumber.init(float: -0.1)
-        if dn.isGreaterThanAndEqualZero() {
-            textView.text = Device.uuid()
-        }
+//        let dn = NSDecimalNumber.init(float: -0.1)
+//        if dn.isGreaterThanAndEqualZero() {
+//            textView.text = Device.uuid()
+//        }
         
+        let name = "郭伟坤";
+        textView.text = name.pinyin()
+        
+        imageView.image = UIImage.image(UIColor.redColor())
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -34,7 +39,9 @@ class MainViewController: UIViewController {
 
     
     @IBAction func testAction(sender: AnyObject) {
-        demoView.clearSeparatorLine()
+//        demoView.clearSeparatorLine()
+        let sheet = UIAlertController.init(message: "ActionSheet", preferredStyle: .ActionSheet)
+        presentViewController(sheet, animated: true, completion: nil)
     }
 }
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIAlertController {
+extension UIAlertController: UIPopoverPresentationControllerDelegate {
     
     /**
      便利构造器
