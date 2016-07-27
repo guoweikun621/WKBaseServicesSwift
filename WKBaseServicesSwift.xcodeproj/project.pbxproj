@@ -12,11 +12,12 @@
 		C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */; };
 		C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC6921D3DF19500FC625E /* UIViewCategory.swift */; };
 		C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575231D3CCCF2007C936A /* AppDelegate.swift */; };
-		C84575261D3CCCF2007C936A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575251D3CCCF2007C936A /* ViewController.swift */; };
+		C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575251D3CCCF2007C936A /* MainViewController.swift */; };
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
 		C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C845752A1D3CCCF2007C936A /* Assets.xcassets */; };
 		C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */; };
 		C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */; };
+		C87BFE5C1D487E9C00209B77 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5B1D487E9C00209B77 /* AppInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +27,14 @@
 		C81EC6921D3DF19500FC625E /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
 		C84575201D3CCCF2007C936A /* WKBaseServicesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKBaseServicesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84575231D3CCCF2007C936A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C84575251D3CCCF2007C936A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C84575251D3CCCF2007C936A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C84575281D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C845752A1D3CCCF2007C936A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C845752D1D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C845752F1D3CCCF2007C936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C84575361D3CD052007C936A /* WKBaseServicesSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKBaseServicesSwift.h; sourceTree = "<group>"; };
 		C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
+		C87BFE5B1D487E9C00209B77 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,7 @@
 			children = (
 				C84575351D3CD031007C936A /* WKBaseServicesSwift */,
 				C84575231D3CCCF2007C936A /* AppDelegate.swift */,
-				C84575251D3CCCF2007C936A /* ViewController.swift */,
+				C84575251D3CCCF2007C936A /* MainViewController.swift */,
 				C84575271D3CCCF2007C936A /* Main.storyboard */,
 				C845752A1D3CCCF2007C936A /* Assets.xcassets */,
 				C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */,
@@ -101,6 +103,7 @@
 		C84575381D3CD0E3007C936A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C87BFE5B1D487E9C00209B77 /* AppInfo.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -195,8 +198,9 @@
 				C81EC68D1D3DEDB800FC625E /* StringCategory.swift in Sources */,
 				C81EC68F1D3DEE5C00FC625E /* NSDateCategory.swift in Sources */,
 				C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */,
-				C84575261D3CCCF2007C936A /* ViewController.swift in Sources */,
+				C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
+				C87BFE5C1D487E9C00209B77 /* AppInfo.swift in Sources */,
 				C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */,
 				C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */,
 			);
