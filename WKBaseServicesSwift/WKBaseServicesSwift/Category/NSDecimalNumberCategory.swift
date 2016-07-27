@@ -54,4 +54,14 @@ extension NSDecimalNumber {
     public func isGreaterThanAndEqualZero() -> Bool {
         return self.compare(NSDecimalNumber.zero()) != .OrderedAscending
     }
+    
+    public func currenyString() -> String {
+        let numberFormatter = NSNumberFormatter.init()
+        numberFormatter.numberStyle = .CurrencyStyle
+        numberFormatter.locale = NSLocale.cnLocal()
+        numberFormatter.currencySymbol = NSLocale.cnCurrenySymbol()
+        numberFormatter.currencyCode = NSLocale.cnCurrenyCode()
+        
+        return numberFormatter.stringFromNumber(self)!
+    }
 }

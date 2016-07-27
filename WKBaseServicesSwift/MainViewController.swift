@@ -22,13 +22,13 @@ class MainViewController: UIViewController {
         demoView.addTopLine(UIColor.grayColor(), leading: 15, tailing: 15)
         demoView.addBottomLine(UIColor.redColor(), leading: 15, tailing: 15)
 
-//        let dn = NSDecimalNumber.init(float: -0.1)
-//        if dn.isGreaterThanAndEqualZero() {
-//            textView.text = Device.uuid()
-//        }
+        let dn = NSDecimalNumber.init(float: 0.01)
+        if dn.isGreaterThanAndEqualZero() {
+            textView.text = dn.currenyString()
+        }
         
-        let name = "郭伟坤";
-        textView.text = name.pinyin()
+//        let name = "郭伟坤";
+//        textView.text = name.pinyin()
         
         imageView.image = UIImage.image(UIColor.redColor())
     }

@@ -19,6 +19,7 @@
 		C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */; };
 		C87BFE5C1D487E9C00209B77 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5B1D487E9C00209B77 /* AppInfo.swift */; };
 		C87BFE5E1D48A0C300209B77 /* UIImageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5D1D48A0C300209B77 /* UIImageCategory.swift */; };
+		C87BFE601D48A9D700209B77 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5F1D48A9D700209B77 /* NSLocalCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
 		C87BFE5B1D487E9C00209B77 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		C87BFE5D1D48A0C300209B77 /* UIImageCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCategory.swift; sourceTree = "<group>"; };
+		C87BFE5F1D48A9D700209B77 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */,
 				C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */,
 				C87BFE5D1D48A0C300209B77 /* UIImageCategory.swift */,
+				C87BFE5F1D48A9D700209B77 /* NSLocalCategory.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */,
 				C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
+				C87BFE601D48A9D700209B77 /* NSLocalCategory.swift in Sources */,
 				C87BFE5C1D487E9C00209B77 /* AppInfo.swift in Sources */,
 				C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */,
 				C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */,

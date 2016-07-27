@@ -68,4 +68,24 @@ public class App {
         print(dict?.description)
         return (dict?["CFBundleVersion"])! as! String
     }
+    
+    /**
+     获取程序Caches目录
+     
+     - returns: Caches路径
+     */
+    public static func cachesDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)
+        return paths.first!
+    }
+    
+    /**
+     获取App Document路径
+     
+     - returns: Document 路径
+     */
+    public static func documentDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+        return paths.first!
+    }
 }
