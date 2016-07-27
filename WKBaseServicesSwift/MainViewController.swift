@@ -21,7 +21,11 @@ class MainViewController: UIViewController {
         demoView.addTopLine(UIColor.grayColor(), leading: 15, tailing: 15)
         demoView.addBottomLine(UIColor.redColor(), leading: 15, tailing: 15)
 
-        textView.text = DeviceInfo.uuid()
+        let dn = NSDecimalNumber.init(float: -0.1)
+        if dn.isGreaterThanAndEqualZero() {
+            textView.text = Device.uuid()
+        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
