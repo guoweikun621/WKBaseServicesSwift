@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://github.com/guoweikun621/WKBaseServicesSwift.git" }
+  s.source       = { :git => "http://github.com/guoweikun621/WKBaseServicesSwift.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -89,7 +89,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/WKBaseServicesSwift/*.{swift}"
+  s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/**/*.{swift}"
   s.exclude_files = "WKBaseServicesSwift/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
