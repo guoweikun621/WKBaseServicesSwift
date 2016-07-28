@@ -56,7 +56,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/guoweikun621/WKBaseServicesSwift.git", :tag => s.version.to_s }
 
-  s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/WKBaseServicesSwift/*.swift"
+  s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/Sources/*.swift"
   # s.exclude_files = "WKBaseServicesSwift/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
