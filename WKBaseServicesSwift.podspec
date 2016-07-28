@@ -17,15 +17,14 @@ Pod::Spec.new do |s|
 
   s.name         = "WKBaseServicesSwift"
   s.version      = "0.0.1"
-  s.summary      = "A short description of WKBaseServicesSwift."
+  s.summary      = "WKBaseServicesSwift.是一个swift的基础的扩展服务框架。"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = <<-DESC
-                   DESC
+  # s.description  = 
 
   s.homepage     = "https://github.com/guoweikun621/WKBaseServicesSwift"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -79,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "http://EXAMPLE/WKBaseServicesSwift.git" }
+  s.source       = { :git => "http://github.com/guoweikun621/WKBaseServicesSwift.git" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/WKBaseServicesSwift/*.{swift}"
-  s.exclude_files = "Classes/Exclude"
+  s.exclude_files = "WKBaseServicesSwift/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
