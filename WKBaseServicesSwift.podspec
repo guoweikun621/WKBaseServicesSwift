@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #
 
   s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/**/*.{swift}"
-  s.exclude_files = "WKBaseServicesSwift/Exclude"
+  # s.exclude_files = "WKBaseServicesSwift/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -115,8 +115,8 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.framework  = "UIKit"
-  # s.frameworks = "SomeFramework", "AnotherFramework"
+  # s.framework  = "UIKit"
+  s.frameworks = "UIKit", "Foundation"
 
   # s.library   = "iconv"
   # s.libraries = "iconv", "xml2"
