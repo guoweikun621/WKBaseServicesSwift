@@ -81,12 +81,21 @@ extension UIView {
         get { return CGRectGetMaxY(self.frame) }
     }
     
+    /// 分隔线宽度或高度
     private var lineHeight: CGFloat {
         get {
             return 1.0 / UIScreen.mainScreen().scale
         }
     }
     
+    /**
+    分隔线的方向
+     
+     - Leading: 左
+     - Tailing: 右
+     - Top:     上
+     - Bottom:  下
+     */
     private enum Direction {
         case Leading
         case Tailing
@@ -217,6 +226,9 @@ extension UIView {
         return self.addSeparatorLine(color, leading: leading, tailing: tailing, direction: .Bottom)
     }
     
+    /**
+     清除自定义分隔线
+     */
     public func clearSeparatorLine() {
         self.subviews.forEach { (obj) in
             if obj.isKindOfClass(SeparatorLineView) {
@@ -231,7 +243,7 @@ extension UIView {
     }
 }
 
-
+/// 分隔线视图
 class SeparatorLineView: UIView {
     
 }
