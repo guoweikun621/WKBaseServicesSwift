@@ -54,7 +54,7 @@ Pod::Spec.new do |s|
   # s.tvos.deployment_target = "9.0"
 
 
-  s.source       = { :git => "http://github.com/guoweikun621/WKBaseServicesSwift.git", :tag => s.version }
+  s.source       = { :git => "http://github.com/guoweikun621/WKBaseServicesSwift.git" }
 
   s.source_files  = "WKBaseServicesSwift", "WKBaseServicesSwift/WKBaseServicesSwift/*.swift"
   # s.exclude_files = "WKBaseServicesSwift/Exclude"
