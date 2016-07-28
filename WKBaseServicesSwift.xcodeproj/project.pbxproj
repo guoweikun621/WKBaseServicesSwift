@@ -7,26 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C81EC68D1D3DEDB800FC625E /* StringCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC68C1D3DEDB800FC625E /* StringCategory.swift */; };
-		C81EC68F1D3DEE5C00FC625E /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */; };
-		C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */; };
-		C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C81EC6921D3DF19500FC625E /* UIViewCategory.swift */; };
+		C83020441D49E51600AC9142 /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020391D49E51600AC9142 /* NSDateCategory.swift */; };
+		C83020451D49E51600AC9142 /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */; };
+		C83020461D49E51600AC9142 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203B1D49E51600AC9142 /* NSLocalCategory.swift */; };
+		C83020471D49E51600AC9142 /* StringCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203C1D49E51600AC9142 /* StringCategory.swift */; };
+		C83020481D49E51600AC9142 /* UIImageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203D1D49E51600AC9142 /* UIImageCategory.swift */; };
+		C83020491D49E51600AC9142 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203F1D49E51600AC9142 /* AppInfo.swift */; };
+		C830204A1D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020411D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift */; };
+		C830204B1D49E51600AC9142 /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020431D49E51600AC9142 /* UIViewCategory.swift */; };
+		C830204D1D49E52900AC9142 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830204C1D49E52900AC9142 /* Package.swift */; };
 		C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575231D3CCCF2007C936A /* AppDelegate.swift */; };
 		C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575251D3CCCF2007C936A /* MainViewController.swift */; };
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
 		C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C845752A1D3CCCF2007C936A /* Assets.xcassets */; };
 		C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */; };
-		C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */; };
-		C87BFE5C1D487E9C00209B77 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5B1D487E9C00209B77 /* AppInfo.swift */; };
-		C87BFE5E1D48A0C300209B77 /* UIImageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5D1D48A0C300209B77 /* UIImageCategory.swift */; };
-		C87BFE601D48A9D700209B77 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C87BFE5F1D48A9D700209B77 /* NSLocalCategory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C81EC68C1D3DEDB800FC625E /* StringCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCategory.swift; sourceTree = "<group>"; };
-		C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
-		C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
-		C81EC6921D3DF19500FC625E /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
+		C83020391D49E51600AC9142 /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
+		C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
+		C830203B1D49E51600AC9142 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
+		C830203C1D49E51600AC9142 /* StringCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCategory.swift; sourceTree = "<group>"; };
+		C830203D1D49E51600AC9142 /* UIImageCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCategory.swift; sourceTree = "<group>"; };
+		C830203F1D49E51600AC9142 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		C83020411D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
+		C83020431D49E51600AC9142 /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
+		C830204C1D49E52900AC9142 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C84575201D3CCCF2007C936A /* WKBaseServicesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKBaseServicesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84575231D3CCCF2007C936A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84575251D3CCCF2007C936A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -34,11 +40,6 @@
 		C845752A1D3CCCF2007C936A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C845752D1D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C845752F1D3CCCF2007C936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C84575361D3CD052007C936A /* WKBaseServicesSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKBaseServicesSwift.h; sourceTree = "<group>"; };
-		C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
-		C87BFE5B1D487E9C00209B77 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		C87BFE5D1D48A0C300209B77 /* UIImageCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCategory.swift; sourceTree = "<group>"; };
-		C87BFE5F1D48A9D700209B77 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C83020371D49E51600AC9142 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C830204C1D49E52900AC9142 /* Package.swift */,
+				C83020381D49E51600AC9142 /* Category */,
+				C830203E1D49E51600AC9142 /* Common */,
+				C83020401D49E51600AC9142 /* Controller */,
+				C83020421D49E51600AC9142 /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C83020381D49E51600AC9142 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C83020391D49E51600AC9142 /* NSDateCategory.swift */,
+				C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */,
+				C830203B1D49E51600AC9142 /* NSLocalCategory.swift */,
+				C830203C1D49E51600AC9142 /* StringCategory.swift */,
+				C830203D1D49E51600AC9142 /* UIImageCategory.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C830203E1D49E51600AC9142 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C830203F1D49E51600AC9142 /* AppInfo.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C83020401D49E51600AC9142 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C83020411D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C83020421D49E51600AC9142 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C83020431D49E51600AC9142 /* UIViewCategory.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C830204E1D49E54100AC9142 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C845752A1D3CCCF2007C936A /* Assets.xcassets */,
+				C84575231D3CCCF2007C936A /* AppDelegate.swift */,
+				C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */,
+				C845752F1D3CCCF2007C936A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		C84575171D3CCCF2007C936A = {
 			isa = PBXGroup;
 			children = (
@@ -71,63 +131,12 @@
 		C84575221D3CCCF2007C936A /* WKBaseServicesSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C84575351D3CD031007C936A /* WKBaseServicesSwift */,
-				C84575231D3CCCF2007C936A /* AppDelegate.swift */,
+				C83020371D49E51600AC9142 /* Sources */,
 				C84575251D3CCCF2007C936A /* MainViewController.swift */,
 				C84575271D3CCCF2007C936A /* Main.storyboard */,
-				C845752A1D3CCCF2007C936A /* Assets.xcassets */,
-				C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */,
-				C845752F1D3CCCF2007C936A /* Info.plist */,
+				C830204E1D49E54100AC9142 /* Supporting Files */,
 			);
 			path = WKBaseServicesSwift;
-			sourceTree = "<group>";
-		};
-		C84575351D3CD031007C936A /* WKBaseServicesSwift */ = {
-			isa = PBXGroup;
-			children = (
-				C84575371D3CD0E3007C936A /* Category */,
-				C84575381D3CD0E3007C936A /* Common */,
-				C84575391D3CD0E3007C936A /* Controller */,
-				C845753A1D3CD0E3007C936A /* View */,
-				C84575361D3CD052007C936A /* WKBaseServicesSwift.h */,
-			);
-			path = WKBaseServicesSwift;
-			sourceTree = "<group>";
-		};
-		C84575371D3CD0E3007C936A /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				C81EC68C1D3DEDB800FC625E /* StringCategory.swift */,
-				C81EC68E1D3DEE5C00FC625E /* NSDateCategory.swift */,
-				C81EC6901D3DEF6500FC625E /* NSDecimalNumberCategory.swift */,
-				C87BFE5D1D48A0C300209B77 /* UIImageCategory.swift */,
-				C87BFE5F1D48A9D700209B77 /* NSLocalCategory.swift */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		C84575381D3CD0E3007C936A /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				C87BFE5B1D487E9C00209B77 /* AppInfo.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		C84575391D3CD0E3007C936A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C845753D1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C845753A1D3CD0E3007C936A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C81EC6921D3DF19500FC625E /* UIViewCategory.swift */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,16 +210,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C81EC68D1D3DEDB800FC625E /* StringCategory.swift in Sources */,
-				C81EC68F1D3DEE5C00FC625E /* NSDateCategory.swift in Sources */,
-				C87BFE5E1D48A0C300209B77 /* UIImageCategory.swift in Sources */,
-				C845753E1D3CDCC4007C936A /* UIAlertControllerQuickInitAndShow.swift in Sources */,
+				C83020471D49E51600AC9142 /* StringCategory.swift in Sources */,
+				C83020441D49E51600AC9142 /* NSDateCategory.swift in Sources */,
+				C83020461D49E51600AC9142 /* NSLocalCategory.swift in Sources */,
 				C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */,
+				C83020481D49E51600AC9142 /* UIImageCategory.swift in Sources */,
+				C83020491D49E51600AC9142 /* AppInfo.swift in Sources */,
+				C830204B1D49E51600AC9142 /* UIViewCategory.swift in Sources */,
+				C830204A1D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
-				C87BFE601D48A9D700209B77 /* NSLocalCategory.swift in Sources */,
-				C87BFE5C1D487E9C00209B77 /* AppInfo.swift in Sources */,
-				C81EC6931D3DF19500FC625E /* UIViewCategory.swift in Sources */,
-				C81EC6911D3DEF6500FC625E /* NSDecimalNumberCategory.swift in Sources */,
+				C830204D1D49E52900AC9142 /* Package.swift in Sources */,
+				C83020451D49E51600AC9142 /* NSDecimalNumberCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
