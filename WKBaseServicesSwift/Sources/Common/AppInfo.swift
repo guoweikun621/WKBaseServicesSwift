@@ -75,8 +75,10 @@ public class App {
      - returns: Caches路径
      */
     public static func cachesDirectory() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)
-        return paths.first!
+//        let paths = NSSearchPathForDirectoriesInDomains(.CachesDirectory, .UserDomainMask, true)
+//        return paths.first!
+        let paths = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask);
+        return (paths.last?.absoluteString)!
     }
     
     /**
@@ -85,7 +87,22 @@ public class App {
      - returns: Document 路径
      */
     public static func documentDirectory() -> String {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
-        return paths.first!
+//        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+//        return paths.first!
+        let paths = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask);
+        return (paths.last?.absoluteString)!
     }
+    
+    /**
+     获取Library路径
+     
+     - returns: Library路径
+     */
+    public static func libraryDirectory() -> String? {
+        let paths = NSFileManager.defaultManager().URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask);
+        return paths.last?.absoluteString
+    }
+    
+    
+    
 }

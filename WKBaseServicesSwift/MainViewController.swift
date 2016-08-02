@@ -14,6 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var imageView: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad();
         
@@ -31,6 +32,7 @@ class MainViewController: UIViewController {
 //        textView.text = name.pinyin()
         
 //        imageView.image = UIImage.image(UIColor.redColor())
+        
     }
     
     override func viewWillAppear(animated: Bool) {

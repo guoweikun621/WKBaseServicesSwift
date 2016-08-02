@@ -9,8 +9,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "WKBaseServicesSwift"
-  s.version      = "0.0.2"
-  s.summary      = "WKBaseServicesSwift。"
+  s.version      = "0.0.3"
+  s.summary      = "WKBaseServicesSwift是一个swift的基础的扩展服务框架"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
