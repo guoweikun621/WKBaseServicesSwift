@@ -1,3 +1,13 @@
 # WKBaseServicesSwift
-用于开发Swift项目。
-提供 UIView等 扩展
+
+Swift常用扩展。
+
+##Feature:
+
+* UIViewCategory
+* UIAlertControllerQuickInitAndShow
+* AppInfo
+* UIViewCategory
+* NSDecimalNumberCategory
+* NSLocalCategory
+* StringCategory
