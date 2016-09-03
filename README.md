@@ -7,7 +7,8 @@ Swift常用扩展。
 * UIViewCategory
 * UIAlertControllerQuickInitAndShow
 * AppInfo
-* UIViewCategory
+* UIColorCategory
 * NSDecimalNumberCategory
 * NSLocalCategory
 * StringCategory
+* WKCheckBox
