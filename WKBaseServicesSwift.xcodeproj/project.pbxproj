@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C82B64C41D7B165300007205 /* WKCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B64C31D7B165300007205 /* WKCheckBox.swift */; };
+		C82B64C61D7B166300007205 /* UIColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B64C51D7B166300007205 /* UIColorCategory.swift */; };
 		C83020441D49E51600AC9142 /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020391D49E51600AC9142 /* NSDateCategory.swift */; };
 		C83020451D49E51600AC9142 /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */; };
 		C83020461D49E51600AC9142 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203B1D49E51600AC9142 /* NSLocalCategory.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C82B64C31D7B165300007205 /* WKCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCheckBox.swift; sourceTree = "<group>"; };
+		C82B64C51D7B166300007205 /* UIColorCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorCategory.swift; sourceTree = "<group>"; };
 		C83020391D49E51600AC9142 /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
 		C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
 		C830203B1D49E51600AC9142 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
@@ -68,6 +72,7 @@
 		C83020381D49E51600AC9142 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				C82B64C51D7B166300007205 /* UIColorCategory.swift */,
 				C83020391D49E51600AC9142 /* NSDateCategory.swift */,
 				C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */,
 				C830203B1D49E51600AC9142 /* NSLocalCategory.swift */,
@@ -96,6 +101,7 @@
 		C83020421D49E51600AC9142 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C82B64C31D7B165300007205 /* WKCheckBox.swift */,
 				C83020431D49E51600AC9142 /* UIViewCategory.swift */,
 			);
 			path = View;
@@ -218,7 +224,9 @@
 				C83020491D49E51600AC9142 /* AppInfo.swift in Sources */,
 				C830204B1D49E51600AC9142 /* UIViewCategory.swift in Sources */,
 				C830204A1D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift in Sources */,
+				C82B64C41D7B165300007205 /* WKCheckBox.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
+				C82B64C61D7B166300007205 /* UIColorCategory.swift in Sources */,
 				C830204D1D49E52900AC9142 /* Package.swift in Sources */,
 				C83020451D49E51600AC9142 /* NSDecimalNumberCategory.swift in Sources */,
 			);

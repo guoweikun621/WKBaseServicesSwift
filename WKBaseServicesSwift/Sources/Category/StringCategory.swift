@@ -10,6 +10,13 @@ import Foundation
 
 extension String {
     
+    /// 字符串长度
+    public var lenght: Int {
+        get {
+            return self.characters.count
+        }
+    }
+    
     /**
      日期值
      
