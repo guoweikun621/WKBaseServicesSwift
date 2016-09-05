@@ -46,12 +46,22 @@ extension UIView {
         get {
             return CGRectGetWidth(self.frame)
         }
+        set {
+            var frame = self.frame
+            frame.size.width = newValue
+            self.frame = frame
+        }
     }
     
     /// 视图的高度
     public var height: CGFloat {
         get {
             return CGRectGetHeight(self.frame)
+        }
+        set {
+            var frame = self.frame
+            frame.size.height = newValue
+            self.frame = frame
         }
     }
     
@@ -60,12 +70,22 @@ extension UIView {
         get {
             return CGRectGetMinX(self.frame)
         }
+        set {
+            var frame = self.frame
+            frame.origin.x = newValue
+            self.frame = frame
+        }
     }
     
     /// 视图最大X坐标
     public var right: CGFloat {
         get {
             return CGRectGetMaxX(self.frame)
+        }
+        set {
+            var frame = self.frame
+            frame.size.width = (newValue - frame.origin.x)
+            self.frame = frame
         }
     }
     
@@ -74,11 +94,21 @@ extension UIView {
         get {
             return CGRectGetMinY(self.frame)
         }
+        set {
+            var frame = self.frame
+            frame.origin.y = newValue
+            self.frame = frame
+        }
     }
     
     /// 视图最大Y坐标
     public var bottom: CGFloat {
         get { return CGRectGetMaxY(self.frame) }
+        set {
+            var frame = self.frame
+            frame.size.height = (newValue - frame.origin.y)
+            self.frame = frame
+        }
     }
     
     /// 分隔线宽度或高度
@@ -104,7 +134,7 @@ extension UIView {
     }
     
     private func addSeparatorLine(color: UIColor, leading: CGFloat, tailing: CGFloat, direction: Direction) -> UIView {
-        let line = SeparatorLineView.init();
+        let line = SeparatorLineView();
         var mask: UIViewAutoresizing
         var lineFrame: CGRect
         switch direction {
