@@ -33,9 +33,9 @@ extension UIImage {
         let f = CGRect.init(origin: CGPointZero, size: size)
         UIGraphicsBeginImageContext(size)
         let content = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(content, color.CGColor)
-        CGContextFillRect(content, f)
+        CGContextSetFillColorWithColor(content!, color.CGColor)
+        CGContextFillRect(content!, f)
         
-        return UIGraphicsGetImageFromCurrentImageContext()
+        return UIGraphicsGetImageFromCurrentImageContext()!
     }
 }

@@ -153,6 +153,7 @@ extension UIView {
         }
         line.frame = lineFrame
         line.autoresizingMask = mask
+        
         line.backgroundColor = color
         addSubview(line)
         return line
