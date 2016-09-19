@@ -25,15 +25,15 @@ extension String {
      - returns: NSDate 
      */
     public func dateValue(formatterStyle: String) -> NSDate? {
-        let formatter = NSDateFormatter.init()
-        formatter.locale = NSLocale.init(localeIdentifier: "zh_CN")
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "zh_CN")
         formatter.dateFormat = formatterStyle
         return formatter.dateFromString(self)
     }
     
     public func pinyin() -> String? {
         //转成了可变字符串
-        let str = NSMutableString.init(string: self)
+        let str = NSMutableString(string: self)
         //先转换为带声调的拼音
         CFStringTransform(str as CFMutableStringRef, nil, kCFStringTransformMandarinLatin, false)
         //再转换为不带声调的拼音

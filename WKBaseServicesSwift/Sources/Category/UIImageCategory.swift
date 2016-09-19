@@ -30,7 +30,7 @@ extension UIImage {
      - returns: UIImage
      */
     public static func image(color: UIColor, size: CGSize) -> UIImage {
-        let f = CGRect.init(origin: CGPointZero, size: size)
+        let f = CGRect(origin: CGPointZero, size: size)
         UIGraphicsBeginImageContext(size)
         let content = UIGraphicsGetCurrentContext()
         CGContextSetFillColorWithColor(content!, color.CGColor)

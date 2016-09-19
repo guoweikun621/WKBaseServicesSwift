@@ -42,8 +42,9 @@ class MainViewController: UIViewController {
     
     @IBAction func testAction(sender: AnyObject) {
         demoView.clearSeparatorLine()
-        let sheet = UIAlertController.init(message: "ActionSheet", preferredStyle: .ActionSheet)
-        presentViewController(sheet, animated: true, completion: nil)
+        WKAlertController.actionSheet("test", defaluts: ["Defalut"]) { (action) in
+            
+        }
     }
 }
 
