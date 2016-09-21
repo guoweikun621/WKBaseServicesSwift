@@ -126,4 +126,14 @@ public class WKAlertController {
         WKAlertController.presentController?.presentViewController(alert, animated: true, completion: nil)
         return alert
     }
+    
+    public static func actionSheet(title: String?, message: String?, cancel: String?, destructive: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?, sourceView: UIView?) -> UIAlertController {
+        let alert = WKAlertController.actionSheet(title, message: message, cancel: cancel, destructive: destructive, defaluts: defaluts, handler: handler)
+        alert.popoverPresentationController?.sourceView = sourceView
+        if sourceView != nil {
+            alert.popoverPresentationController?.sourceRect = sourceView!.bounds
+        }
+        
+        return alert
+    }
 }
