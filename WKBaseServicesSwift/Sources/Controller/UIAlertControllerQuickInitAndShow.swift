@@ -87,41 +87,43 @@ public class WKAlertController {
     }()
     
     // MARK: - Alert
-    public static func alert(message: String?) {
-        WKAlertController.alert(message) { (alertAction) in
+    public static func alert(message: String?) -> UIAlertController {
+        return WKAlertController.alert(message) { (alertAction) in
             
         }
     }
     
-    public static func alert(message: String?, confirmHandler: ((UIAlertAction) -> Void)?) {
-        WKAlertController.alert("提示", message: message, confirmHandler: confirmHandler)
+    public static func alert(message: String?, confirmHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+        return WKAlertController.alert("提示", message: message, confirmHandler: confirmHandler)
     }
     
-    public static func alert(title: String?, message: String?, confirmHandler: ((UIAlertAction) -> Void)?) {
-        WKAlertController.alert(title, message: message, confirmHandler: confirmHandler, cancelHandler: nil)
+    public static func alert(title: String?, message: String?, confirmHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+        return WKAlertController.alert(title, message: message, confirmHandler: confirmHandler, cancelHandler: nil)
     }
     
-    public static func alert(title: String?, message: String?, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
+    public static func alert(title: String?, message: String?, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .Alert, confirmHandler: confirmHandler, cancelHandler: cancelHandler)
         WKAlertController.presentController?.presentViewController(alert, animated: true, completion: nil)
+        return alert
     }
     
     // MARK: - ActionSheet
     
-    public static func actionSheet(message: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) {
-        WKAlertController.actionSheet("提示", message: message, cancel: nil, defaluts: defaluts, handler: handler)
+    public static func actionSheet(message: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+       return WKAlertController.actionSheet("提示", message: message, cancel: nil, defaluts: defaluts, handler: handler)
     }
     
-    public static func actionSheet(title: String?, message: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) {
-        WKAlertController.actionSheet(title, message: message, cancel: nil, defaluts: defaluts, handler: handler)
+    public static func actionSheet(title: String?, message: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+        return WKAlertController.actionSheet(title, message: message, cancel: nil, defaluts: defaluts, handler: handler)
     }
     
-    public static func actionSheet(title: String?, message: String?, cancel: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) {
-        WKAlertController.actionSheet(title, message: message, cancel: cancel, destructive: nil, defaluts: defaluts, handler: handler)
+    public static func actionSheet(title: String?, message: String?, cancel: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+        return WKAlertController.actionSheet(title, message: message, cancel: cancel, destructive: nil, defaluts: defaluts, handler: handler)
     }
     
-    public static func actionSheet(title: String?, message: String?, cancel: String?, destructive: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) {
+    public static func actionSheet(title: String?, message: String?, cancel: String?, destructive: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .ActionSheet, cancel: cancel, destructive: destructive, defaluts: defaluts, handler: handler)
         WKAlertController.presentController?.presentViewController(alert, animated: true, completion: nil)
+        return alert
     }
 }

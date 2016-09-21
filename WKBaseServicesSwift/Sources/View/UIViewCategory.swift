@@ -128,34 +128,47 @@ extension UIView {
      */
     private enum Direction {
         case Leading
-        case Tailing
+        case Trailing
         case Top
         case Bottom
     }
     
     private func addSeparatorLine(color: UIColor, leading: CGFloat, tailing: CGFloat, direction: Direction) -> UIView {
         let line = SeparatorLineView();
-        var mask: UIViewAutoresizing
-        var lineFrame: CGRect
-        switch direction {
-            case .Leading:
-                lineFrame = CGRectMake(0, leading, lineHeight, height - leading - tailing)
-                mask = .FlexibleRightMargin
-            case .Tailing:
-                lineFrame = CGRectMake(width - lineHeight, leading, lineHeight, height - leading - tailing)
-                mask = .FlexibleLeftMargin
-            case .Top:
-                lineFrame = CGRectMake(leading, 0, width - leading - tailing, lineHeight)
-                mask = .FlexibleBottomMargin
-            case .Bottom:
-                lineFrame = CGRectMake(leading, height - lineHeight, width - leading - tailing, lineHeight)
-                mask = .FlexibleTopMargin
-        }
-        line.frame = lineFrame
-        line.autoresizingMask = mask
         
         line.backgroundColor = color
         addSubview(line)
+
+        line.translatesAutoresizingMaskIntoConstraints = false
+        switch direction {
+        case .Leading:
+            self.addConstraints([
+                NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: leading),
+                NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: lineHeight)])
+            break
+  
+        case .Trailing:
+            self.addConstraints([
+                NSLayoutConstraint(item: line, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: leading),
+                NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .Width, multiplier: 1.0, constant: lineHeight)])
+        case .Top:
+            self.addConstraints([
+                NSLayoutConstraint(item: line, attribute: .Top, relatedBy: .Equal, toItem: self, attribute: .Top, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: leading),
+                NSLayoutConstraint(item: line, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: lineHeight)])
+        case .Bottom:
+            self.addConstraints([
+                NSLayoutConstraint(item: line, attribute: .Bottom, relatedBy: .Equal, toItem: self, attribute: .Bottom, multiplier: 1.0, constant: 0),
+                NSLayoutConstraint(item: line, attribute: .Leading, relatedBy: .Equal, toItem: self, attribute: .Leading, multiplier: 1.0, constant: leading),
+                NSLayoutConstraint(item: line, attribute: .Trailing, relatedBy: .Equal, toItem: self, attribute: .Trailing, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .Height, multiplier: 1.0, constant: lineHeight)])
+        }
+        
         return line
     }
     
@@ -205,7 +218,7 @@ extension UIView {
      - returns: 分隔线
      */
     public func addRightLine(color: UIColor, top: CGFloat, bottom: CGFloat) -> UIView {
-        return self.addSeparatorLine(color, leading: top, tailing: bottom, direction: .Tailing)
+        return self.addSeparatorLine(color, leading: top, tailing: bottom, direction: .Trailing)
     }
     
     
