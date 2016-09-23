@@ -1,0 +1,56 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Device"
+- "App"
+provides-nominal:
+- "C6Common6Device"
+- "C6Common3App"
+provides-member:
+- ["C6Common6Device", ""]
+- ["C6Common3App", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Device"
+- !private "print"
+- "CastingPrecedence"
+- !private "NSProcessInfo"
+- "CGFloat"
+- "String"
+- "App"
+- !private "NSBundle"
+- !private "NSFileManager"
+- "CGSize"
+depends-member:
+- !private ["Ps9AnyObject", "NSBundle"]
+- !private ["Ps9AnyObject", "NSFileManager"]
+- !private ["Ps9AnyObject", "NSProcessInfo"]
+- !private ["Ps9AnyObject", "print"]
+- ["Ps9AnyObject", ""]
+- !private ["C6Common3App", "NSBundle"]
+- !private ["C6Common3App", "NSFileManager"]
+- ["C6Common3App", "String"]
+- ["C6Common3App", "appVersion"]
+- ["C6Common3App", "cachesDirectory"]
+- ["C6Common3App", "deinit"]
+- ["C6Common3App", "documentDirectory"]
+- ["C6Common3App", "init"]
+- ["C6Common3App", "libraryDirectory"]
+- !private ["C6Common3App", "print"]
+- ["C6Common6Device", "CGFloat"]
+- ["C6Common6Device", "CGSize"]
+- !private ["C6Common6Device", "NSProcessInfo"]
+- ["C6Common6Device", "String"]
+- ["C6Common6Device", "deinit"]
+- ["C6Common6Device", "deviceName"]
+- ["C6Common6Device", "init"]
+- ["C6Common6Device", "systemVersion"]
+- ["C6Common6Device", "uuid"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C6Common3App"
+- "C6Common6Device"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "9c6df5f20d58eb88a5281f1e522c46e2"

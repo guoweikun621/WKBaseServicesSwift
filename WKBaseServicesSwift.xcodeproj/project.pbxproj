@@ -7,34 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C82B64C41D7B165300007205 /* WKCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B64C31D7B165300007205 /* WKCheckBox.swift */; };
-		C82B64C61D7B166300007205 /* UIColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82B64C51D7B166300007205 /* UIColorCategory.swift */; };
-		C83020441D49E51600AC9142 /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020391D49E51600AC9142 /* NSDateCategory.swift */; };
-		C83020451D49E51600AC9142 /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */; };
-		C83020461D49E51600AC9142 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203B1D49E51600AC9142 /* NSLocalCategory.swift */; };
-		C83020471D49E51600AC9142 /* StringCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203C1D49E51600AC9142 /* StringCategory.swift */; };
-		C83020481D49E51600AC9142 /* UIImageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203D1D49E51600AC9142 /* UIImageCategory.swift */; };
-		C83020491D49E51600AC9142 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C830203F1D49E51600AC9142 /* AppInfo.swift */; };
-		C830204A1D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020411D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift */; };
-		C830204B1D49E51600AC9142 /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83020431D49E51600AC9142 /* UIViewCategory.swift */; };
 		C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575231D3CCCF2007C936A /* AppDelegate.swift */; };
 		C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575251D3CCCF2007C936A /* MainViewController.swift */; };
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
 		C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C845752A1D3CCCF2007C936A /* Assets.xcassets */; };
 		C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */; };
+		C8AA35A61D951B4600AA5CB1 /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35991D951B4600AA5CB1 /* NSDateCategory.swift */; };
+		C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberCategory.swift */; };
+		C8AA35A81D951B4600AA5CB1 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359B1D951B4600AA5CB1 /* NSLocalCategory.swift */; };
+		C8AA35A91D951B4600AA5CB1 /* StringCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359C1D951B4600AA5CB1 /* StringCategory.swift */; };
+		C8AA35AA1D951B4600AA5CB1 /* UIColorCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359D1D951B4600AA5CB1 /* UIColorCategory.swift */; };
+		C8AA35AB1D951B4600AA5CB1 /* UIImageCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359E1D951B4600AA5CB1 /* UIImageCategory.swift */; };
+		C8AA35AC1D951B4600AA5CB1 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A01D951B4600AA5CB1 /* AppInfo.swift */; };
+		C8AA35AD1D951B4600AA5CB1 /* UIAlertControllerQuickInitAndShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A21D951B4600AA5CB1 /* UIAlertControllerQuickInitAndShow.swift */; };
+		C8AA35AE1D951B4600AA5CB1 /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A41D951B4600AA5CB1 /* UIViewCategory.swift */; };
+		C8AA35AF1D951B4600AA5CB1 /* WKCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C82B64C31D7B165300007205 /* WKCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCheckBox.swift; sourceTree = "<group>"; };
-		C82B64C51D7B166300007205 /* UIColorCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorCategory.swift; sourceTree = "<group>"; };
-		C83020391D49E51600AC9142 /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
-		C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
-		C830203B1D49E51600AC9142 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
-		C830203C1D49E51600AC9142 /* StringCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCategory.swift; sourceTree = "<group>"; };
-		C830203D1D49E51600AC9142 /* UIImageCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCategory.swift; sourceTree = "<group>"; };
-		C830203F1D49E51600AC9142 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
-		C83020411D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
-		C83020431D49E51600AC9142 /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
 		C84575201D3CCCF2007C936A /* WKBaseServicesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKBaseServicesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84575231D3CCCF2007C936A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84575251D3CCCF2007C936A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +32,16 @@
 		C845752A1D3CCCF2007C936A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C845752D1D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C845752F1D3CCCF2007C936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8AA35991D951B4600AA5CB1 /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
+		C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
+		C8AA359B1D951B4600AA5CB1 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
+		C8AA359C1D951B4600AA5CB1 /* StringCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringCategory.swift; sourceTree = "<group>"; };
+		C8AA359D1D951B4600AA5CB1 /* UIColorCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorCategory.swift; sourceTree = "<group>"; };
+		C8AA359E1D951B4600AA5CB1 /* UIImageCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageCategory.swift; sourceTree = "<group>"; };
+		C8AA35A01D951B4600AA5CB1 /* AppInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
+		C8AA35A21D951B4600AA5CB1 /* UIAlertControllerQuickInitAndShow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertControllerQuickInitAndShow.swift; sourceTree = "<group>"; };
+		C8AA35A41D951B4600AA5CB1 /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
+		C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCheckBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,55 +55,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C83020371D49E51600AC9142 /* Sources */ = {
-			isa = PBXGroup;
-			children = (
-				C83020381D49E51600AC9142 /* Category */,
-				C830203E1D49E51600AC9142 /* Common */,
-				C83020401D49E51600AC9142 /* Controller */,
-				C83020421D49E51600AC9142 /* View */,
-			);
-			path = Sources;
-			sourceTree = "<group>";
-		};
-		C83020381D49E51600AC9142 /* Category */ = {
-			isa = PBXGroup;
-			children = (
-				C82B64C51D7B166300007205 /* UIColorCategory.swift */,
-				C83020391D49E51600AC9142 /* NSDateCategory.swift */,
-				C830203A1D49E51600AC9142 /* NSDecimalNumberCategory.swift */,
-				C830203B1D49E51600AC9142 /* NSLocalCategory.swift */,
-				C830203C1D49E51600AC9142 /* StringCategory.swift */,
-				C830203D1D49E51600AC9142 /* UIImageCategory.swift */,
-			);
-			path = Category;
-			sourceTree = "<group>";
-		};
-		C830203E1D49E51600AC9142 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				C830203F1D49E51600AC9142 /* AppInfo.swift */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
-		C83020401D49E51600AC9142 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C83020411D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C83020421D49E51600AC9142 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C82B64C31D7B165300007205 /* WKCheckBox.swift */,
-				C83020431D49E51600AC9142 /* UIViewCategory.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		C830204E1D49E54100AC9142 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +69,7 @@
 		C84575171D3CCCF2007C936A = {
 			isa = PBXGroup;
 			children = (
+				C8AA35971D951B4600AA5CB1 /* Sources */,
 				C84575221D3CCCF2007C936A /* WKBaseServicesSwift */,
 				C84575211D3CCCF2007C936A /* Products */,
 			);
@@ -134,12 +86,60 @@
 		C84575221D3CCCF2007C936A /* WKBaseServicesSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C83020371D49E51600AC9142 /* Sources */,
 				C84575251D3CCCF2007C936A /* MainViewController.swift */,
 				C84575271D3CCCF2007C936A /* Main.storyboard */,
 				C830204E1D49E54100AC9142 /* Supporting Files */,
 			);
 			path = WKBaseServicesSwift;
+			sourceTree = "<group>";
+		};
+		C8AA35971D951B4600AA5CB1 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C8AA35981D951B4600AA5CB1 /* Category */,
+				C8AA359F1D951B4600AA5CB1 /* Common */,
+				C8AA35A11D951B4600AA5CB1 /* Controller */,
+				C8AA35A31D951B4600AA5CB1 /* View */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C8AA35981D951B4600AA5CB1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C8AA35991D951B4600AA5CB1 /* NSDateCategory.swift */,
+				C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberCategory.swift */,
+				C8AA359B1D951B4600AA5CB1 /* NSLocalCategory.swift */,
+				C8AA359C1D951B4600AA5CB1 /* StringCategory.swift */,
+				C8AA359D1D951B4600AA5CB1 /* UIColorCategory.swift */,
+				C8AA359E1D951B4600AA5CB1 /* UIImageCategory.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		C8AA359F1D951B4600AA5CB1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C8AA35A01D951B4600AA5CB1 /* AppInfo.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		C8AA35A11D951B4600AA5CB1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C8AA35A21D951B4600AA5CB1 /* UIAlertControllerQuickInitAndShow.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C8AA35A31D951B4600AA5CB1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C8AA35A41D951B4600AA5CB1 /* UIViewCategory.swift */,
+				C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +174,7 @@
 				TargetAttributes = {
 					C845751F1D3CCCF2007C936A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = A4ZVHKBMNS;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
@@ -215,18 +216,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83020471D49E51600AC9142 /* StringCategory.swift in Sources */,
-				C83020441D49E51600AC9142 /* NSDateCategory.swift in Sources */,
-				C83020461D49E51600AC9142 /* NSLocalCategory.swift in Sources */,
+				C8AA35A91D951B4600AA5CB1 /* StringCategory.swift in Sources */,
+				C8AA35A61D951B4600AA5CB1 /* NSDateCategory.swift in Sources */,
+				C8AA35A81D951B4600AA5CB1 /* NSLocalCategory.swift in Sources */,
+				C8AA35AE1D951B4600AA5CB1 /* UIViewCategory.swift in Sources */,
+				C8AA35AA1D951B4600AA5CB1 /* UIColorCategory.swift in Sources */,
 				C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */,
-				C83020481D49E51600AC9142 /* UIImageCategory.swift in Sources */,
-				C83020491D49E51600AC9142 /* AppInfo.swift in Sources */,
-				C830204B1D49E51600AC9142 /* UIViewCategory.swift in Sources */,
-				C830204A1D49E51600AC9142 /* UIAlertControllerQuickInitAndShow.swift in Sources */,
-				C82B64C41D7B165300007205 /* WKCheckBox.swift in Sources */,
+				C8AA35AD1D951B4600AA5CB1 /* UIAlertControllerQuickInitAndShow.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
-				C82B64C61D7B166300007205 /* UIColorCategory.swift in Sources */,
-				C83020451D49E51600AC9142 /* NSDecimalNumberCategory.swift in Sources */,
+				C8AA35AF1D951B4600AA5CB1 /* WKCheckBox.swift in Sources */,
+				C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberCategory.swift in Sources */,
+				C8AA35AB1D951B4600AA5CB1 /* UIImageCategory.swift in Sources */,
+				C8AA35AC1D951B4600AA5CB1 /* AppInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A4ZVHKBMNS;
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -366,7 +367,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = A4ZVHKBMNS;
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

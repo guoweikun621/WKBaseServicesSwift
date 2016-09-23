@@ -1,0 +1,38 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WKAlertController"
+provides-nominal:
+- "C10Controller17WKAlertController"
+provides-member:
+- ["C10Controller17WKAlertController", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- !private "!="
+- "UIAlertController"
+- "WKAlertController"
+- "AssignmentPrecedence"
+- "UIViewController"
+- "UIAlertAction"
+- "UIAlertControllerStyle"
+- "String"
+depends-member:
+- !private ["Ps9AnyObject", "UIAlertController"]
+- !private ["Ps9AnyObject", "WKAlertController"]
+- !private ["Ps9AnyObject", "actionSheet"]
+- !private ["Ps9AnyObject", "presentController"]
+- ["Ps9AnyObject", ""]
+- ["C10Controller17WKAlertController", "UIAlertController"]
+- ["C10Controller17WKAlertController", "UIViewController"]
+- !private ["C10Controller17WKAlertController", "WKAlertController"]
+- !private ["C10Controller17WKAlertController", "actionSheet"]
+- ["C10Controller17WKAlertController", "deinit"]
+- ["C10Controller17WKAlertController", "init"]
+- !private ["C10Controller17WKAlertController", "presentController"]
+depends-nominal:
+- "Ps9AnyObject"
+- "C10Controller17WKAlertController"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx/x86_64/SwiftOnoneSupport.swiftmodule"
+interface-hash: "3715447f1612b9f44543d09d2246ff49"

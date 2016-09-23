@@ -1,0 +1,95 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "test": ["<Category.module>","<Common.module>","<Controller.module>","<View.module>","<WKBaseServicesSwiftTests.module>","<WKBaseServicesSwiftPackageTests.test>"]
+  "main": ["<Category.module>","<Common.module>","<Controller.module>","<View.module>"]
+default: "main"
+commands: 
+  "<Category.module>":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Category"
+    module-output-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.swiftmodule"
+    inputs: []
+    outputs: ["<Category.module>","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/NSDateCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/NSDecimalNumberCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/NSLocalCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/StringCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/UIColorCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/UIImageCategory.swift.o"]
+    import-paths: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug"]
+    temps-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build"
+    objects: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/NSDateCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/NSDecimalNumberCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/NSLocalCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/StringCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/UIColorCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Category.build/UIImageCategory.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk","-module-cache-path","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/ModuleCache"]
+    sources: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/NSDateCategory.swift","/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/NSDecimalNumberCategory.swift","/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/NSLocalCategory.swift","/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/StringCategory.swift","/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/UIColorCategory.swift","/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/UIImageCategory.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<Common.module>":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Common"
+    module-output-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Common.swiftmodule"
+    inputs: []
+    outputs: ["<Common.module>","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Common.build/AppInfo.swift.o"]
+    import-paths: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug"]
+    temps-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Common.build"
+    objects: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Common.build/AppInfo.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk","-module-cache-path","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/ModuleCache"]
+    sources: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Common/AppInfo.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<Controller.module>":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "Controller"
+    module-output-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Controller.swiftmodule"
+    inputs: []
+    outputs: ["<Controller.module>","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Controller.build/UIAlertControllerQuickInitAndShow.swift.o"]
+    import-paths: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug"]
+    temps-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Controller.build"
+    objects: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/Controller.build/UIAlertControllerQuickInitAndShow.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk","-module-cache-path","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/ModuleCache"]
+    sources: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Controller/UIAlertControllerQuickInitAndShow.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<View.module>":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "View"
+    module-output-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/View.swiftmodule"
+    inputs: []
+    outputs: ["<View.module>","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/View.build/UIViewCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/View.build/WKCheckBox.swift.o"]
+    import-paths: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug"]
+    temps-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/View.build"
+    objects: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/View.build/UIViewCategory.swift.o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/View.build/WKCheckBox.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk","-module-cache-path","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/ModuleCache"]
+    sources: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/View/UIViewCategory.swift","/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/View/WKCheckBox.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<WKBaseServicesSwiftTests.module>":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "WKBaseServicesSwiftTests"
+    module-output-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftTests.swiftmodule"
+    inputs: []
+    outputs: ["<WKBaseServicesSwiftTests.module>","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftTests.build/WKBaseServicesSwiftTests.swift.o"]
+    import-paths: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug"]
+    temps-path: "/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftTests.build"
+    objects: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftTests.build/WKBaseServicesSwiftTests.swift.o"]
+    other-args: ["-j8","-D","SWIFT_PACKAGE","-Onone","-g","-enable-testing","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk","-module-cache-path","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/ModuleCache"]
+    sources: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/Tests/WKBaseServicesSwiftTests/WKBaseServicesSwiftTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "<WKBaseServicesSwiftPackageTests.test>":
+    tool: shell
+    description: "Linking ./.build/debug/WKBaseServicesSwiftPackageTests.xctest/Contents/MacOS/WKBaseServicesSwiftPackageTests"
+    inputs: ["/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftTests.build/WKBaseServicesSwiftTests.swift.o"]
+    outputs: ["<WKBaseServicesSwiftPackageTests.test>","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftPackageTests.xctest/Contents/MacOS/WKBaseServicesSwiftPackageTests"]
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk","-g","-L/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug","-o","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftPackageTests.xctest/Contents/MacOS/WKBaseServicesSwiftPackageTests","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-module-name","WKBaseServicesSwiftPackageTests","-Xlinker","-bundle","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","/Users/guoweikun/Developer/git/WKBaseServicesSwift/.build/debug/WKBaseServicesSwiftTests.build/WKBaseServicesSwiftTests.swift.o"]
+

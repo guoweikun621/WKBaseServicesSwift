@@ -1,0 +1,5 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "27a8ce150bfdd9eb63683190432023b6"
+build_time: [527934378, 391809000]
+inputs:
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Common/AppInfo.swift": !dirty [527933223, 0]

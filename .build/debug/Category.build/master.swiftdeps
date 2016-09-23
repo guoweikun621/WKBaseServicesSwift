@@ -1,0 +1,10 @@
+version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
+options: "41df028aea846715590c519a823bcd3e"
+build_time: [527934378, 392402000]
+inputs:
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/NSDateCategory.swift": !dirty [527933223, 0]
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/NSDecimalNumberCategory.swift": !dirty [527933223, 0]
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/NSLocalCategory.swift": !dirty [527933223, 0]
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/StringCategory.swift": !dirty [527933223, 0]
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/UIColorCategory.swift": !dirty [527933223, 0]
+  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Category/UIImageCategory.swift": !dirty [527933223, 0]
