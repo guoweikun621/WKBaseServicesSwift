@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "d31024cf7f7fb49cc18714f24d0fe349"
-build_time: [527934378, 392505000]
-inputs:
-  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/View/UIViewCategory.swift": !dirty [527933223, 0]
-  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/View/WKCheckBox.swift": !dirty [527933223, 0]

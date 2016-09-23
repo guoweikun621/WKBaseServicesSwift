@@ -1,5 +1,0 @@
-version: "Apple Swift version 3.0 (swiftlang-800.0.46.2 clang-800.0.38)"
-options: "713a1d941cbc171c3dda53b01bbffb70"
-build_time: [527934378, 392917000]
-inputs:
-  "/Users/guoweikun/Developer/git/WKBaseServicesSwift/Sources/Controller/UIAlertControllerQuickInitAndShow.swift": !dirty [527933223, 0]
