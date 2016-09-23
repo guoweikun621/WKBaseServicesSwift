@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WKBaseServicesSwift"
-  s.version      = "0.0.4"
+  s.version      = "2.0.0"
   s.summary      = "WKBaseServicesSwift是一个swift的基础的扩展服务框架"
   s.description      = <<-DESC
                         WKBaseServicesSwift.是一个swift的基础的扩展服务框架。
