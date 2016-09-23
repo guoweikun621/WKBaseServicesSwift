@@ -12,10 +12,6 @@ Pod::Spec.new do |s|
   s.version      = "2.0.0"
   s.summary      = "WKBaseServicesSwift 是一个swift的基础的扩展服务框架。"
 
-  s.description  = <<-DESC
-                   WKBaseServicesSwift 是一个swift的基础的扩展服务框架。
-                   DESC
-
   s.homepage     = "https://github.com/guoweikun621/WKBaseServicesSwift"
 
   s.license      = "MIT"
