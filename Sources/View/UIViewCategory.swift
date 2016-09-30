@@ -41,6 +41,26 @@ extension UIView {
         }
     }
     
+    public var origin: CGPoint {
+        get {
+            return self.frame.origin
+        }
+        set {
+            var frame = self.frame
+            frame.origin = newValue
+            self.frame = frame
+        }
+    }
+    
+    public var size: CGSize {
+        get { return self.frame.size }
+        set {
+            var frame = self.frame
+            frame.size = newValue
+            self.frame = frame
+        }
+    }
+    
     /// 视图的宽度
     public var width: CGFloat {
         get {
@@ -108,6 +128,24 @@ extension UIView {
             var frame = self.frame
             frame.size.height = (newValue - frame.origin.y)
             self.frame = frame
+        }
+    }
+    
+    public var centerX: CGFloat {
+        get { return self.center.x }
+        set {
+            var center = self.center
+            center.x = newValue
+            self.center = center
+        }
+    }
+    
+    public var centerY: CGFloat {
+        get { return self.center.y }
+        set {
+            var center = self.center
+            center.y = newValue
+            self.center = center
         }
     }
     
