@@ -37,6 +37,9 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
     var imageContainerView: UIView!
     var imageView: UIImageView!
     
+    var model: WKAssetModel?
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -117,6 +120,9 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
     // MARK: - Config Data
     
     func setAssetModel(model: WKAssetModel) {
+        self.model = model
+        scrollView.setZoomScale(1.0, animated: false)
+        // 获取图片
         
     }
     
@@ -152,5 +158,10 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
 
 
 class WKAssetModel: NSObject {
+    
+}
+
+
+class WKAlbumModel: NSObject {
     
 }
