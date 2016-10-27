@@ -8,15 +8,15 @@
 
 import Foundation
 
-extension NSLocale {
+extension Locale {
 
     /**
      获取中国大陆Local
      
      - returns: NSLocal
      */
-    public static func cnLocal() -> NSLocale {
-        return NSLocale.init(localeIdentifier: "zh_CN")
+    public static func cnLocal() -> Locale {
+        return Locale(identifier: "zh_CN")
     }
     
     /**
@@ -25,10 +25,10 @@ extension NSLocale {
      - returns: ¥
      */
     public static func cnCurrenySymbol() -> String? {
-        return NSLocale.cnLocal().objectForKey(NSLocaleCurrencySymbol) as? String
+        return Locale.cnLocal().currencySymbol
     }
     
     public static func cnCurrenyCode() -> String? {
-        return NSLocale.cnLocal().objectForKey(NSLocaleCurrencyCode) as? String
+        return Locale.cnLocal().currencyCode
     }
 }

@@ -18,12 +18,12 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        demoView.addLeftLine(UIColor.yellowColor(), top: 15, bottom: 15)
-        demoView.addRightLine(UIColor.greenColor(), top: 15, bottom: 15)
-        demoView.addTopLine(UIColor.grayColor(), leading: 15, tailing: 15)
-        demoView.addBottomLine(UIColor.redColor(), leading: 15, tailing: 15)
+        _ = demoView.addLeftLine(color: UIColor.yellow, top: 15, bottom: 15)
+        _ = demoView.addRightLine(color: UIColor.green, top: 15, bottom: 15)
+        _ = demoView.addTopLine(color: UIColor.gray, leading: 15, tailing: 15)
+        _ = demoView.addBottomLine(color: UIColor.red, leading: 15, tailing: 15)
 
-        let dn = NSDecimalNumber.init(float: 0.01)
+        let dn = NSDecimalNumber(value: 0.01)
         if dn.isGreaterThanAndEqualZero() {
             textView.text = dn.currenyString()
         }
@@ -31,18 +31,18 @@ class MainViewController: UIViewController {
         let name = "郭伟坤";
         textView.text = name.pinyin()
         
-        imageView.image = UIImage.image(UIColor.redColor())
+        imageView.image = UIImage.image(color: UIColor.red)
         
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated);
     }
 
     
     @IBAction func testAction(sender: AnyObject) {
-        demoView.clearSeparatorLine()
-        WKAlertController.actionSheet("test", defaluts: ["Defalut"]) { (action) in
+        // demoView.clearSeparatorLine()
+        _ = WKAlertController.actionSheet(message: "test", defaluts: ["Defalut"]) { (action) in
             
         }
     }

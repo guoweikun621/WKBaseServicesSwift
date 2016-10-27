@@ -23,7 +23,7 @@ public class WKPhotoPreviewViewController: UIViewController {
 
     // MARK: - Storyboard
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    public override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
 
@@ -51,13 +51,13 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
     }
     
     func setupView() {
-        self.backgroundColor = UIColor.blackColor()
+        self.backgroundColor = UIColor.black
         
         scrollView = UIScrollView(frame: self.bounds)
         scrollView.bouncesZoom = true;
         scrollView.maximumZoomScale = 2.5;
         scrollView.minimumZoomScale = 1.0;
-        scrollView.multipleTouchEnabled = true;
+        scrollView.isMultipleTouchEnabled = true;
         scrollView.delegate = self;
         scrollView.scrollsToTop = false;
         scrollView.showsHorizontalScrollIndicator = false;
@@ -82,7 +82,7 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
         
         let doubleTap = UITapGestureRecognizer(target: self, action: #selector(doubleTapHandler))
         doubleTap.numberOfTapsRequired = 2
-        singleTap.requireGestureRecognizerToFail(doubleTap)
+        singleTap.require(toFail: doubleTap)
         self.addGestureRecognizer(doubleTap)
     }
     
@@ -92,7 +92,7 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
     }
     
     func resizeSubViews() {
-        imageContainerView.origin = CGPointZero;
+        imageContainerView.origin = CGPoint.zero;
         imageContainerView.width = self.scrollView.width;
         
         let image = imageView.image
@@ -101,7 +101,7 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
             imageContainerView.height = floor(imageSize.height / (imageSize.width / self.scrollView.width));
         } else {
             var height = imageSize.height / imageSize.width * self.scrollView.width;
-            if (height < 1 || isnan(height)) {
+            if (height < 1) {
                 height = self.height
             }
             height = floor(height);
@@ -135,24 +135,24 @@ class WKPreviewCollectionCell: UICollectionViewCell, UIScrollViewDelegate {
         if (scrollView.zoomScale > 1.0) {
             scrollView.setZoomScale(1.0, animated: true)
         } else {
-            let touchPoint = gesture.locationInView(self.imageView)
+            let touchPoint = gesture.location(in: self.imageView)
             let newZoomScale = scrollView.maximumZoomScale;
             let xsize = self.frame.size.width / newZoomScale;
             let ysize = self.frame.size.height / newZoomScale;
-            scrollView.zoomToRect(CGRect(x: touchPoint.x - xsize / 2, y: touchPoint.y - ysize / 2, width: xsize, height: ysize), animated: true)
+            scrollView.zoom(to: CGRect(x: touchPoint.x - xsize / 2, y: touchPoint.y - ysize / 2, width: xsize, height: ysize), animated: true)
         }
     }
     
     
     // MARK: UIScrollViewDelegate
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageContainerView
     }
     
-    func scrollViewDidZoom(scrollView: UIScrollView) {
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
         let offsetX = (scrollView.width > scrollView.contentSize.width) ? (scrollView.width - scrollView.contentSize.width) * 0.5 : 0.0;
         let offsetY = (scrollView.height > scrollView.contentSize.height) ? (scrollView.height - scrollView.contentSize.height) * 0.5 : 0.0;
-        self.imageContainerView.center = CGPointMake(scrollView.contentSize.width * 0.5 + offsetX, scrollView.contentSize.height * 0.5 + offsetY);
+        self.imageContainerView.center = CGPoint(x: scrollView.contentSize.width * 0.5 + offsetX, y: scrollView.contentSize.height * 0.5 + offsetY);
     }
 }
 

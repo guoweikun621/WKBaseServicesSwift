@@ -17,7 +17,7 @@ public enum BoxType {
 public class WKCheckBox: UIControl {
     
     @IBOutlet weak var delegate: WKCheckBoxDelegate?;
-    var clickAction: ((box: WKCheckBox, on: Bool) -> Void)?
+    var clickAction: ((_ box: WKCheckBox, _ on: Bool) -> Void)?
     
     
     public var type: BoxType = .Square {
@@ -26,26 +26,26 @@ public class WKCheckBox: UIControl {
         }
     }
     
-    @IBInspectable public var offStrokeColor: UIColor = UIColor.color("666666") {
+    @IBInspectable public var offStrokeColor: UIColor = UIColor.color(hexString: "666666") {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var offFillColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var offFillColor: UIColor = UIColor.white {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var onStrokeColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var onStrokeColor: UIColor = UIColor.white {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
     
-    @IBInspectable public var onFillColor: UIColor = UIColor.color("00cc00") {
+    @IBInspectable public var onFillColor: UIColor = UIColor.color(hexString: "00cc00") {
         didSet {
             self.setNeedsDisplay()
         }
@@ -75,22 +75,22 @@ public class WKCheckBox: UIControl {
     }
     
     private func setupView() {
-        self.backgroundColor = UIColor.clearColor()
-        self.addTarget(self, action: #selector(toggle), forControlEvents: .TouchUpInside)
+        self.backgroundColor = UIColor.clear
+        self.addTarget(self, action: #selector(toggle), for: .touchUpInside)
     }
     
     @objc private func toggle(sender: AnyObject) {
         on = !on
-        delegate?.click?(self, on: on)
-        clickAction?(box: self, on: on)
+        delegate?.click?(box: self, on: on)
+        clickAction?(self, on)
     }
     
     private func updateUI() -> Void {
 
-        let borderPath = type == .Square ? UIBezierPath(roundedRect: self.bounds, cornerRadius: 5) : UIBezierPath(ovalInRect: self.bounds)
+        let borderPath = type == .Square ? UIBezierPath(roundedRect: self.bounds, cornerRadius: 5) : UIBezierPath(ovalIn: self.bounds)
         borderPath.lineWidth = lineWidth;
-        borderPath.lineCapStyle = .Butt
-        borderPath.lineJoinStyle = .Round
+        borderPath.lineCapStyle = .butt
+        borderPath.lineJoinStyle = .round
         
         // 填充
         on ? onFillColor.set() : offFillColor.set()
@@ -103,17 +103,17 @@ public class WKCheckBox: UIControl {
         on ? onStrokeColor.set() : offStrokeColor.set()
         if on {
             let checkBezier = UIBezierPath()
-            checkBezier.moveToPoint(CGPoint(x: self.width * 0.13, y: self.bounds.size.height * 0.45))
-            checkBezier.addLineToPoint(CGPoint(x: self.bounds.size.width * 0.43, y: self.bounds.size.height * 0.73))
-            checkBezier.addLineToPoint(CGPoint(x: self.bounds.size.width * 0.83, y: self.bounds.size.height * 0.3))
+            checkBezier.move(to: CGPoint(x: self.width * 0.13, y: self.bounds.size.height * 0.45))
+            checkBezier.addLine(to: CGPoint(x: self.bounds.size.width * 0.43, y: self.bounds.size.height * 0.73))
+            checkBezier.addLine(to: CGPoint(x: self.bounds.size.width * 0.83, y: self.bounds.size.height * 0.3))
             checkBezier.lineWidth = lineWidth;
-            checkBezier.lineJoinStyle = .Round
+            checkBezier.lineJoinStyle = .round
             checkBezier.stroke()
         }
     }
     
-    public override func drawRect(rect: CGRect) {
-        super.drawRect(rect);
+    public override func draw(_ rect: CGRect) {
+        super.draw(rect);
         
         self.updateUI()
     }

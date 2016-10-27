@@ -16,7 +16,7 @@ public class Device {
      - returns: operatingSystemVersionString
      */
     public static func systemVersion() -> String {
-        return NSProcessInfo.processInfo().operatingSystemVersionString
+        return ProcessInfo.processInfo.operatingSystemVersionString
     }
     
     /**
@@ -25,7 +25,7 @@ public class Device {
      - returns: globallyUniqueString
      */
     public static func uuid() -> String {
-        return NSProcessInfo.processInfo().globallyUniqueString
+        return ProcessInfo.processInfo.globallyUniqueString
     }
     
     /**
@@ -34,7 +34,7 @@ public class Device {
      - returns: 关于手机-手机名字
      */
     public static func deviceName() -> String {
-        return NSProcessInfo.processInfo().hostName
+        return ProcessInfo.processInfo.hostName
     }
     
     /**
@@ -43,7 +43,7 @@ public class Device {
      - returns: scale
      */
     public static func scale() -> CGFloat {
-        return UIScreen.mainScreen().scale
+        return UIScreen.main.scale
     }
     
     /**
@@ -52,7 +52,7 @@ public class Device {
      - returns: CGSize
      */
     public static func size() -> CGSize {
-        return UIScreen.mainScreen().bounds.size
+        return UIScreen.main.bounds.size
     }
 }
 
@@ -64,7 +64,7 @@ public class App {
      - returns: CFBundleVersion
      */
     public static func appVersion() -> String {
-        let dict = NSBundle.mainBundle().infoDictionary
+        let dict = Bundle.main.infoDictionary
         print(dict?.description)
         return (dict?["CFBundleVersion"])! as! String
     }
@@ -75,7 +75,7 @@ public class App {
      - returns: Caches路径
      */
     public static func cachesDirectory() -> String {
-        let paths = NSFileManager.defaultManager().URLsForDirectory(.CachesDirectory, inDomains: .UserDomainMask);
+        let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
         return (paths.last?.absoluteString)!
     }
     
@@ -85,7 +85,7 @@ public class App {
      - returns: Document 路径
      */
     public static func documentDirectory() -> String {
-        let paths = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask);
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return (paths.last?.absoluteString)!
     }
     
@@ -95,7 +95,7 @@ public class App {
      - returns: Library路径
      */
     public static func libraryDirectory() -> String? {
-        let paths = NSFileManager.defaultManager().URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask);
+        let paths = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
         return paths.last?.absoluteString
     }
     

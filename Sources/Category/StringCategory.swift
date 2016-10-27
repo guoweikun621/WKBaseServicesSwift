@@ -24,20 +24,20 @@ extension String {
      
      - returns: NSDate 
      */
-    public func dateValue(formatterStyle: String) -> NSDate? {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "zh_CN")
+    public func dateValue(formatterStyle: String) -> Date? {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "zh_CN")
         formatter.dateFormat = formatterStyle
-        return formatter.dateFromString(self)
+        return formatter.date(from: self)
     }
     
     public func pinyin() -> String? {
         //转成了可变字符串
         let str = NSMutableString(string: self)
         //先转换为带声调的拼音
-        CFStringTransform(str as CFMutableStringRef, nil, kCFStringTransformMandarinLatin, false)
+        CFStringTransform(str as CFMutableString, nil, kCFStringTransformMandarinLatin, false)
         //再转换为不带声调的拼音
-        CFStringTransform(str as CFMutableStringRef, nil, kCFStringTransformStripDiacritics, false);
-        return str.lowercaseString;
+        CFStringTransform(str as CFMutableString, nil, kCFStringTransformStripDiacritics, false);
+        return str.lowercased;
     }
 }

@@ -19,16 +19,14 @@ public class WKPhotoBrowserViewController: UICollectionViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         // Do any additional setup after loading the view.
     }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-    }
+    
 
 
     // MARK: UICollectionViewDataSource

@@ -16,7 +16,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isEqualZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero()) == .OrderedSame
+        return self.compare(NSDecimalNumber.zero) == .orderedSame
     }
     
     /**
@@ -25,7 +25,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isLessThanZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero()) == .OrderedAscending
+        return self.compare(NSDecimalNumber.zero) == .orderedAscending
     }
     
     /**
@@ -34,7 +34,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isLessThanAndEqualZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero()) != .OrderedDescending
+        return self.compare(NSDecimalNumber.zero) != .orderedDescending
     }
     
     /**
@@ -43,7 +43,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isGreaterThanZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero()) == .OrderedDescending
+        return self.compare(NSDecimalNumber.zero) == .orderedDescending
     }
     
     /**
@@ -52,16 +52,16 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isGreaterThanAndEqualZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero()) != .OrderedAscending
+        return self.compare(NSDecimalNumber.zero) != .orderedAscending
     }
     
     public func currenyString() -> String {
-        let numberFormatter = NSNumberFormatter.init()
-        numberFormatter.numberStyle = .CurrencyStyle
-        numberFormatter.locale = NSLocale.cnLocal()
-        numberFormatter.currencySymbol = NSLocale.cnCurrenySymbol()
-        numberFormatter.currencyCode = NSLocale.cnCurrenyCode()
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale.cnLocal()
+        numberFormatter.currencySymbol = Locale.cnCurrenySymbol()
+        numberFormatter.currencyCode = Locale.cnCurrenyCode()
         
-        return numberFormatter.stringFromNumber(self)!
+        return numberFormatter.string(from: self)!
     }
 }

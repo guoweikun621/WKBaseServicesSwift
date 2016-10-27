@@ -18,7 +18,7 @@ extension UIImage {
      - returns: UIImage
      */
     public static func image(color: UIColor) -> UIImage {
-        return UIImage.image(color, size: CGSizeMake(1.0, 1.0))
+        return UIImage.image(color: color, size: CGSize(width: 1.0, height: 1.0))
     }
     
     /**
@@ -30,11 +30,11 @@ extension UIImage {
      - returns: UIImage
      */
     public static func image(color: UIColor, size: CGSize) -> UIImage {
-        let f = CGRect(origin: CGPointZero, size: size)
+        let f = CGRect(origin: CGPoint(x: 0, y: 0), size: size)
         UIGraphicsBeginImageContext(size)
         let content = UIGraphicsGetCurrentContext()
-        CGContextSetFillColorWithColor(content!, color.CGColor)
-        CGContextFillRect(content!, f)
+        content!.setFillColor(color.cgColor)
+        content!.fill(f)
         
         return UIGraphicsGetImageFromCurrentImageContext()!
     }
