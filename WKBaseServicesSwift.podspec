@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WKBaseServicesSwift"
-  s.version      = "2.0.0"
+  s.version      = "3.0.0"
   s.summary      = "WKBaseServicesSwift是一个swift的基础的扩展服务框架"
   s.homepage     = "https://github.com/guoweikun621/WKBaseServicesSwift"
   s.license      = "MIT"
@@ -21,6 +21,5 @@ Pod::Spec.new do |s|
 
   s.frameworks = "UIKit", "Foundation"
   s.requires_arc = true
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '2.3' }
   
 end
