@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,12 +23,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-Gw-QBy">
+                                <rect key="frame" x="16" y="20" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqq-KT-UkT"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="aLp-mE-M3M">
+                                <rect key="frame" x="16" y="280" width="240" height="128"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="7kl-uC-Qdl"/>
@@ -45,8 +50,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-BC-CJd"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hhp-BC-CJd">
+                                <rect key="frame" x="16" y="424" width="200" height="200"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zm3-yf-S2O">
+                                <rect key="frame" x="16" y="63" width="240" height="195"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="RQL-95-9fb"/>
@@ -58,10 +66,10 @@
                             <constraint firstItem="hhp-BC-CJd" firstAttribute="leading" secondItem="aLp-mE-M3M" secondAttribute="leading" id="4A3-kH-QA4"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EiY-1I-c3z"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="leading" secondItem="aLp-mE-M3M" secondAttribute="leading" id="TAo-xh-BtY"/>
-                            <constraint firstItem="hhp-BC-CJd" firstAttribute="trailing" secondItem="aLp-mE-M3M" secondAttribute="trailing" id="UfX-vc-IBd"/>
+                            <constraint firstItem="hhp-BC-CJd" firstAttribute="trailing" secondItem="aLp-mE-M3M" secondAttribute="trailing" constant="-40" id="UfX-vc-IBd"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="top" secondItem="CJL-Gw-QBy" secondAttribute="bottom" constant="13" id="bvf-5p-FUA"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jNs-UL-bFx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hhp-BC-CJd" secondAttribute="bottom" constant="115" id="lb3-UG-Vwn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hhp-BC-CJd" secondAttribute="bottom" constant="43" id="lb3-UG-Vwn"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="leading" secondItem="zm3-yf-S2O" secondAttribute="leading" id="lem-eO-bJt"/>
                             <constraint firstItem="aLp-mE-M3M" firstAttribute="top" secondItem="zm3-yf-S2O" secondAttribute="bottom" constant="22" id="own-2a-FUc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="aLp-mE-M3M" secondAttribute="bottom" constant="259" id="qq6-1l-SiR"/>
@@ -77,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="60"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="59.820089955022496"/>
         </scene>
     </scenes>
 </document>

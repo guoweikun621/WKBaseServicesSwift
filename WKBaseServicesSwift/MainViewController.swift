@@ -31,8 +31,7 @@ class MainViewController: UIViewController {
         let name = "郭伟坤";
         textView.text = name.pinyin()
         
-        imageView.image = UIImage.image(UIColor.redColor())
-        
+        imageView.image = WKQRCodeGenerator.qrCode("", size: CGSize(width: 200.0, height: 200.0), logo: UIImage.image(UIColor.brownColor(), size: CGSize(width: 40, height: 40)))
     }
     
     override func viewWillAppear(animated: Bool) {
