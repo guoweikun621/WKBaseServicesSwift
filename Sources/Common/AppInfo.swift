@@ -65,7 +65,6 @@ public class App {
      */
     public static func appVersion() -> String {
         let dict = Bundle.main.infoDictionary
-        print(dict?.description)
         return (dict?["CFBundleVersion"])! as! String
     }
     
