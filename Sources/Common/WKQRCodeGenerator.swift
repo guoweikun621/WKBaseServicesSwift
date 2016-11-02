@@ -21,6 +21,7 @@ public class WKQRCodeGenerator: NSObject {
     public class func qrCode(content: String, size: CGSize, logo: UIImage? = nil) -> UIImage? {
         let contentData = content.dataUsingEncoding(NSUTF8StringEncoding)
         let filter = CIFilter(name: "CIQRCodeGenerator")
+        filter?.setDefaults()
         filter?.setValue(contentData, forKey: "inputMessage")
         filter?.setValue("Q", forKey: "inputCorrectionLevel")
         let ci = filter?.outputImage
