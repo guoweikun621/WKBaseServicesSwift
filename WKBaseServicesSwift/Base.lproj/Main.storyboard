@@ -60,11 +60,39 @@
                                     <constraint firstAttribute="height" constant="195" id="RQL-95-9fb"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpP-Rv-cef" customClass="WKCheckBox" customModule="WKBaseServicesSwift" customModuleProvider="target">
+                                <rect key="frame" x="101" y="20" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Z4P-VA-JFf"/>
+                                    <constraint firstAttribute="width" constant="30" id="upV-4b-Tub"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onFillColor">
+                                        <color key="value" red="1" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="onStrokeColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offStrokeColor">
+                                        <color key="value" red="1" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="offFillColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hhp-BC-CJd" firstAttribute="leading" secondItem="aLp-mE-M3M" secondAttribute="leading" id="4A3-kH-QA4"/>
+                            <constraint firstItem="wpP-Rv-cef" firstAttribute="leading" secondItem="CJL-Gw-QBy" secondAttribute="trailing" constant="39" id="5wa-zu-VMi"/>
+                            <constraint firstItem="wpP-Rv-cef" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ChA-gO-fI8"/>
                             <constraint firstItem="CJL-Gw-QBy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EiY-1I-c3z"/>
+                            <constraint firstItem="zm3-yf-S2O" firstAttribute="top" secondItem="wpP-Rv-cef" secondAttribute="bottom" constant="13" id="RcJ-9A-DX7"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="leading" secondItem="aLp-mE-M3M" secondAttribute="leading" id="TAo-xh-BtY"/>
                             <constraint firstItem="hhp-BC-CJd" firstAttribute="trailing" secondItem="aLp-mE-M3M" secondAttribute="trailing" constant="-40" id="UfX-vc-IBd"/>
                             <constraint firstItem="zm3-yf-S2O" firstAttribute="top" secondItem="CJL-Gw-QBy" secondAttribute="bottom" constant="13" id="bvf-5p-FUA"/>

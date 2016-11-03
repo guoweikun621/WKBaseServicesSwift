@@ -89,9 +89,9 @@ public class WKCheckBox: UIControl {
 
         let borderPath = type == .Square ? UIBezierPath(roundedRect: self.bounds, cornerRadius: 5) : UIBezierPath(ovalInRect: self.bounds)
         borderPath.lineWidth = lineWidth;
-        borderPath.lineCapStyle = .Butt
+        borderPath.lineCapStyle = .Round
         borderPath.lineJoinStyle = .Round
-        
+        borderPath.addClip()
         // 填充
         on ? onFillColor.set() : offFillColor.set()
         borderPath.fill()
