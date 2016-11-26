@@ -17,6 +17,13 @@ extension String {
         }
     }
     
+    
+    /// url 转码
+    public var urlEscaped: String {
+        return self.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? ""
+    }
+    
+    
     /**
      日期值
      
@@ -31,6 +38,10 @@ extension String {
         return formatter.dateFromString(self)
     }
     
+    
+    /// 汉字转拼音
+    ///
+    /// - Returns: 拼音
     public func pinyin() -> String? {
         //转成了可变字符串
         let str = NSMutableString(string: self)
@@ -40,4 +51,6 @@ extension String {
         CFStringTransform(str as CFMutableStringRef, nil, kCFStringTransformStripDiacritics, false);
         return str.lowercaseString;
     }
+    
+    
 }
