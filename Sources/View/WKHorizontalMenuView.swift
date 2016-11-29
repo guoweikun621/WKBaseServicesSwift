@@ -8,27 +8,27 @@
 
 import UIKit
 
-@objc protocol WKHorizontalMenuDelegate {
+@objc public protocol WKHorizontalMenuDelegate {
     optional func didSelectItem(oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) -> Void
 }
 
 @IBDesignable
 public class WKHorizontalMenuView: UIView {
     
-    var delegate: WKHorizontalMenuDelegate?
-    var didSelctedItem: ((oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) ->Void)?
+    public var delegate: WKHorizontalMenuDelegate?
+    public var didSelctedItem: ((oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) ->Void)?
     
     
     var scrollView: UIScrollView!
     var underlineView: UIView!
-    var selectedIndex: Int = 0 {
+    public var selectedIndex: Int = 0 {
         didSet {
             updateSelectItem(oldValue)
         }
     }
     
     
-    var menuItems: [String] = [String]() {
+    public var menuItems: [String] = [String]() {
         didSet {
             // 更新菜单
             configItems()
@@ -38,7 +38,7 @@ public class WKHorizontalMenuView: UIView {
     private var config = ItemConfig()
     private var itemViews: [HorizontalMenuItemView] = [HorizontalMenuItemView]()
     
-    @IBInspectable var textFontSize: CGFloat {
+    @IBInspectable public var textFontSize: CGFloat {
         set {
             config.textFontSize = newValue
         }
@@ -46,7 +46,7 @@ public class WKHorizontalMenuView: UIView {
             return config.textFontSize
         }
     }
-    @IBInspectable var selectFontSize: CGFloat {
+    @IBInspectable public var selectFontSize: CGFloat {
         set {
             config.selectTextFontSize = newValue
         }
@@ -54,7 +54,7 @@ public class WKHorizontalMenuView: UIView {
             return config.selectTextFontSize
         }
     }
-    @IBInspectable var textColor: UIColor {
+    @IBInspectable public var textColor: UIColor {
         set {
             config.textColor = newValue
         }
@@ -62,7 +62,7 @@ public class WKHorizontalMenuView: UIView {
             return config.textColor
         }
     }
-    @IBInspectable var selectTextColor: UIColor {
+    @IBInspectable public var selectTextColor: UIColor {
         set {
             config.selectedTextColor = newValue
         }
@@ -70,7 +70,7 @@ public class WKHorizontalMenuView: UIView {
             return config.selectedTextColor
         }
     }
-    @IBInspectable var underLineColor: UIColor {
+    @IBInspectable public var underLineColor: UIColor {
         set {
             config.underlineColor = newValue
         }
@@ -80,7 +80,7 @@ public class WKHorizontalMenuView: UIView {
     }
     
     // MARK: Init
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
@@ -152,15 +152,6 @@ public class WKHorizontalMenuView: UIView {
         didSelctedItem?(oldItem: oldItem, selectedItem: newItem)
         delegate?.didSelectItem?(oldItem, selectedItem: newItem)
     }
-    
-    func animationDidStop(anim: CAAnimation, finished flag: Bool) {
-        if flag {
-            let newItem = itemViews[selectedIndex] as HorizontalMenuItemView
-            var uframe = underlineView.frame
-            uframe.origin = newItem.origin
-            underlineView.frame = uframe
-        }
-    }
 }
 
 public class HorizontalMenuItemView: UIControl {
@@ -173,7 +164,7 @@ public class HorizontalMenuItemView: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
-    var titleLabel: UILabel!
+    public var titleLabel: UILabel!
     
     func setupView() {
         backgroundColor = UIColor.clearColor()
@@ -186,9 +177,9 @@ public class HorizontalMenuItemView: UIControl {
 }
 
 public struct ItemConfig {
-    var textColor: UIColor = UIColor.color("333333")
-    var selectedTextColor: UIColor = UIColor.blueColor()
-    var textFontSize: CGFloat = 13.0
-    var selectTextFontSize: CGFloat = 14.0
-    var underlineColor: UIColor = UIColor.blueColor()
+    public var textColor: UIColor = UIColor.color("333333")
+    public var selectedTextColor: UIColor = UIColor.blueColor()
+    public var textFontSize: CGFloat = 13.0
+    public var selectTextFontSize: CGFloat = 14.0
+    public var underlineColor: UIColor = UIColor.blueColor()
 }
