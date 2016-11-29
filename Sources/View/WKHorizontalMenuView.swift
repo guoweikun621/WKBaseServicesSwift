@@ -40,7 +40,7 @@ public class WKHorizontalMenuView: UIView {
     
     private var config = ItemConfig()
     private var itemViews: [HorizontalMenuItemView] = [HorizontalMenuItemView]()
-    private let spacing = 8.0
+    private let spacing: CGFloat = 8.0
     
     
     /// 是否可以滚动，如No，则一页显示全部菜单，Default is true
@@ -108,6 +108,15 @@ public class WKHorizontalMenuView: UIView {
         }
     }
     
+    @IBInspectable public var underlineHeight: CGFloat {
+        set {
+            config.underlineHeight = newValue
+        }
+        get {
+            return config.underlineHeight
+        }
+    }
+    
     // MARK: Init
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -125,9 +134,14 @@ public class WKHorizontalMenuView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         addSubview(scrollView)
         
-        underlineView = UIView(frame: CGRect(origin: CGPoint(x: 10.0, y: self.height-1), size: CGSize(width: 60, height: 1)))
+        underlineView = UIView(frame: CGRect(origin: CGPoint(x: self.spacing, y: self.height - underlineHeight), size: CGSize(width: self.itemWidth - spacing * 2, height: underlineHeight)))
         underlineView.backgroundColor = underLineColor
         scrollView.addSubview(underlineView)
+    }
+    
+    var itemWidth: CGFloat {
+        let itemW = self.width / CGFloat(self.menuItems.count)
+        return config.scrollEnable ? 80.0 : itemW
     }
     
     func configItems() {
@@ -137,25 +151,45 @@ public class WKHorizontalMenuView: UIView {
             }
         }
         var x: CGFloat = 0.0
-        var w: CGFloat {
-            let itemW = self.width / CGFloat(self.menuItems.count)
-            
-            return config.scrollEnable ? 80.0 : itemW
-        }
+        
+        
+        var idx = 0
         
         for title in menuItems {
-            let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: w, height: self.height))
+            let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: itemWidth, height: self.height))
             item.titleLabel.text = title
-            item.titleLabel.font = UIFont.systemFontOfSize(textFontSize)
-            item.titleLabel.textColor = textColor
-            item.itemWidth = w
-            x += w
+            if idx == selectedIndex {
+                item.titleLabel.font = UIFont.systemFontOfSize(selectFontSize)
+                item.titleLabel.textColor = selectTextColor
+            }
+            else {
+                item.titleLabel.font = UIFont.systemFontOfSize(textFontSize)
+                item.titleLabel.textColor = textColor
+            }
+            
+            item.itemWidth = itemWidth
+            x += itemWidth
+            idx += 1
             item.addTarget(self, action: #selector(itemAction), forControlEvents: .TouchUpInside)
             scrollView.addSubview(item)
             itemViews.append(item)
         }
         underlineView.backgroundColor = underLineColor
+        underlineView.size = CGSize(width: itemWidth - spacing * 2, height: underlineHeight)
         scrollView.contentSize = CGSize(width: x, height: self.height)
+    }
+    
+    public override func layoutSubviews() {
+        //
+        var x: CGFloat = 0.0
+        for item in itemViews {
+            item.frame = CGRect(x: x, y: 0, width: itemWidth, height: self.height)
+            item.itemWidth = itemWidth
+            x += itemWidth
+        }
+        underlineView.size = CGSize(width: itemWidth - spacing * 2, height: underlineHeight)
+        scrollView.contentSize = CGSize(width: x, height: self.height)
+        super.layoutSubviews()
     }
     
     @objc func itemAction(sender: HorizontalMenuItemView) {
@@ -165,17 +199,15 @@ public class WKHorizontalMenuView: UIView {
     }
     
     func updateSelectItem(oldIndex: Int) {
-        let oldItem = itemViews[oldIndex] as HorizontalMenuItemView
+        
         if oldIndex == selectedIndex {
-            oldItem.titleLabel.font = UIFont.systemFontOfSize(textFontSize)
-            oldItem.titleLabel.textColor = self.textColor
             return
         }
-        
+        let oldItem = itemViews[oldIndex] as HorizontalMenuItemView
         let newItem = itemViews[selectedIndex] as HorizontalMenuItemView
         
         UIView.animateWithDuration(0.4, animations: { [weak self, newItem, oldItem] in
-            self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.left+10, y: newItem.height - 1), size: (self?.underlineView.size)!)
+            self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.left + (self?.spacing)!, y: newItem.height - (self?.underlineHeight)!), size: (self?.underlineView.size)!)
             newItem.titleLabel.font = UIFont.systemFontOfSize((self?.selectFontSize)!)
             newItem.titleLabel.textColor = self?.selectTextColor
             oldItem.titleLabel.font = UIFont.systemFontOfSize((self?.textFontSize)!)
@@ -219,5 +251,6 @@ public struct ItemConfig {
     public var textFontSize: CGFloat = 13.0
     public var selectTextFontSize: CGFloat = 14.0
     public var underlineColor: UIColor = UIColor.blueColor()
+    public var underlineHeight: CGFloat = 1.0
     public var scrollEnable: Bool = true
 }

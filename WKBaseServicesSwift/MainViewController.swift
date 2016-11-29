@@ -10,40 +10,14 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    @IBOutlet weak var demoView: UIView!
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var menuView: WKHorizontalMenuView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        demoView.addLeftLine(UIColor.yellowColor(), top: 15, bottom: 15)
-        demoView.addRightLine(UIColor.greenColor(), top: 15, bottom: 15)
-        demoView.addTopLine(UIColor.grayColor(), leading: 15, tailing: 15)
-        demoView.addBottomLine(UIColor.redColor(), leading: 15, tailing: 15)
-
-        let dn = NSDecimalNumber.init(float: 0.01)
-        if dn.isGreaterThanAndEqualZero() {
-            textView.text = dn.currenyString()
-        }
+        menuView.menuItems = ["全部", "待确认", "待进场", "已完成", "其它"]
         
-        let name = "郭伟坤";
-        textView.text = name.pinyin()
-        
-        imageView.image = WKQRCodeGenerator.qrCode("", size: CGSize(width: 200.0, height: 200.0), logo: UIImage.image(UIColor.brownColor(), size: CGSize(width: 40, height: 40)))
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated);
-    }
-
-    
-    @IBAction func testAction(sender: AnyObject) {
-        demoView.clearSeparatorLine()
-        WKAlertController.actionSheet("test", defaluts: ["Defalut"]) { (action) in
-            
-        }
     }
 }
 
