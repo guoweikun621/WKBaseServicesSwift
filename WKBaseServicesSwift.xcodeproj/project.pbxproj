@@ -24,6 +24,7 @@
 		C8AA35AE1D951B4600AA5CB1 /* UIViewCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A41D951B4600AA5CB1 /* UIViewCategory.swift */; };
 		C8AA35AF1D951B4600AA5CB1 /* WKCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */; };
 		C8B46E921DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */; };
+		C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */; };
 		C8EDCC791D9E33B7006F9916 /* WKBaseServices.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */; };
 		C8EDCC7D1D9E3581006F9916 /* WKPhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EDCC7C1D9E3581006F9916 /* WKPhotoPreviewViewController.swift */; };
 		C8EDCC811D9E36A3006F9916 /* WKPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EDCC801D9E36A3006F9916 /* WKPhotoBrowserViewController.swift */; };
@@ -49,6 +50,7 @@
 		C8AA35A41D951B4600AA5CB1 /* UIViewCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewCategory.swift; sourceTree = "<group>"; };
 		C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCheckBox.swift; sourceTree = "<group>"; };
 		C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKQRCodeGenerator.swift; sourceTree = "<group>"; };
+		C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKHorizontalMenuView.swift; sourceTree = "<group>"; };
 		C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WKBaseServices.bundle; sourceTree = "<group>"; };
 		C8EDCC7C1D9E3581006F9916 /* WKPhotoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPhotoPreviewViewController.swift; sourceTree = "<group>"; };
 		C8EDCC801D9E36A3006F9916 /* WKPhotoBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPhotoBrowserViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		C8AA35A31D951B4600AA5CB1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */,
 				C8AA35A41D951B4600AA5CB1 /* UIViewCategory.swift */,
 				C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */,
 			);
@@ -244,6 +247,7 @@
 				C8AA35A91D951B4600AA5CB1 /* StringCategory.swift in Sources */,
 				C8AA35A61D951B4600AA5CB1 /* NSDateCategory.swift in Sources */,
 				C8AA35A81D951B4600AA5CB1 /* NSLocalCategory.swift in Sources */,
+				C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */,
 				C8AA35AE1D951B4600AA5CB1 /* UIViewCategory.swift in Sources */,
 				C8AA35AA1D951B4600AA5CB1 /* UIColorCategory.swift in Sources */,
 				C8B46E921DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift in Sources */,
