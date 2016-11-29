@@ -13,7 +13,7 @@ import UIKit
 }
 
 @IBDesignable
-class WKHorizontalMenuView: UIView {
+public class WKHorizontalMenuView: UIView {
     
     var delegate: WKHorizontalMenuDelegate?
     var didSelctedItem: ((oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) ->Void)?
@@ -85,7 +85,7 @@ class WKHorizontalMenuView: UIView {
         setupView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupView()
     }
@@ -163,13 +163,13 @@ class WKHorizontalMenuView: UIView {
     }
 }
 
-class HorizontalMenuItemView: UIControl {
+public class HorizontalMenuItemView: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -185,7 +185,7 @@ class HorizontalMenuItemView: UIControl {
     }
 }
 
-struct ItemConfig {
+public struct ItemConfig {
     var textColor: UIColor = UIColor.color("333333")
     var selectedTextColor: UIColor = UIColor.blueColor()
     var textFontSize: CGFloat = 13.0
