@@ -131,7 +131,7 @@ class WKHorizontalMenuView: UIView {
     func updateSelectItem(oldIndex: Int) {
         let oldItem = itemViews[oldIndex] as HorizontalMenuItemView
         if oldIndex == selectedIndex {
-            oldItem.titleLabel.font = UIFont.systemFontOfSize(self.textFontSize)
+            oldItem.titleLabel.font = UIFont.systemFontOfSize(textFontSize)
             oldItem.titleLabel.textColor = self.textColor
             return
         }
