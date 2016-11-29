@@ -17,10 +17,12 @@ public class WKHorizontalMenuView: UIView {
     
     public var delegate: WKHorizontalMenuDelegate?
     public var didSelctedItem: ((oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) ->Void)?
-    
-    
+
     var scrollView: UIScrollView!
     var underlineView: UIView!
+    
+    
+    /// 选中索引
     public var selectedIndex: Int = 0 {
         didSet {
             updateSelectItem(oldValue)
@@ -28,6 +30,7 @@ public class WKHorizontalMenuView: UIView {
     }
     
     
+    /// 菜单列表数组
     public var menuItems: [String] = [String]() {
         didSet {
             // 更新菜单
@@ -37,7 +40,21 @@ public class WKHorizontalMenuView: UIView {
     
     private var config = ItemConfig()
     private var itemViews: [HorizontalMenuItemView] = [HorizontalMenuItemView]()
+    private let spacing = 8.0
     
+    
+    /// 是否可以滚动，如No，则一页显示全部菜单，Default is true
+    @IBInspectable public var scrollEnable: Bool {
+        set {
+            config.scrollEnable = newValue
+        }
+        get {
+            return config.scrollEnable
+        }
+    }
+    
+    
+    /// 未选中字体大小
     @IBInspectable public var textFontSize: CGFloat {
         set {
             config.textFontSize = newValue
@@ -46,6 +63,9 @@ public class WKHorizontalMenuView: UIView {
             return config.textFontSize
         }
     }
+    
+    
+    /// 选中字体大小
     @IBInspectable public var selectFontSize: CGFloat {
         set {
             config.selectTextFontSize = newValue
@@ -54,6 +74,9 @@ public class WKHorizontalMenuView: UIView {
             return config.selectTextFontSize
         }
     }
+    
+    
+    /// 未选中字体颜色
     @IBInspectable public var textColor: UIColor {
         set {
             config.textColor = newValue
@@ -62,6 +85,9 @@ public class WKHorizontalMenuView: UIView {
             return config.textColor
         }
     }
+    
+    
+    /// 选中字体颜色
     @IBInspectable public var selectTextColor: UIColor {
         set {
             config.selectedTextColor = newValue
@@ -70,6 +96,9 @@ public class WKHorizontalMenuView: UIView {
             return config.selectedTextColor
         }
     }
+    
+    
+    /// 选中下划线颜色
     @IBInspectable public var underLineColor: UIColor {
         set {
             config.underlineColor = newValue
@@ -108,18 +137,25 @@ public class WKHorizontalMenuView: UIView {
             }
         }
         var x: CGFloat = 0.0
+        var w: CGFloat {
+            let itemW = self.width / CGFloat(self.menuItems.count)
+            
+            return config.scrollEnable ? 80.0 : itemW
+        }
+        
         for title in menuItems {
-            let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: 80, height: self.height))
+            let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: w, height: self.height))
             item.titleLabel.text = title
             item.titleLabel.font = UIFont.systemFontOfSize(textFontSize)
             item.titleLabel.textColor = textColor
-            x += 80
+            item.itemWidth = w
+            x += w
             item.addTarget(self, action: #selector(itemAction), forControlEvents: .TouchUpInside)
             scrollView.addSubview(item)
             itemViews.append(item)
         }
         underlineView.backgroundColor = underLineColor
-        scrollView.contentSize = CGSize(width: x + 80, height: self.height)
+        scrollView.contentSize = CGSize(width: x, height: self.height)
     }
     
     @objc func itemAction(sender: HorizontalMenuItemView) {
@@ -165,6 +201,7 @@ public class HorizontalMenuItemView: UIControl {
     }
     
     public var titleLabel: UILabel!
+    public var itemWidth: CGFloat?
     
     func setupView() {
         backgroundColor = UIColor.clearColor()
@@ -182,4 +219,5 @@ public struct ItemConfig {
     public var textFontSize: CGFloat = 13.0
     public var selectTextFontSize: CGFloat = 14.0
     public var underlineColor: UIColor = UIColor.blueColor()
+    public var scrollEnable: Bool = true
 }
