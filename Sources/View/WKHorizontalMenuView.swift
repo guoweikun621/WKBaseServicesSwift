@@ -129,10 +129,13 @@ class WKHorizontalMenuView: UIView {
     }
     
     func updateSelectItem(oldIndex: Int) {
+        let oldItem = itemViews[oldIndex] as HorizontalMenuItemView
         if oldIndex == selectedIndex {
+            oldItem.titleLabel.font = UIFont.systemFontOfSize(self.textFontSize)
+            oldItem.titleLabel.textColor = self.textColor
             return
         }
-        let oldItem = itemViews[oldIndex] as HorizontalMenuItemView
+        
         let newItem = itemViews[selectedIndex] as HorizontalMenuItemView
         
         UIView.animateWithDuration(0.4, animations: { [weak self, newItem, oldItem] in
