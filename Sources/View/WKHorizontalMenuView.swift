@@ -15,7 +15,7 @@ import UIKit
 @IBDesignable
 public class WKHorizontalMenuView: UIView {
     
-    public var delegate: WKHorizontalMenuDelegate?
+    public weak var delegate: WKHorizontalMenuDelegate?
     public var didSelctedItem: ((oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) ->Void)?
 
     var scrollView: UIScrollView!
