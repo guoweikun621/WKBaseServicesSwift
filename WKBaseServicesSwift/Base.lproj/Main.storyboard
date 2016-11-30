@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sal-Ss-eZS" customClass="WKHorizontalMenuView" customModule="WKBaseServicesSwift" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="8Tn-Pd-F1L"/>
@@ -31,12 +32,27 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="scrollEnable" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="s01-WT-EaS" customClass="WKPlaceholderTextView" customModule="WKBaseServicesSwift" customModuleProvider="target">
+                                <rect key="frame" x="16" y="78" width="343" height="86"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="86" id="INg-Tv-Scj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请输入内容"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="s01-WT-EaS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="1wq-JM-R0k"/>
                             <constraint firstItem="Sal-Ss-eZS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3bc-Qx-0Cs"/>
                             <constraint firstAttribute="trailing" secondItem="Sal-Ss-eZS" secondAttribute="trailing" id="Odw-NH-sYf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s01-WT-EaS" secondAttribute="trailing" id="cYa-C0-4cq"/>
                             <constraint firstItem="Sal-Ss-eZS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hrK-Vz-U9h"/>
+                            <constraint firstItem="s01-WT-EaS" firstAttribute="top" secondItem="Sal-Ss-eZS" secondAttribute="bottom" constant="8" id="m9a-7J-5Bo"/>
                         </constraints>
                     </view>
                     <connections>
@@ -45,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="59.820089955022496"/>
+            <point key="canvasLocation" x="-3.75" y="59.154929577464792"/>
         </scene>
     </scenes>
 </document>
