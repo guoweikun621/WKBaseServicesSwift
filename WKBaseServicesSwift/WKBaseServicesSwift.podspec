@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
 
   s.source       = { :git => "https://github.com/guoweikun621/WKBaseServicesSwift.git", :tag => s.version }
-  s.source_files  = "Sources/**/*.swift", "Sources/CCommonCrypto/*.modulemap"
+  s.source_files  = "Sources/**/*.swift", "Sources/**/*.h"
 
   s.frameworks = "UIKit", "Foundation"
   s.requires_arc = true
