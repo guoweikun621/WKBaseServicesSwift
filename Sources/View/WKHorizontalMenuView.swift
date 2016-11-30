@@ -242,6 +242,11 @@ public class HorizontalMenuItemView: UIControl {
         titleLabel.backgroundColor = UIColor.clearColor()
         addSubview(titleLabel)
     }
+    
+    public override func layoutSubviews() {
+        titleLabel.frame = self.bounds
+        super.layoutSubviews()
+    }
 }
 
 public struct ItemConfig {
