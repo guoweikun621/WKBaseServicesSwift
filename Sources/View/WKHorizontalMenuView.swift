@@ -180,6 +180,7 @@ public class WKHorizontalMenuView: UIView {
     
     public override func layoutSubviews() {
         //
+        scrollView.frame = self.bounds
         var x: CGFloat = 0.0
         for item in itemViews {
             item.frame = CGRect(x: x, y: 0, width: itemWidth, height: self.height)
