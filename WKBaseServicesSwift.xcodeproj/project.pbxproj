@@ -26,7 +26,6 @@
 		C8B46E921DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */; };
 		C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */; };
 		C8DD08651DEE593B0094771C /* WKPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */; };
-		C8DD087A1DEEB4FD0094771C /* WKBaseServicesSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C8DD08791DEEB4FD0094771C /* WKBaseServicesSwift.podspec */; };
 		C8EDCC791D9E33B7006F9916 /* WKBaseServices.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */; };
 		C8EDCC7D1D9E3581006F9916 /* WKPhotoPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EDCC7C1D9E3581006F9916 /* WKPhotoPreviewViewController.swift */; };
 		C8EDCC811D9E36A3006F9916 /* WKPhotoBrowserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8EDCC801D9E36A3006F9916 /* WKPhotoBrowserViewController.swift */; };
@@ -54,7 +53,6 @@
 		C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKQRCodeGenerator.swift; sourceTree = "<group>"; };
 		C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKHorizontalMenuView.swift; sourceTree = "<group>"; };
 		C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPlaceholderTextView.swift; sourceTree = "<group>"; };
-		C8DD08791DEEB4FD0094771C /* WKBaseServicesSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WKBaseServicesSwift.podspec; sourceTree = "<group>"; };
 		C8DD087F1DEEB7A50094771C /* WKBaseServicesSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKBaseServicesSwift-Bridging-Header.h"; sourceTree = "<group>"; };
 		C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WKBaseServices.bundle; sourceTree = "<group>"; };
 		C8EDCC7C1D9E3581006F9916 /* WKPhotoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPhotoPreviewViewController.swift; sourceTree = "<group>"; };
@@ -103,7 +101,6 @@
 		C84575221D3CCCF2007C936A /* WKBaseServicesSwift */ = {
 			isa = PBXGroup;
 			children = (
-				C8DD08791DEEB4FD0094771C /* WKBaseServicesSwift.podspec */,
 				C84575251D3CCCF2007C936A /* MainViewController.swift */,
 				C84575271D3CCCF2007C936A /* Main.storyboard */,
 				C830204E1D49E54100AC9142 /* Supporting Files */,
@@ -241,7 +238,6 @@
 				C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */,
 				C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */,
 				C8EDCC791D9E33B7006F9916 /* WKBaseServices.bundle in Resources */,
-				C8DD087A1DEEB4FD0094771C /* WKBaseServicesSwift.podspec in Resources */,
 				C84575291D3CCCF2007C936A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
