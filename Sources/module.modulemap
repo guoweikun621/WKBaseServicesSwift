@@ -4,3 +4,8 @@ framework module WKBaseServicesSwift {
   export *
   module * { export * }
 }
+
+module CCommonCrypto {
+    header "/usr/include/CommonCrypto/CommonCrypto.h"
+    export *
+}
