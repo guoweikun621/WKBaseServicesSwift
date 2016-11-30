@@ -53,7 +53,7 @@ extension String {
         return str.lowercaseString;
     }
     
-    var md5: String! {
+    public var md5: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
@@ -62,7 +62,7 @@ extension String {
         return stringFromBytes(result, length: digestLen)
     }
     
-    var sha1: String! {
+    public var sha1: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
         let digestLen = Int(CC_SHA1_DIGEST_LENGTH)
@@ -71,7 +71,7 @@ extension String {
         return stringFromBytes(result, length: digestLen)
     }
     
-    var sha256String: String! {
+    public var sha256String: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
         let digestLen = Int(CC_SHA256_DIGEST_LENGTH)
@@ -80,7 +80,7 @@ extension String {
         return stringFromBytes(result, length: digestLen)
     }
     
-    var sha512String: String! {
+    public var sha512String: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
         let digestLen = Int(CC_SHA512_DIGEST_LENGTH)
