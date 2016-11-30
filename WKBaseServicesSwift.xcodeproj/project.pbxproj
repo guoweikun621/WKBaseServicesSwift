@@ -53,7 +53,7 @@
 		C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKQRCodeGenerator.swift; sourceTree = "<group>"; };
 		C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKHorizontalMenuView.swift; sourceTree = "<group>"; };
 		C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPlaceholderTextView.swift; sourceTree = "<group>"; };
-		C8DD087F1DEEB7A50094771C /* WKBaseServicesSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WKBaseServicesSwift-Bridging-Header.h"; sourceTree = "<group>"; };
+		C8DD08801DEEC7370094771C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WKBaseServices.bundle; sourceTree = "<group>"; };
 		C8EDCC7C1D9E3581006F9916 /* WKPhotoPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPhotoPreviewViewController.swift; sourceTree = "<group>"; };
 		C8EDCC801D9E36A3006F9916 /* WKPhotoBrowserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPhotoBrowserViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +111,7 @@
 		C8AA35971D951B4600AA5CB1 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				C8DD08801DEEC7370094771C /* module.modulemap */,
 				C8EDCC771D9E338A006F9916 /* Resources */,
 				C8AA35981D951B4600AA5CB1 /* Category */,
 				C8AA359F1D951B4600AA5CB1 /* Common */,
@@ -167,7 +168,6 @@
 		C8EDCC771D9E338A006F9916 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				C8DD087F1DEEB7A50094771C /* WKBaseServicesSwift-Bridging-Header.h */,
 				C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */,
 			);
 			path = Resources;
@@ -397,8 +397,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoweikun.WKBaseServicesSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Resources/WKBaseServicesSwift-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 			};
@@ -417,8 +417,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoweikun.WKBaseServicesSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "Sources/Resources/WKBaseServicesSwift-Bridging-Header.h";
+				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
