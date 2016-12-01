@@ -9,14 +9,14 @@
 import UIKit
 
 @objc public protocol WKHorizontalMenuDelegate {
-    optional func didSelectItem(oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) -> Void
+    optional func didSelectItem(menu: WKHorizontalMenuView, oldIndex: Int, selectedIndex: Int) -> Void
 }
 
 @IBDesignable
 public class WKHorizontalMenuView: UIView {
     
     public weak var delegate: WKHorizontalMenuDelegate?
-    public var didSelctedItem: ((oldItem: HorizontalMenuItemView, selectedItem: HorizontalMenuItemView) ->Void)?
+    public var didSelctedItem: ((menu: WKHorizontalMenuView, oldIndex: Int, selectedIndex: Int) ->Void)?
 
     var scrollView: UIScrollView!
     var underlineView: UIView!
@@ -217,8 +217,8 @@ public class WKHorizontalMenuView: UIView {
         }
 
         // 处理回调方法
-        didSelctedItem?(oldItem: oldItem, selectedItem: newItem)
-        delegate?.didSelectItem?(oldItem, selectedItem: newItem)
+        didSelctedItem?(menu: self, oldIndex: oldIndex, selectedIndex: selectedIndex)
+        delegate?.didSelectItem?(self, oldIndex: oldIndex, selectedIndex: selectedIndex)
     }
 }
 
