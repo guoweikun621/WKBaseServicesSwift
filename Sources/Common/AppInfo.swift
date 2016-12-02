@@ -54,6 +54,22 @@ public class Device {
     public static func size() -> CGSize {
         return UIScreen.mainScreen().bounds.size
     }
+    
+    public static func isPhone5() -> Bool {
+        return size().height == 568
+    }
+    
+    public static func isPhone4() -> Bool {
+        return size().height == 480
+    }
+    
+    public static func isPhone6() -> Bool {
+        return size().height == 667
+    }
+    
+    public static func isPhonePlus() -> Bool {
+        return size().height == 736
+    }
 }
 
 

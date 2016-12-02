@@ -19,8 +19,8 @@ extension NSDate {
      - returns: 返回格式化后日期字符串
      */
     public func formtter(formatterStyle: String) -> String {
-        let formater = NSDateFormatter.init()
-        formater.locale = NSLocale.init(localeIdentifier: "zh_CN")
+        let formater = NSDateFormatter()
+        formater.locale = NSLocale.cnLocal()
         formater.dateFormat = formatterStyle
         return formater.stringFromDate(self)
     }
@@ -32,5 +32,13 @@ extension NSDate {
      */
     public func yyyyMMddHHmmss() -> String {
         return self.formtter("yyyy-MM-dd HH:mm:ss")
+    }
+    
+    
+    /// 格式化为 yyyy-MM-dd
+    ///
+    /// - Returns: 返回日期字符串
+    public func yyyyMMdd() -> String {
+        return formtter("yyyy-MM-dd")
     }
 }

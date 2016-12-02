@@ -16,7 +16,7 @@ extension NSLocale {
      - returns: NSLocal
      */
     public static func cnLocal() -> NSLocale {
-        return NSLocale.init(localeIdentifier: "zh_CN")
+        return NSLocale(localeIdentifier: "zh_CN")
     }
     
     /**

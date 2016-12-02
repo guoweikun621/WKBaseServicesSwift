@@ -53,6 +53,8 @@ extension String {
         return str.lowercaseString;
     }
     
+    
+    /// MD5
     public var md5: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
