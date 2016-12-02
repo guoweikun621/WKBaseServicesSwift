@@ -28,6 +28,10 @@ extension NSLocale {
         return NSLocale.cnLocal().objectForKey(NSLocaleCurrencySymbol) as? String
     }
     
+    
+    /// 人民币Code
+    ///
+    /// - Returns: code
     public static func cnCurrenyCode() -> String? {
         return NSLocale.cnLocal().objectForKey(NSLocaleCurrencyCode) as? String
     }

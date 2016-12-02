@@ -55,18 +55,34 @@ public class Device {
         return UIScreen.mainScreen().bounds.size
     }
     
+    
+    /// 判断是否 iPhone5 尺寸设备
+    ///
+    /// - Returns: Bool
     public static func isPhone5() -> Bool {
         return size().height == 568
     }
     
+    
+    /// 判断是否 iPhone4 尺寸设备
+    ///
+    /// - Returns: Bool
     public static func isPhone4() -> Bool {
         return size().height == 480
     }
     
+    
+    /// 判断是否 iPhone6 尺寸设备
+    ///
+    /// - Returns: Bool
     public static func isPhone6() -> Bool {
         return size().height == 667
     }
     
+    
+    /// 判断是否 iPhone plus 尺寸设备
+    ///
+    /// - Returns: Bool
     public static func isPhonePlus() -> Bool {
         return size().height == 736
     }

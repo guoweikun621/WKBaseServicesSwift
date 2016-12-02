@@ -14,6 +14,8 @@ public class WKPlaceholderTextView: UITextView {
     
     private var placeholderLabel: UILabel!
     
+    
+    /// 占位符
     @IBInspectable public var placeholder: String? {
         set {
             placeholderLabel.text = newValue
@@ -22,6 +24,9 @@ public class WKPlaceholderTextView: UITextView {
             return placeholderLabel.text
         }
     }
+    
+    
+    /// 占位符颜色
     @IBInspectable public var placeholderColor: UIColor? {
         set {
             placeholderLabel.textColor = newValue

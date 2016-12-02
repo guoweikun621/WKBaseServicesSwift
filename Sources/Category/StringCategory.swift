@@ -54,7 +54,7 @@ extension String {
     }
     
     
-    /// MD5
+    /// MD5 加密
     public var md5: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
@@ -64,6 +64,8 @@ extension String {
         return stringFromBytes(result, length: digestLen)
     }
     
+    
+    /// sha1 加密
     public var sha1: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
@@ -73,6 +75,8 @@ extension String {
         return stringFromBytes(result, length: digestLen)
     }
     
+    
+    /// sha256 加密
     public var sha256String: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
@@ -82,6 +86,8 @@ extension String {
         return stringFromBytes(result, length: digestLen)
     }
     
+    
+    /// sha512 加密
     public var sha512String: String! {
         let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
         let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))

@@ -55,6 +55,10 @@ extension NSDecimalNumber {
         return self.compare(NSDecimalNumber.zero()) != .OrderedAscending
     }
     
+    
+    /// 人民币格式化
+    ///
+    /// - Returns: ¥0.00
     public func currenyString() -> String {
         let numberFormatter = NSNumberFormatter.init()
         numberFormatter.numberStyle = .CurrencyStyle

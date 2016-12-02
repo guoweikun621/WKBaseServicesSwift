@@ -131,6 +131,8 @@ extension UIView {
         }
     }
     
+    
+    /// Center.x
     public var centerX: CGFloat {
         get { return self.center.x }
         set {
@@ -140,6 +142,8 @@ extension UIView {
         }
     }
     
+    
+    /// Center.y
     public var centerY: CGFloat {
         get { return self.center.y }
         set {

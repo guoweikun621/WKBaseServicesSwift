@@ -15,7 +15,11 @@ import UIKit
 @IBDesignable
 public class WKHorizontalMenuView: UIView {
     
+    
+    /// 代理
     public weak var delegate: WKHorizontalMenuDelegate?
+    
+    /// 回调方法
     public var didSelctedItem: ((menu: WKHorizontalMenuView, oldIndex: Int, selectedIndex: Int) ->Void)?
 
     var scrollView: UIScrollView!
@@ -250,6 +254,8 @@ public class HorizontalMenuItemView: UIControl {
     }
 }
 
+
+/// 选项配置项
 public struct ItemConfig {
     public var textColor: UIColor = UIColor.color("333333")
     public var selectedTextColor: UIColor = UIColor.blueColor()

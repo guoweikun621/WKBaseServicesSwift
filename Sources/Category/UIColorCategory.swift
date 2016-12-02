@@ -27,13 +27,13 @@ extension UIColor {
             return UIColor.blackColor()
         }
         
-        let rStirng = (hex as NSString).substringWithRange(NSMakeRange(0, 2)) //substring(with: NSMakeRange(0, 2))
+        let rStirng = (hex as NSString).substringWithRange(NSMakeRange(0, 2))
         let gString = (hex as NSString).substringWithRange(NSMakeRange(2, 2))
         let bString = (hex as NSString).substringWithRange(NSMakeRange(4, 2))
         var r: UInt32 = 0x0
         var g: UInt32 = 0x0
         var b: UInt32 = 0x0
-        NSScanner(string: rStirng).scanHexInt(&r)//scanHexInt32(&r)
+        NSScanner(string: rStirng).scanHexInt(&r)
         NSScanner(string: gString).scanHexInt(&g)
         NSScanner(string: bString).scanHexInt(&b)
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: alpha)
