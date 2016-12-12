@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
         
         menuView.menuItems = ["全部", "待确认", "待进场", "已完成", "其它"]
         
+        print("2016-01-01".dateValue("yyyy-MM-dd"))
     }
 }
 

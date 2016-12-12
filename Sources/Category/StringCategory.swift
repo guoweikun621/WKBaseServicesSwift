@@ -34,7 +34,9 @@ extension String {
      */
     public func dateValue(formatterStyle: String) -> NSDate? {
         let formatter = NSDateFormatter()
-//        formatter.locale = NSLocale.cnLocal()
+        formatter.calendar = NSCalendar.currentCalendar()
+        formatter.locale = NSLocale.currentLocale()
+        formatter.timeZone = NSTimeZone(abbreviation: "UTC")
         formatter.dateFormat = formatterStyle
         return formatter.dateFromString(self)
     }
