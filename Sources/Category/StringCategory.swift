@@ -34,7 +34,7 @@ extension String {
      */
     public func dateValue(formatterStyle: String) -> NSDate? {
         let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "zh_CN")
+//        formatter.locale = NSLocale.cnLocal()
         formatter.dateFormat = formatterStyle
         return formatter.dateFromString(self)
     }

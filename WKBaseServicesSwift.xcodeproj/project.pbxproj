@@ -206,7 +206,6 @@
 				TargetAttributes = {
 					C845751F1D3CCCF2007C936A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = A4ZVHKBMNS;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
@@ -391,7 +390,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A4ZVHKBMNS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -411,7 +410,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A4ZVHKBMNS;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
