@@ -8,42 +8,47 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var demoView: UIView!
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    let exampleList = ["HorizontalMenuView"]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad();
+ 
+    }
+    
+    // MARK: - UITableView Delegate And DataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exampleList.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MainTableCell")!
+        cell.textLabel?.text = exampleList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
         
-        _ = demoView.addLeftLine(color: UIColor.yellow, top: 15, bottom: 15)
-        _ = demoView.addRightLine(color: UIColor.green, top: 15, bottom: 15)
-        _ = demoView.addTopLine(color: UIColor.gray, leading: 15, tailing: 15)
-        _ = demoView.addBottomLine(color: UIColor.red, leading: 15, tailing: 15)
-
-        let dn = NSDecimalNumber(value: 0.01)
-        if dn.isGreaterThanAndEqualZero() {
-            textView.text = dn.currenyString()
+        if row == 0 {
+            performSegueWithIdentifier("HorizontalMenuSegue", sender: nil)
         }
-        
-        let name = "郭伟坤";
-        textView.text = name.pinyin()
-        
-        imageView.image = UIImage.image(color: UIColor.red)
-        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated);
-    }
-
-    
-    @IBAction func testAction(sender: AnyObject) {
-        // demoView.clearSeparatorLine()
-        _ = WKAlertController.actionSheet(message: "test", defaluts: ["Defalut"]) { (action) in
-            
+    // Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let identifier = segue.identifier
+        let controller = segue.destinationViewController
+        
+        // HorizontalMenuSegue
+        if identifier == "HorizontalMenuSegue" {
+            let menuController = controller as! HorizontalMenuViewController
+            menuController.idx = Int(arc4random_uniform(5))
         }
     }
 }

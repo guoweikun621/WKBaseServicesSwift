@@ -19,7 +19,14 @@ public class WKCheckBox: UIControl {
     @IBOutlet weak var delegate: WKCheckBoxDelegate?;
     var clickAction: ((_ box: WKCheckBox, _ on: Bool) -> Void)?
     
+    /// 代理
+    @IBOutlet public weak var delegate: WKCheckBoxDelegate?;
     
+    /// 回调方式
+    public var clickAction: ((_ box: WKCheckBox, _ on: Bool) -> Void)?
+    
+    
+    /// 复选框类型   圆或方
     public var type: BoxType = .Square {
         didSet {
             self.setNeedsDisplay()
@@ -38,6 +45,7 @@ public class WKCheckBox: UIControl {
         }
     }
     
+    /// 选中时的线条颜色
     @IBInspectable public var onStrokeColor: UIColor = UIColor.white {
         didSet {
             self.setNeedsDisplay()
@@ -45,12 +53,15 @@ public class WKCheckBox: UIControl {
     }
     
     
+    /// 选中时的填充色
     @IBInspectable public var onFillColor: UIColor = UIColor.color(hexString: "00cc00") {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
+    
+    /// 线条宽度
     @IBInspectable public var lineWidth: CGFloat = Device.scale() {
         didSet {
             self.setNeedsDisplay()
@@ -58,6 +69,7 @@ public class WKCheckBox: UIControl {
     }
     
     
+    /// 是否选中
     @IBInspectable public var on: Bool = false {
         didSet {
             self.setNeedsDisplay()
@@ -89,9 +101,9 @@ public class WKCheckBox: UIControl {
 
         let borderPath = type == .Square ? UIBezierPath(roundedRect: self.bounds, cornerRadius: 5) : UIBezierPath(ovalIn: self.bounds)
         borderPath.lineWidth = lineWidth;
-        borderPath.lineCapStyle = .butt
+        borderPath.lineCapStyle = .round
         borderPath.lineJoinStyle = .round
-        
+        borderPath.addClip()
         // 填充
         on ? onFillColor.set() : offFillColor.set()
         borderPath.fill()
@@ -120,6 +132,6 @@ public class WKCheckBox: UIControl {
 }
 
 
-@objc protocol WKCheckBoxDelegate {
+@objc public protocol WKCheckBoxDelegate {
     @objc optional func click(box: WKCheckBox, on: Bool)
 }

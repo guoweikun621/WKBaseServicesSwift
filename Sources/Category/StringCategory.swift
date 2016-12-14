@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CCommonCrypto
 
 extension String {
     
@@ -16,6 +17,13 @@ extension String {
             return self.characters.count
         }
     }
+    
+    
+    /// url 转码
+    public var urlEscaped: String {
+        return self.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? ""
+    }
+    
     
     /**
      日期值
@@ -27,10 +35,16 @@ extension String {
     public func dateValue(formatterStyle: String) -> Date? {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "zh_CN")
+        formatter.calendar = NSCalendar.currentCalendar()
+        formatter.timeZone = NSTimeZone(abbreviation: "UTC")
         formatter.dateFormat = formatterStyle
         return formatter.date(from: self)
     }
     
+    
+    /// 汉字转拼音
+    ///
+    /// - Returns: 拼音
     public func pinyin() -> String? {
         //转成了可变字符串
         let str = NSMutableString(string: self)
@@ -40,4 +54,59 @@ extension String {
         CFStringTransform(str as CFMutableString, nil, kCFStringTransformStripDiacritics, false);
         return str.lowercased;
     }
+    
+    
+    /// MD5 加密
+    public var md5: String! {
+        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
+        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        CC_MD5(str!, strLen, result)
+        return stringFromBytes(result, length: digestLen)
+    }
+    
+    
+    /// sha1 加密
+    public var sha1: String! {
+        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
+        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let digestLen = Int(CC_SHA1_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        CC_SHA1(str!, strLen, result)
+        return stringFromBytes(result, length: digestLen)
+    }
+    
+    
+    /// sha256 加密
+    public var sha256String: String! {
+        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
+        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let digestLen = Int(CC_SHA256_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        CC_SHA256(str!, strLen, result)
+        return stringFromBytes(result, length: digestLen)
+    }
+    
+    
+    /// sha512 加密
+    public var sha512String: String! {
+        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
+        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let digestLen = Int(CC_SHA512_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        CC_SHA512(str!, strLen, result)
+        return stringFromBytes(result, length: digestLen)
+    }
+
+    func stringFromBytes(bytes: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String{
+        let hash = NSMutableString()
+        for i in 0..<length {
+            hash.appendFormat("%02x", bytes[i])
+        }
+        bytes.dealloc(length)
+        return String(format: hash as String)
+    }
+    
+
 }

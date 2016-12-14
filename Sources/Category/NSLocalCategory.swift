@@ -28,6 +28,10 @@ extension Locale {
         return Locale.cnLocal().currencySymbol
     }
     
+    
+    /// 人民币Code
+    ///
+    /// - Returns: code
     public static func cnCurrenyCode() -> String? {
         return Locale.cnLocal().currencyCode
     }

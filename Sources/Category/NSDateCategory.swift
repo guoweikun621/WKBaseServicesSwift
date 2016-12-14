@@ -33,4 +33,12 @@ extension Date {
     public func yyyyMMddHHmmss() -> String {
         return self.formtter(formatterStyle: "yyyy-MM-dd HH:mm:ss")
     }
+    
+    
+    /// 格式化为 yyyy-MM-dd
+    ///
+    /// - Returns: 返回日期字符串
+    public func yyyyMMdd() -> String {
+        return formtter("yyyy-MM-dd")
+    }
 }
