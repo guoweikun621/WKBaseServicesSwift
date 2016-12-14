@@ -8,17 +8,48 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet weak var menuView: WKHorizontalMenuView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    let exampleList = ["HorizontalMenuView"]
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad();
+ 
+    }
+    
+    // MARK: - UITableView Delegate And DataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return exampleList.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MainTableCell")!
+        cell.textLabel?.text = exampleList[indexPath.row]
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let row = indexPath.row
         
-        menuView.menuItems = ["全部", "待确认", "待进场", "已完成", "其它"]
+        if row == 0 {
+            performSegueWithIdentifier("HorizontalMenuSegue", sender: nil)
+        }
+    }
+    
+    // Navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let identifier = segue.identifier
+        let controller = segue.destinationViewController
         
-        print("2016-01-01".dateValue("yyyy-MM-dd"))
+        // HorizontalMenuSegue
+        if identifier == "HorizontalMenuSegue" {
+            let menuController = controller as! HorizontalMenuViewController
+            menuController.idx = Int(arc4random_uniform(5))
+        }
     }
 }
 

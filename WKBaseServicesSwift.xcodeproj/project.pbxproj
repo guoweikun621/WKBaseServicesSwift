@@ -13,6 +13,7 @@
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
 		C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C845752A1D3CCCF2007C936A /* Assets.xcassets */; };
 		C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */; };
+		C85846AF1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85846AE1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift */; };
 		C8AA35A61D951B4600AA5CB1 /* NSDateCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35991D951B4600AA5CB1 /* NSDateCategory.swift */; };
 		C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberCategory.swift */; };
 		C8AA35A81D951B4600AA5CB1 /* NSLocalCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359B1D951B4600AA5CB1 /* NSLocalCategory.swift */; };
@@ -40,6 +41,7 @@
 		C845752A1D3CCCF2007C936A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C845752D1D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C845752F1D3CCCF2007C936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C85846AE1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalMenuViewController.swift; sourceTree = "<group>"; };
 		C8AA35991D951B4600AA5CB1 /* NSDateCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateCategory.swift; sourceTree = "<group>"; };
 		C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberCategory.swift; sourceTree = "<group>"; };
 		C8AA359B1D951B4600AA5CB1 /* NSLocalCategory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLocalCategory.swift; sourceTree = "<group>"; };
@@ -101,11 +103,20 @@
 		C84575221D3CCCF2007C936A /* WKBaseServicesSwift */ = {
 			isa = PBXGroup;
 			children = (
+				C85846AD1E00DE7900EA8EE4 /* Examples */,
 				C84575251D3CCCF2007C936A /* MainViewController.swift */,
 				C84575271D3CCCF2007C936A /* Main.storyboard */,
 				C830204E1D49E54100AC9142 /* Supporting Files */,
 			);
 			path = WKBaseServicesSwift;
+			sourceTree = "<group>";
+		};
+		C85846AD1E00DE7900EA8EE4 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				C85846AE1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift */,
+			);
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		C8AA35971D951B4600AA5CB1 /* Sources */ = {
@@ -256,6 +267,7 @@
 				C8AA35AE1D951B4600AA5CB1 /* UIViewCategory.swift in Sources */,
 				C8AA35AA1D951B4600AA5CB1 /* UIColorCategory.swift in Sources */,
 				C8B46E921DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift in Sources */,
+				C85846AF1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift in Sources */,
 				C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */,
 				C8AA35AD1D951B4600AA5CB1 /* UIAlertControllerEx.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
