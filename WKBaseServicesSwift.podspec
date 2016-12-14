@@ -21,5 +21,7 @@ Pod::Spec.new do |s|
 
   s.frameworks = "UIKit", "Foundation"
   s.requires_arc = true
+  s.xcconfig = { 'SWIFT_INCLUDE_PATHS' =>
+  '$(PODS_ROOT)/WKBaseServicesSwift/Sources' }
   s.preserve_paths = 'Sources/module.modulemap'
 end
