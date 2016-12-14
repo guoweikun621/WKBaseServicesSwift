@@ -14,12 +14,6 @@ import UIKit
 @IBDesignable
 extension UIView {
     
-    public struct LineConfig {
-        public var lineColor: UIColor
-        public var leading: CGFloat
-        public var trailing: CGFloat
-    }
-    
     /// layer 圆角半径
     @IBInspectable public var cornerRadius: CGFloat {
         set {
@@ -322,14 +316,6 @@ extension UIView {
         return self.addSeparatorLine(color: color, leading: leading, trailing: trailing, direction: .Bottom)
     }
     
-    public func addTopLine(config: (() -> LineConfig)? = nil) {
-//        var lineConfig: LineConfig = LineConfig(lineColor: UIColor.color(hexString: "e3e3e3"), leading: 0, trailing: 0)
-//        if let config = config {
-//            lineConfig = config()
-//        }
-//
-//        addSeparatorLine(color: lineConfig.lineColor, leading: lineConfig.leading, trailing: lineConfig.trailing, direction: .Top)
-    }
     
     /**
      清除自定义分隔线
