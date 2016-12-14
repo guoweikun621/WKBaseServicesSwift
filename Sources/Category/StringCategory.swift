@@ -21,7 +21,7 @@ extension String {
     
     /// url 转码
     public var urlEscaped: String {
-        return self.stringByAddingPercentEncodingWithAllowedCharacters(.URLHostAllowedCharacterSet()) ?? ""
+        return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
     }
     
     
@@ -35,8 +35,8 @@ extension String {
     public func dateValue(formatterStyle: String) -> Date? {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "zh_CN")
-        formatter.calendar = NSCalendar.currentCalendar()
-        formatter.timeZone = NSTimeZone(abbreviation: "UTC")
+        formatter.calendar = Calendar.current
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = formatterStyle
         return formatter.date(from: self)
     }
@@ -58,45 +58,45 @@ extension String {
     
     /// MD5 加密
     public var md5: String! {
-        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
-        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CC_LONG(self.lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         CC_MD5(str!, strLen, result)
-        return stringFromBytes(result, length: digestLen)
+        return stringFromBytes(bytes: result, length: digestLen)
     }
     
     
     /// sha1 加密
     public var sha1: String! {
-        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
-        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CC_LONG(self.lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_SHA1_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         CC_SHA1(str!, strLen, result)
-        return stringFromBytes(result, length: digestLen)
+        return stringFromBytes(bytes: result, length: digestLen)
     }
     
     
     /// sha256 加密
     public var sha256String: String! {
-        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
-        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CC_LONG(self.lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_SHA256_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         CC_SHA256(str!, strLen, result)
-        return stringFromBytes(result, length: digestLen)
+        return stringFromBytes(bytes: result, length: digestLen)
     }
     
     
     /// sha512 加密
     public var sha512String: String! {
-        let str = self.cStringUsingEncoding(NSUTF8StringEncoding)
-        let strLen = CC_LONG(self.lengthOfBytesUsingEncoding(NSUTF8StringEncoding))
+        let str = self.cString(using: String.Encoding.utf8)
+        let strLen = CC_LONG(self.lengthOfBytes(using: String.Encoding.utf8))
         let digestLen = Int(CC_SHA512_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>.alloc(digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         CC_SHA512(str!, strLen, result)
-        return stringFromBytes(result, length: digestLen)
+        return stringFromBytes(bytes: result, length: digestLen)
     }
 
     func stringFromBytes(bytes: UnsafeMutablePointer<CUnsignedChar>, length: Int) -> String{
@@ -104,7 +104,7 @@ extension String {
         for i in 0..<length {
             hash.appendFormat("%02x", bytes[i])
         }
-        bytes.dealloc(length)
+        bytes.deallocate(capacity: length)
         return String(format: hash as String)
     }
     

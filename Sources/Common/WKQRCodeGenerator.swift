@@ -19,13 +19,13 @@ public class WKQRCodeGenerator: NSObject {
     ///   - logo: 中心块logo
     /// - Returns: 返回二维码图片
     public class func qrCode(content: String, size: CGSize, logo: UIImage? = nil) -> UIImage? {
-        let contentData = content.dataUsingEncoding(NSUTF8StringEncoding)
+        let contentData = content.data(using: String.Encoding.utf8)
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setDefaults()
         filter?.setValue(contentData, forKey: "inputMessage")
         filter?.setValue("Q", forKey: "inputCorrectionLevel")
         let ci = filter?.outputImage
-        return createQRCode(ci, size: size, logo: logo)
+        return createQRCode(img: ci, size: size, logo: logo)
     }
     
     private class func createQRCode(img: CIImage?, size: CGSize, logo: UIImage? = nil) -> UIImage? {
@@ -34,22 +34,23 @@ public class WKQRCodeGenerator: NSObject {
             let scale = min(size.width / rect.width, size.height / rect.height)
             let s = CGSize(width: rect.width * scale, height: rect.height * scale)
             let cs = CGColorSpaceCreateDeviceGray()
-            let bitmapRef = CGBitmapContextCreate(nil, Int(s.width), Int(s.height), 8, 0, cs, 0)
+            let bitmapRef = CGContext(data: nil, width: Int(s.width), height: Int(s.height), bitsPerComponent: 8, bytesPerRow: 0, space: cs, bitmapInfo: 0)
             let context = CIContext(options: nil)
-            let bitmapImage = context.createCGImage(img!, fromRect: rect)
-            CGContextSetInterpolationQuality(bitmapRef!, .None)
-            CGContextScaleCTM(bitmapRef!, scale, scale)
-            CGContextDrawImage(bitmapRef!, rect, bitmapImage!)
-
-            // save
-            let scaledImage = CGBitmapContextCreateImage(bitmapRef!)
+            let bitmapImage = context.createCGImage(img!, from: rect)
+            bitmapRef!.interpolationQuality = .none
+            bitmapRef!.scaleBy(x: scale, y: scale)
+            // CGContextDrawImage(bitmapRef!, rect, bitmapImage!)
+            bitmapRef?.draw(bitmapImage!, in: rect)
             
-            let outputImage = UIImage(CGImage: scaledImage!)
+            // save
+            let scaledImage = bitmapRef!.makeImage()
+            
+            let outputImage = UIImage(cgImage: scaledImage!)
             UIGraphicsBeginImageContextWithOptions(outputImage.size, false, Device.scale())
-            outputImage.drawInRect(CGRect(origin: CGPointZero, size: size))
+            outputImage.draw(in: CGRect(origin: CGPoint.zero, size: size))
 
             if let waterImage = logo {
-                waterImage.drawInRect(CGRect(origin: CGPoint(x: (size.width - waterImage.size.width) / 2.0, y: (size.height - waterImage.size.height) / 2.0), size: waterImage.size))
+                waterImage.draw(in: CGRect(origin: CGPoint(x: (size.width - waterImage.size.width) / 2.0, y: (size.height - waterImage.size.height) / 2.0), size: waterImage.size))
             }
             let newImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()

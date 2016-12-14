@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public protocol WKHorizontalMenuDelegate {
-    optional func didSelectItem(menu: WKHorizontalMenuView, oldIndex: Int, selectedIndex: Int) -> Void
+    @objc optional func didSelectItem(menu: WKHorizontalMenuView, oldIndex: Int, selectedIndex: Int) -> Void
 }
 
 @IBDesignable
@@ -20,7 +20,7 @@ public class WKHorizontalMenuView: UIView {
     public weak var delegate: WKHorizontalMenuDelegate?
     
     /// 回调方法
-    public var didSelctedItem: ((menu: WKHorizontalMenuView, oldIndex: Int, selectedIndex: Int) ->Void)?
+    public var didSelctedItem: ((_ menu: WKHorizontalMenuView, _ oldIndex: Int, _ selectedIndex: Int) ->Void)?
 
     var scrollView: UIScrollView!
     var underlineView: UIView!
@@ -29,7 +29,7 @@ public class WKHorizontalMenuView: UIView {
     /// 选中索引
     public var selectedIndex: Int = 0 {
         didSet {
-            updateSelectItem(oldValue)
+            updateSelectItem(oldIndex: oldValue)
         }
     }
     
@@ -149,7 +149,7 @@ public class WKHorizontalMenuView: UIView {
     
     func configItems() {
         for v in scrollView.subviews {
-            if v.isKindOfClass(HorizontalMenuItemView) {
+            if v.isKind(of: HorizontalMenuItemView.self) {
                 v.removeFromSuperview()
             }
         }
@@ -162,18 +162,18 @@ public class WKHorizontalMenuView: UIView {
             let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: itemWidth, height: self.height))
             item.titleLabel.text = title
             if idx == selectedIndex {
-                item.titleLabel.font = UIFont.systemFontOfSize(selectFontSize)
+                item.titleLabel.font = UIFont.systemFont(ofSize: selectFontSize)
                 item.titleLabel.textColor = selectTextColor
             }
             else {
-                item.titleLabel.font = UIFont.systemFontOfSize(textFontSize)
+                item.titleLabel.font = UIFont.systemFont(ofSize: textFontSize)
                 item.titleLabel.textColor = textColor
             }
             
             item.itemWidth = itemWidth
             x += itemWidth
             idx += 1
-            item.addTarget(self, action: #selector(itemAction), forControlEvents: .TouchUpInside)
+            item.addTarget(self, action: #selector(itemAction), for: .touchUpInside)
             scrollView.addSubview(item)
             itemViews.append(item)
         }
@@ -198,7 +198,7 @@ public class WKHorizontalMenuView: UIView {
     
     @objc func itemAction(sender: HorizontalMenuItemView) {
         let selectTitle = sender.titleLabel.text ?? ""
-        let index = menuItems.indexOf(selectTitle) ?? 0
+        let index = menuItems.index(of: selectTitle) ?? 0
         self.selectedIndex = index
     }
     
@@ -210,19 +210,19 @@ public class WKHorizontalMenuView: UIView {
         let oldItem = itemViews[oldIndex] as HorizontalMenuItemView
         let newItem = itemViews[selectedIndex] as HorizontalMenuItemView
         
-        UIView.animateWithDuration(0.4, animations: { [weak self, newItem, oldItem] in
+        UIView.animate(withDuration: 0.4, animations: { [weak self, newItem, oldItem] in
             self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.left, y: newItem.height - (self?.underlineHeight)!), size: (self?.underlineView.size)!)
-            newItem.titleLabel.font = UIFont.systemFontOfSize((self?.selectFontSize)!)
+            newItem.titleLabel.font = UIFont.systemFont(ofSize: (self?.selectFontSize)!)
             newItem.titleLabel.textColor = self?.selectTextColor
-            oldItem.titleLabel.font = UIFont.systemFontOfSize((self?.textFontSize)!)
+            oldItem.titleLabel.font = UIFont.systemFont(ofSize: (self?.textFontSize)!)
             oldItem.titleLabel.textColor = self?.textColor
             }) { (flag) in
                 
         }
 
         // 处理回调方法
-        didSelctedItem?(menu: self, oldIndex: oldIndex, selectedIndex: selectedIndex)
-        delegate?.didSelectItem?(self, oldIndex: oldIndex, selectedIndex: selectedIndex)
+        didSelctedItem?(self, oldIndex, selectedIndex)
+        delegate?.didSelectItem?(menu: self, oldIndex: oldIndex, selectedIndex: selectedIndex)
     }
 }
 
@@ -240,11 +240,11 @@ public class HorizontalMenuItemView: UIControl {
     public var itemWidth: CGFloat?
     
     func setupView() {
-        backgroundColor = UIColor.clearColor()
+        backgroundColor = UIColor.clear
         
         titleLabel = UILabel(frame: self.bounds)
-        titleLabel.textAlignment = .Center
-        titleLabel.backgroundColor = UIColor.clearColor()
+        titleLabel.textAlignment = .center
+        titleLabel.backgroundColor = UIColor.clear
         addSubview(titleLabel)
     }
     
@@ -257,11 +257,11 @@ public class HorizontalMenuItemView: UIControl {
 
 /// 选项配置项
 public struct ItemConfig {
-    public var textColor: UIColor = UIColor.color("333333")
-    public var selectedTextColor: UIColor = UIColor.blueColor()
+    public var textColor: UIColor = UIColor.color(hexString: "333333")
+    public var selectedTextColor: UIColor = UIColor.blue
     public var textFontSize: CGFloat = 13.0
     public var selectTextFontSize: CGFloat = 14.0
-    public var underlineColor: UIColor = UIColor.blueColor()
+    public var underlineColor: UIColor = UIColor.blue
     public var underlineHeight: CGFloat = 1.0
     public var scrollEnable: Bool = true
 }

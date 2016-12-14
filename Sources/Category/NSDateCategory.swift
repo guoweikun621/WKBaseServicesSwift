@@ -39,6 +39,6 @@ extension Date {
     ///
     /// - Returns: 返回日期字符串
     public func yyyyMMdd() -> String {
-        return formtter("yyyy-MM-dd")
+        return formtter(formatterStyle: "yyyy-MM-dd")
     }
 }

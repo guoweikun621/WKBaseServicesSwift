@@ -15,10 +15,6 @@ public enum BoxType {
 
 @IBDesignable
 public class WKCheckBox: UIControl {
-    
-    @IBOutlet weak var delegate: WKCheckBoxDelegate?;
-    var clickAction: ((_ box: WKCheckBox, _ on: Bool) -> Void)?
-    
     /// 代理
     @IBOutlet public weak var delegate: WKCheckBoxDelegate?;
     

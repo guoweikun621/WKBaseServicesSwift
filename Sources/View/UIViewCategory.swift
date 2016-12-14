@@ -196,7 +196,7 @@ extension UIView {
             self.addConstraints([
                 NSLayoutConstraint(item: line, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: line, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: leading),
-                NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -trailing),
                 NSLayoutConstraint(item: line, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: lineHeight)])
 
             break
@@ -205,19 +205,19 @@ extension UIView {
             self.addConstraints([
                 NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: line, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: leading),
-                NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -trailing),
                 NSLayoutConstraint(item: line, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: lineHeight)])
         case .Top:
             self.addConstraints([
                 NSLayoutConstraint(item: line, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: line, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: leading),
-                NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: -trailing),
                 NSLayoutConstraint(item: line, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: lineHeight)])
         case .Bottom:
             self.addConstraints([
                 NSLayoutConstraint(item: line, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0),
                 NSLayoutConstraint(item: line, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: leading),
-                NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: -tailing),
+                NSLayoutConstraint(item: line, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: -trailing),
                 NSLayoutConstraint(item: line, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .height, multiplier: 1.0, constant: lineHeight)])
         }
         
@@ -319,15 +319,16 @@ extension UIView {
      - returns: 分隔线
      */
     public func addBottomLine(color: UIColor, leading: CGFloat, trailing: CGFloat) -> UIView {
-        return self.addSeparatorLine(color: color, leading: leading, trailing: tailing, direction: .Bottom)
+        return self.addSeparatorLine(color: color, leading: leading, trailing: trailing, direction: .Bottom)
     }
     
     public func addTopLine(config: (() -> LineConfig)? = nil) {
-        var lineConfig: LineConfig = LineConfig(lineColor: UIColor.color("e3e3e3"), leading: 0, trailing: 0)
-        if let config = config {
-            lineConfig = config()
-        }
-        addSeparatorLine(lineConfig.lineColor, leading: lineConfig.leading, trailing: lineConfig.trailing, direction: .Top)
+//        var lineConfig: LineConfig = LineConfig(lineColor: UIColor.color(hexString: "e3e3e3"), leading: 0, trailing: 0)
+//        if let config = config {
+//            lineConfig = config()
+//        }
+//
+//        addSeparatorLine(color: lineConfig.lineColor, leading: lineConfig.leading, trailing: lineConfig.trailing, direction: .Top)
     }
     
     /**

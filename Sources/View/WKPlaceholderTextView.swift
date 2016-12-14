@@ -51,18 +51,18 @@ public class WKPlaceholderTextView: UITextView {
         
         placeholderLabel = UILabel(frame: CGRect(origin: CGPoint(x: inset.left+2, y: inset.top), size: CGSize(width: self.width - 20, height: 20)))
         placeholderLabel.font = self.font
-        placeholderLabel.textColor = UIColor.color("cccccc")
+        placeholderLabel.textColor = UIColor.color(hexString: "cccccc")
         addSubview(placeholderLabel)
                 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(textChanged), name: UITextViewTextDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
     }
 
     func textChanged(notification: NSNotification) {
-        placeholderLabel.hidden = self.text.lenght > 0
+        placeholderLabel.isHidden = self.text.lenght > 0
     }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UITextViewTextDidChangeNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextViewTextDidChange, object: nil)
     }
     
 }
