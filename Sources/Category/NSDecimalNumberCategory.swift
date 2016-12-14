@@ -62,9 +62,9 @@ extension NSDecimalNumber {
     public func currenyString() -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
-        numberFormatter.locale = Locale.cnLocal()
-        numberFormatter.currencySymbol = Locale.cnCurrenySymbol()
-        numberFormatter.currencyCode = Locale.cnCurrenyCode()
+        numberFormatter.locale = NSLocale.cnLocal() as Locale!
+        numberFormatter.currencySymbol = NSLocale.cnCurrenySymbol()
+        numberFormatter.currencyCode = NSLocale.cnCurrenyCode()
         
         return numberFormatter.string(from: self)!
     }
