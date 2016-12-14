@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension Date {
+extension NSDate {
     
     /**
      格式化日期为String
@@ -19,10 +19,10 @@ extension Date {
      - returns: 返回格式化后日期字符串
      */
     public func formtter(formatterStyle: String) -> String {
-        let formater = DateFormatter.init()
+        let formater = DateFormatter()
         formater.locale = Locale(identifier: "zh_CN")
         formater.dateFormat = formatterStyle
-        return formater.string(from: self)
+        return formater.string(from: self as Date)
     }
     
     /**
