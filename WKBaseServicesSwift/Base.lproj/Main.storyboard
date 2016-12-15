@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--WKBaseServcies-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WKBaseServicesSwift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -48,7 +48,7 @@
                             <constraint firstAttribute="trailing" secondItem="Kvu-cE-G94" secondAttribute="trailing" id="hMJ-rn-cIo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VSu-DF-hcc"/>
+                    <navigationItem key="navigationItem" title="WKBaseServcies" id="VSu-DF-hcc"/>
                     <connections>
                         <outlet property="tableView" destination="Kvu-cE-G94" id="xVe-dh-p4Y"/>
                         <segue destination="ZAS-lx-svC" kind="show" identifier="HorizontalMenuSegue" id="Ypn-ts-2LV"/>
@@ -61,7 +61,7 @@
         <!--Horizontal Menu View Controller-->
         <scene sceneID="uqo-v5-L9L">
             <objects>
-                <viewController id="ZAS-lx-svC" customClass="HorizontalMenuViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ZAS-lx-svC" customClass="HorizontalMenuViewController" customModule="WKBaseServicesSwift" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GKw-qV-BYQ"/>
                         <viewControllerLayoutGuide type="bottom" id="9X8-B1-zU6"/>
@@ -86,7 +86,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="menuView" destination="Dmd-Lm-9wW" id="KS0-jd-Zeu"/>
+                        <outlet property="menuView" destination="Dmd-Lm-9wW" id="nhP-B8-AfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ru-Ol-Ntj" userLabel="First Responder" sceneMemberID="firstResponder"/>

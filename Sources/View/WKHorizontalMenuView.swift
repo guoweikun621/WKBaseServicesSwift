@@ -39,6 +39,7 @@ public class WKHorizontalMenuView: UIView {
         didSet {
             // 更新菜单
             configItems()
+            setNeedsLayout()
         }
     }
     
@@ -135,6 +136,9 @@ public class WKHorizontalMenuView: UIView {
         scrollView = UIScrollView(frame: self.bounds);
         scrollView.showsVerticalScrollIndicator = false
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.alwaysBounceVertical = false
+        scrollView.alwaysBounceHorizontal = true
+        scrollView.contentOffset = CGPoint.zero
         addSubview(scrollView)
         
         underlineView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: self.height - underlineHeight), size: CGSize(width: self.itemWidth, height: underlineHeight)))
@@ -185,13 +189,16 @@ public class WKHorizontalMenuView: UIView {
     public override func layoutSubviews() {
         //
         scrollView.frame = self.bounds
+        scrollView.contentOffset = CGPoint.zero
         var x: CGFloat = 0.0
         for item in itemViews {
             item.frame = CGRect(x: x, y: 0, width: itemWidth, height: self.height)
             item.itemWidth = itemWidth
             x += itemWidth
         }
-        underlineView.size = CGSize(width: itemWidth, height: underlineHeight)
+        let underX: CGFloat = itemWidth * CGFloat(selectedIndex)
+        
+        underlineView.frame = CGRect(origin: CGPoint(x: underX, y: self.height-self.underlineHeight), size: CGSize(width: itemWidth, height: underlineHeight))
         scrollView.contentSize = CGSize(width: x, height: self.height)
         super.layoutSubviews()
     }
@@ -211,7 +218,7 @@ public class WKHorizontalMenuView: UIView {
         let newItem = itemViews[selectedIndex] as HorizontalMenuItemView
         
         UIView.animate(withDuration: 0.4, animations: { [weak self, newItem, oldItem] in
-            self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.left, y: newItem.height - (self?.underlineHeight)!), size: (self?.underlineView.size)!)
+            self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.left, y: newItem.height - (self?.underlineHeight)!), size: CGSize(width: newItem.itemWidth!, height: (self?.underlineHeight)!))
             newItem.titleLabel.font = UIFont.systemFont(ofSize: (self?.selectFontSize)!)
             newItem.titleLabel.textColor = self?.selectTextColor
             oldItem.titleLabel.font = UIFont.systemFont(ofSize: (self?.textFontSize)!)
