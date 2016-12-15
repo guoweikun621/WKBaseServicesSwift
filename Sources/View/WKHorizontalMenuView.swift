@@ -138,6 +138,7 @@ public class WKHorizontalMenuView: UIView {
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.alwaysBounceVertical = false
         scrollView.alwaysBounceHorizontal = true
+        scrollView.contentInset = UIEdgeInsets.zero
         scrollView.contentOffset = CGPoint.zero
         addSubview(scrollView)
         
@@ -183,13 +184,13 @@ public class WKHorizontalMenuView: UIView {
         }
         underlineView.backgroundColor = underLineColor
         underlineView.size = CGSize(width: itemWidth, height: underlineHeight)
-        scrollView.contentSize = CGSize(width: x, height: self.height)
+        scrollView.contentSize = CGSize(width: x, height: 0)
     }
     
     public override func layoutSubviews() {
         //
         scrollView.frame = self.bounds
-        scrollView.contentOffset = CGPoint.zero
+        
         var x: CGFloat = 0.0
         for item in itemViews {
             item.frame = CGRect(x: x, y: 0, width: itemWidth, height: self.height)
@@ -199,7 +200,9 @@ public class WKHorizontalMenuView: UIView {
         let underX: CGFloat = itemWidth * CGFloat(selectedIndex)
         
         underlineView.frame = CGRect(origin: CGPoint(x: underX, y: self.height-self.underlineHeight), size: CGSize(width: itemWidth, height: underlineHeight))
-        scrollView.contentSize = CGSize(width: x, height: self.height)
+        scrollView.contentSize = CGSize(width: x, height: 0)
+        scrollView.contentOffset = CGPoint.zero
+        scrollView.contentInset = UIEdgeInsets.zero
         super.layoutSubviews()
     }
     
