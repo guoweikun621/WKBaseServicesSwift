@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class WKPlaceholderTextView: UITextView {
+open class WKPlaceholderTextView: UITextView {
     
     
     private var placeholderLabel: UILabel!
     
     
     /// 占位符
-    @IBInspectable public var placeholder: String? {
+    @IBInspectable open var placeholder: String? {
         set {
             placeholderLabel.text = newValue
         }
@@ -27,7 +27,7 @@ public class WKPlaceholderTextView: UITextView {
     
     
     /// 占位符颜色
-    @IBInspectable public var placeholderColor: UIColor? {
+    @IBInspectable open var placeholderColor: UIColor? {
         set {
             placeholderLabel.textColor = newValue
         }

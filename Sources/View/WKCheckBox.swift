@@ -14,7 +14,7 @@ public enum BoxType {
 }
 
 @IBDesignable
-public class WKCheckBox: UIControl {
+open class WKCheckBox: UIControl {
     /// 代理
     @IBOutlet public weak var delegate: WKCheckBoxDelegate?;
     
@@ -23,26 +23,26 @@ public class WKCheckBox: UIControl {
     
     
     /// 复选框类型   圆或方
-    public var type: BoxType = .Square {
+    open var type: BoxType = .Square {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var offStrokeColor: UIColor = UIColor.color(hexString: "666666") {
+    @IBInspectable open var offStrokeColor: UIColor = UIColor.color(hexString: "666666") {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var offFillColor: UIColor = UIColor.white {
+    @IBInspectable open var offFillColor: UIColor = UIColor.white {
         didSet {
             self.setNeedsDisplay()
         }
     }
     
     /// 选中时的线条颜色
-    @IBInspectable public var onStrokeColor: UIColor = UIColor.white {
+    @IBInspectable open var onStrokeColor: UIColor = UIColor.white {
         didSet {
             self.setNeedsDisplay()
         }
@@ -50,7 +50,7 @@ public class WKCheckBox: UIControl {
     
     
     /// 选中时的填充色
-    @IBInspectable public var onFillColor: UIColor = UIColor.color(hexString: "00cc00") {
+    @IBInspectable open var onFillColor: UIColor = UIColor.color(hexString: "00cc00") {
         didSet {
             self.setNeedsDisplay()
         }
@@ -58,7 +58,7 @@ public class WKCheckBox: UIControl {
     
     
     /// 线条宽度
-    @IBInspectable public var lineWidth: CGFloat = Device.scale() {
+    @IBInspectable open var lineWidth: CGFloat = Device.scale() {
         didSet {
             self.setNeedsDisplay()
         }
@@ -66,7 +66,7 @@ public class WKCheckBox: UIControl {
     
     
     /// 是否选中
-    @IBInspectable public var on: Bool = false {
+    @IBInspectable open var on: Bool = false {
         didSet {
             self.setNeedsDisplay()
         }
@@ -120,7 +120,7 @@ public class WKCheckBox: UIControl {
         }
     }
     
-    public override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         super.draw(rect);
         
         self.updateUI()

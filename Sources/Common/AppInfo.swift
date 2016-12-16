@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class Device {
+open class Device {
     
     /**
      获取iOS系统版本
@@ -89,7 +89,7 @@ public class Device {
 }
 
 
-public class App {
+open class App {
     /**
      获取当前app版本号
      

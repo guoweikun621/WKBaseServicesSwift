@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class WKQRCodeGenerator: NSObject {
+open class WKQRCodeGenerator: NSObject {
     
     
     /// 生成二维码
@@ -18,7 +18,7 @@ public class WKQRCodeGenerator: NSObject {
     ///   - size: 大小
     ///   - logo: 中心块logo
     /// - Returns: 返回二维码图片
-    public class func qrCode(content: String, size: CGSize, logo: UIImage? = nil) -> UIImage? {
+    open class func qrCode(content: String, size: CGSize, logo: UIImage? = nil) -> UIImage? {
         let contentData = content.data(using: String.Encoding.utf8)
         let filter = CIFilter(name: "CIQRCodeGenerator")
         filter?.setDefaults()

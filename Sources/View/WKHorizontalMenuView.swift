@@ -13,7 +13,7 @@ import UIKit
 }
 
 @IBDesignable
-public class WKHorizontalMenuView: UIView {
+open class WKHorizontalMenuView: UIView {
     
     
     /// 代理
@@ -27,7 +27,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 选中索引
-    public var selectedIndex: Int = 0 {
+    open var selectedIndex: Int = 0 {
         didSet {
             updateSelectItem(oldIndex: oldValue)
         }
@@ -35,7 +35,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 菜单列表数组
-    public var menuItems: [String] = [String]() {
+    open var menuItems: [String] = [String]() {
         didSet {
             // 更新菜单
             configItems()
@@ -48,7 +48,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 是否可以滚动，如No，则一页显示全部菜单，Default is true
-    @IBInspectable public var scrollEnable: Bool {
+    @IBInspectable open var scrollEnable: Bool {
         set {
             config.scrollEnable = newValue
         }
@@ -59,7 +59,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 未选中字体大小
-    @IBInspectable public var textFontSize: CGFloat {
+    @IBInspectable open var textFontSize: CGFloat {
         set {
             config.textFontSize = newValue
         }
@@ -70,7 +70,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 选中字体大小
-    @IBInspectable public var selectFontSize: CGFloat {
+    @IBInspectable open var selectFontSize: CGFloat {
         set {
             config.selectTextFontSize = newValue
         }
@@ -81,7 +81,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 未选中字体颜色
-    @IBInspectable public var textColor: UIColor {
+    @IBInspectable open var textColor: UIColor {
         set {
             config.textColor = newValue
         }
@@ -92,7 +92,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 选中字体颜色
-    @IBInspectable public var selectTextColor: UIColor {
+    @IBInspectable open var selectTextColor: UIColor {
         set {
             config.selectedTextColor = newValue
         }
@@ -103,7 +103,7 @@ public class WKHorizontalMenuView: UIView {
     
     
     /// 选中下划线颜色
-    @IBInspectable public var underLineColor: UIColor {
+    @IBInspectable open var underLineColor: UIColor {
         set {
             config.underlineColor = newValue
         }
@@ -112,7 +112,7 @@ public class WKHorizontalMenuView: UIView {
         }
     }
     
-    @IBInspectable public var underlineHeight: CGFloat {
+    @IBInspectable open var underlineHeight: CGFloat {
         set {
             config.underlineHeight = newValue
         }
@@ -187,7 +187,7 @@ public class WKHorizontalMenuView: UIView {
         scrollView.contentSize = CGSize(width: x, height: 0)
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         //
         scrollView.frame = self.bounds
         
