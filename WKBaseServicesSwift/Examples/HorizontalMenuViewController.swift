@@ -22,7 +22,7 @@ class HorizontalMenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         menuView.menuItems = ["全部", "随便", "都行", "看你", "其它"]
-        menuView.selectedIndex = 0
+        menuView.selectedIndex = Int(arc4random_uniform(4))
     }
 
     
