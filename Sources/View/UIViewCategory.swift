@@ -175,6 +175,7 @@ extension UIView {
         case Bottom
     }
     
+    @discardableResult
     private func addSeparatorLine(color: UIColor, leading: CGFloat, trailing: CGFloat, direction: Direction) -> UIView {
         let line = SeparatorLineView();
         
@@ -222,6 +223,7 @@ extension UIView {
 
      - returns: 分隔线
      */
+    @discardableResult
     public func addLeftLine(color: UIColor) -> UIView {
         return self.addLeftLine(color: color, top: 0.0, bottom: 0.0)
     }
@@ -235,6 +237,7 @@ extension UIView {
      
      - returns: 分隔线
      */
+    @discardableResult
     public func addLeftLine(color: UIColor, top: CGFloat, bottom: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: top, trailing: bottom, direction: .Leading)
     }
@@ -247,6 +250,7 @@ extension UIView {
      
      - returns: 分隔线
      */
+    @discardableResult
     public func addRightLine(color: UIColor) -> UIView {
         return self.addRightLine(color: color, top: 0.0, bottom: 0.0)
     }
@@ -260,6 +264,7 @@ extension UIView {
      
      - returns: 分隔线
      */
+    @discardableResult
     public func addRightLine(color: UIColor, top: CGFloat, bottom: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: top, trailing: bottom, direction: .Trailing)
     }
@@ -272,6 +277,7 @@ extension UIView {
 
      - returns: 分隔线
      */
+    @discardableResult
     public func addTopLine(color: UIColor) -> UIView {
         return self.addTopLine(color: color, leading: 0.0, trailing: 0.0)
     }
@@ -285,6 +291,7 @@ extension UIView {
      
      - returns: 分隔线
      */
+    @discardableResult
     public func addTopLine(color: UIColor, leading: CGFloat, trailing: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: leading, trailing: trailing, direction: .Top)
     }
@@ -296,6 +303,7 @@ extension UIView {
 
      - returns: 分隔线
      */
+    @discardableResult
     public func addBottomLine(color: UIColor) -> UIView {
         return self.addBottomLine(color: color, leading: 0.0, trailing: 0.0)
     }
@@ -309,6 +317,7 @@ extension UIView {
      
      - returns: 分隔线
      */
+    @discardableResult
     public func addBottomLine(color: UIColor, leading: CGFloat, trailing: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: leading, trailing: trailing, direction: .Bottom)
     }
