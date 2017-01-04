@@ -32,13 +32,13 @@ extension String {
      
      - returns: NSDate 
      */
-    public func dateValue(formatterStyle: String) -> NSDate? {
+    public func dateValue(formatterStyle: String) -> Date? {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "zh_CN")
         formatter.calendar = Calendar.current
         formatter.timeZone = TimeZone(abbreviation: "UTC")
         formatter.dateFormat = formatterStyle
-        return formatter.date(from: self) as NSDate?
+        return formatter.date(from: self)
     }
     
     
