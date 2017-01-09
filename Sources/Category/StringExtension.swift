@@ -36,7 +36,7 @@ extension String {
         let formatter = DateFormatter()
         formatter.locale = Locale(identifier: "zh_CN")
         formatter.calendar = Calendar.current
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.timeZone = TimeZone.current
         formatter.dateFormat = formatterStyle
         return formatter.date(from: self)
     }

@@ -16,6 +16,10 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad();
+        
+        let time = "2017-01-04 15:25".dateValue(formatterStyle: "yyyy-MM-dd HH:mm")
+        let str = time?.formtter(formatterStyle: "yyyy-MM-dd HH:mm")
+        WKAlertController.alert(message: str)
     }
     
     // MARK: - UITableView Delegate And DataSource
