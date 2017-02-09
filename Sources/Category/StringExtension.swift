@@ -42,6 +42,15 @@ extension String {
     }
     
     
+    /// 转换成日期类型
+    ///
+    /// - Parameter format: 格式
+    /// - Returns: Date
+    public func date(inFormat format: String) -> Date? {
+        return dateValue(formatterStyle: format)
+    }
+    
+    
     /// 汉字转拼音
     ///
     /// - Returns: 拼音
