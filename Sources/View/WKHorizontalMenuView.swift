@@ -236,7 +236,7 @@ open class WKHorizontalMenuView: UIView {
     }
 }
 
-public class HorizontalMenuItemView: UIControl {
+open class HorizontalMenuItemView: UIControl {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -258,7 +258,7 @@ public class HorizontalMenuItemView: UIControl {
         addSubview(titleLabel)
     }
     
-    public override func layoutSubviews() {
+    open override func layoutSubviews() {
         titleLabel.frame = self.bounds
         super.layoutSubviews()
     }

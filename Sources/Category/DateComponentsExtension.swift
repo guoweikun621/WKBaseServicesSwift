@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension DateComponents {
+extension DateComponents {
     
     public var ago: Date? {
         return Calendar.current.date(byAdding: -self, to: Date())
