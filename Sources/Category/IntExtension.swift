@@ -8,68 +8,68 @@
 
 import UIKit
 
-public extension Int {
-    var year: DateComponents {
+extension Int {
+    public var year: DateComponents {
         return DateComponents(year: self)
     }
     
-    var years: DateComponents {
+    public var years: DateComponents {
         return year
     }
     
-    var month: DateComponents {
+    public var month: DateComponents {
         return DateComponents(month: self)
     }
     
-    var months: DateComponents {
+    public var months: DateComponents {
         return month
     }
     
-    var week: DateComponents {
+    public var week: DateComponents {
         return DateComponents(day: 7 * self)
     }
     
-    var weeks: DateComponents {
+    public var weeks: DateComponents {
         return week
     }
     
-    var day: DateComponents {
+    public var day: DateComponents {
         return DateComponents(day: self)
     }
     
-    var days: DateComponents {
+    public var days: DateComponents {
         return day
     }
     
-    var hour: DateComponents {
+    public var hour: DateComponents {
         return DateComponents(hour: self)
     }
     
-    var hours: DateComponents {
+    public var hours: DateComponents {
         return hour
     }
     
-    var minute: DateComponents {
+    public var minute: DateComponents {
         return DateComponents(minute: self)
     }
     
-    var minutes: DateComponents {
+    public var minutes: DateComponents {
         return minute
     }
     
-    var second: DateComponents {
+    public var second: DateComponents {
         return DateComponents(second: self)
     }
     
-    var seconds: DateComponents {
+    public var seconds: DateComponents {
         return second
     }
     
-    var nanosecond: DateComponents {
+    public var nanosecond: DateComponents {
         return DateComponents(nanosecond: self)
     }
     
-    var nanoseconds: DateComponents {
+    public var nanoseconds: DateComponents {
         return nanosecond
     }
 }

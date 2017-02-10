@@ -341,6 +341,4 @@ extension UIView {
 }
 
 /// 分隔线视图
-class SeparatorLineView: UIView {
-    
-}
+class SeparatorLineView: UIView { }

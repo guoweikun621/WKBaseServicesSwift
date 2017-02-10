@@ -10,11 +10,11 @@ import UIKit
 
 public extension DateComponents {
     
-    var ago: Date? {
+    public var ago: Date? {
         return Calendar.current.date(byAdding: -self, to: Date())
     }
     
-    var later: Date? {
+    public var later: Date? {
         return Calendar.current.date(byAdding: self, to: Date())
     }
     
@@ -23,7 +23,7 @@ public extension DateComponents {
     /// - parameter rhs: 日期组件
     ///
     /// - returns: DateComponents
-    static prefix func -(rhs: DateComponents) -> DateComponents {
+    public static prefix func -(rhs: DateComponents) -> DateComponents {
         var dateComponents = DateComponents()
         
         if let year = rhs.year {
@@ -63,7 +63,7 @@ public extension DateComponents {
     /// - parameter right: 右边日期组件
     ///
     /// - returns: DateComponents instance.
-    static func + (left: DateComponents, right: DateComponents) -> DateComponents {
+    public static func + (left: DateComponents, right: DateComponents) -> DateComponents {
         var dateComponents = left
         
         if let year = right.year {
@@ -103,7 +103,7 @@ public extension DateComponents {
     /// - parameter right: 右边日期组件
     ///
     /// - returns: DateComponents instance.
-    static func - (left: DateComponents, right: DateComponents) -> DateComponents {
+    public static func - (left: DateComponents, right: DateComponents) -> DateComponents {
         return left + (-right)
     }
 }

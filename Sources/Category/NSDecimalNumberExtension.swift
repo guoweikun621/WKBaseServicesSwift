@@ -9,7 +9,6 @@
 import UIKit
 
 extension NSDecimalNumber {
-    
     /**
      是否等于0
      
