@@ -65,6 +65,12 @@ extension String {
     }
     
     
+    /// Base64
+    public var base64: String! {
+        let data = self.data(using: .utf8)!
+        return data.base64EncodedString(options: .lineLength64Characters)
+    }
+    
     /// MD5 加密
     public var md5: String! {
         let str = self.cString(using: String.Encoding.utf8)
