@@ -263,6 +263,15 @@ extension Date {
         return formater.string(from: self)
     }
     
+    
+    /// string value with formatter style
+    ///
+    /// - Parameter style: 格式化方式
+    /// - Returns: 日期字符串
+    public func stringValue(formatter style: String) -> String {
+        return formtter(formatterStyle: style)
+    }
+    
     /**
      格式化为 yyyy-MM-dd HH:mm:ss 字符串
      

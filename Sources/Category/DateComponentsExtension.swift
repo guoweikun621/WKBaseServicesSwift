@@ -10,10 +10,14 @@ import UIKit
 
 extension DateComponents {
     
+    
+    /// 前一天
     public var ago: Date? {
         return Calendar.current.date(byAdding: -self, to: Date())
     }
     
+    
+    /// 后一天
     public var later: Date? {
         return Calendar.current.date(byAdding: self, to: Date())
     }

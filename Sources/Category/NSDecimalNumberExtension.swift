@@ -54,11 +54,24 @@ extension NSDecimalNumber {
         return self.compare(NSDecimalNumber.zero) != .orderedAscending
     }
     
-    
     /// 人民币格式化
     ///
     /// - Returns: ¥0.00
     public func currenyString() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        numberFormatter.locale = Locale.cnLocal()
+        numberFormatter.currencySymbol = Locale.cnCurrenySymbol()
+        numberFormatter.currencyCode = Locale.cnCurrenyCode()
+        
+        return numberFormatter.string(from: self)!
+    }
+    
+    
+    /// rmb 格式字符串，带人民币符号¥
+    ///
+    /// - Returns: ¥0.00格式金额
+    public func rmbString() -> String {
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
         numberFormatter.locale = Locale.cnLocal()
