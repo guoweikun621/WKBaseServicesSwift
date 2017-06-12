@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.frameworks = "UIKit", "Foundation"
   s.dependency 'CryptoSwift', '~> 0.6.9'
   s.requires_arc = true
-  #s.xcconfig = { 'SWIFT_INCLUDE_PATHS' =>
-  '$(PODS_ROOT)/WKBaseServicesSwift/Sources' }
+  #s.xcconfig = { 'SWIFT_INCLUDE_PATHS' => '$(PODS_ROOT)/WKBaseServicesSwift/Sources' }
   #s.preserve_paths = 'Sources/module.modulemap'
 end
