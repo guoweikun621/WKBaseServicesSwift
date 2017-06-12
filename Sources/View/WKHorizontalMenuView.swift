@@ -148,11 +148,14 @@ open class WKHorizontalMenuView: UIView {
     }
     
     var itemWidth: CGFloat {
-        let itemW = self.width / CGFloat(self.menuItems.count)
+        let count = self.menuItems.count == 0 ? CGFloat(1.0) : CGFloat(self.menuItems.count)
+        
+        let itemW = self.width / count
         return config.scrollEnable ? 80.0 : itemW
     }
     
     func configItems() {
+        itemViews.removeAll()
         for v in scrollView.subviews {
             if v.isKind(of: HorizontalMenuItemView.self) {
                 v.removeFromSuperview()
@@ -213,7 +216,9 @@ open class WKHorizontalMenuView: UIView {
     }
     
     func updateSelectItem(oldIndex: Int) {
-        
+        if menuItems.count == 0 {
+            return
+        }
         if oldIndex == selectedIndex {
             return
         }
