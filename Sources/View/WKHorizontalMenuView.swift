@@ -121,6 +121,17 @@ open class WKHorizontalMenuView: UIView {
         }
     }
     
+    @IBInspectable open var isUnderSeparator: Bool = true {
+        didSet {
+            if isUnderSeparator {
+                self.addBottomLine(color: UIColor.color(hexString: "cccccc"))
+            }
+            else {
+                self.clearSeparatorLine()
+            }
+        }
+    }
+    
     // MARK: Init
     override public init(frame: CGRect) {
         super.init(frame: frame)
