@@ -24,6 +24,9 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let amount = NSDecimalNumber(value: 20.98)
         print(amount.rmbString())
+        
+        view.backgroundColor = UIColor.color(hexString: "f3f3f3")
+
     }
     
     // MARK: - UITableView Delegate And DataSource

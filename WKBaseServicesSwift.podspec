@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WKBaseServicesSwift"
-  s.version      = "3.0.2"
+  s.version      = "3.0.3"
   s.summary      = "WKBaseServicesSwift是一个swift的基础的扩展服务框架"
   s.homepage     = "https://github.com/guoweikun621/WKBaseServicesSwift"
   s.license      = "MIT"
@@ -20,8 +20,9 @@ Pod::Spec.new do |s|
   s.source_files  = "Sources/**/*.swift"
 
   s.frameworks = "UIKit", "Foundation"
+  s.dependency 'CryptoSwift', '~> 0.6.9'
   s.requires_arc = true
-  s.xcconfig = { 'SWIFT_INCLUDE_PATHS' =>
+  #s.xcconfig = { 'SWIFT_INCLUDE_PATHS' =>
   '$(PODS_ROOT)/WKBaseServicesSwift/Sources' }
-  s.preserve_paths = 'Sources/module.modulemap'
+  #s.preserve_paths = 'Sources/module.modulemap'
 end
