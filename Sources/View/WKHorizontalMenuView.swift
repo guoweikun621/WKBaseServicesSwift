@@ -273,10 +273,10 @@ open class HorizontalMenuItemView: UIControl {
 /// 选项配置项
 public struct ItemConfig {
     public var textColor: UIColor = UIColor.color(hexString: "333333")
-    public var selectedTextColor: UIColor = UIColor.blue
+    public var selectedTextColor: UIColor = UIColor.color(hexString: "333333")
     public var textFontSize: CGFloat = 13.0
     public var selectTextFontSize: CGFloat = 14.0
-    public var underlineColor: UIColor = UIColor.blue
+    public var underlineColor: UIColor = UIColor.groupTableViewBackground
     public var underlineHeight: CGFloat = 1.0
     public var scrollEnable: Bool = true
 }
