@@ -16,6 +16,7 @@
 		C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C845752A1D3CCCF2007C936A /* Assets.xcassets */; };
 		C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */; };
 		C85846AF1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C85846AE1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift */; };
+		C8796BA71EF240CF00B70EA2 /* RegularEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8796BA61EF240CF00B70EA2 /* RegularEx.swift */; };
 		C8AA35A61D951B4600AA5CB1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35991D951B4600AA5CB1 /* DateExtension.swift */; };
 		C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberEx.swift */; };
 		C8AA35A81D951B4600AA5CB1 /* LocalExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359B1D951B4600AA5CB1 /* LocalExtension.swift */; };
@@ -46,6 +47,7 @@
 		C845752D1D3CCCF2007C936A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C845752F1D3CCCF2007C936A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C85846AE1E00DE9500EA8EE4 /* HorizontalMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalMenuViewController.swift; sourceTree = "<group>"; };
+		C8796BA61EF240CF00B70EA2 /* RegularEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularEx.swift; sourceTree = "<group>"; };
 		C8AA35991D951B4600AA5CB1 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberEx.swift; sourceTree = "<group>"; };
 		C8AA359B1D951B4600AA5CB1 /* LocalExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalExtension.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			children = (
 				C8AA35A01D951B4600AA5CB1 /* AppInfo.swift */,
 				C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */,
+				C8796BA61EF240CF00B70EA2 /* RegularEx.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				C8AA35A91D951B4600AA5CB1 /* StringExtension.swift in Sources */,
 				C8AA35A61D951B4600AA5CB1 /* DateExtension.swift in Sources */,
 				C8AA35A81D951B4600AA5CB1 /* LocalExtension.swift in Sources */,
+				C8796BA71EF240CF00B70EA2 /* RegularEx.swift in Sources */,
 				C8DD08651DEE593B0094771C /* WKPlaceholderTextView.swift in Sources */,
 				C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */,
 				C8AA35AE1D951B4600AA5CB1 /* UIViewExtension.swift in Sources */,

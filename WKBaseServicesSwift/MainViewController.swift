@@ -17,16 +17,23 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        let time = "2017-01-04 15:25".dateValue(formatterStyle: "yyyy-MM-dd HH:mm")
-        let str = time?.formtter(formatterStyle: "yyyy-MM-dd HH:mm")
-        WKAlertController.alert(message: str)
+//        let time = "2017-01-04 15:25".dateValue(formatterStyle: "yyyy-MM-dd HH:mm")
+//        let str = time?.formtter(formatterStyle: "yyyy-MM-dd HH:mm")
+//        WKAlertController.alert(message: str)
         
         
-        let amount = NSDecimalNumber(value: 20.98)
-        print(amount.rmbString())
+//        let amount = NSDecimalNumber(value: 20.98)
+//        print(amount.rmbString())
         
         view.backgroundColor = UIColor.color(hexString: "f3f3f3")
 
+        let result = RegularExp.validate(regExp: .phone, value: "23158888")
+        if result {
+            print("Regular Exp is Success !!! ")
+        }
+        else {
+            print("Regular Exp is Failuer !!! ")
+        }
     }
     
     // MARK: - UITableView Delegate And DataSource
