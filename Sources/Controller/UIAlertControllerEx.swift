@@ -20,7 +20,7 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
      
      - returns: UIAlertController
      */
-    public convenience init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
+    public convenience init(title: String? = "提示", message: String?, preferredStyle: UIAlertControllerStyle, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)? = nil) {
         self.init(title: title, message: message, preferredStyle: preferredStyle);
         if cancelHandler != nil {
             self.addAction(UIAlertAction(title: "取消", style: .cancel, handler: cancelHandler))
@@ -56,19 +56,7 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
             }
         }
     }
-    
-    /**
-     便利构造器 Alert
-     
-     - parameter message:        提示信息
-     - parameter confirmHandler: 确定事件
-     - parameter cancelHandler:  取消事件
-     
-     - returns: UIAlertController
-     */
-    public convenience init(message: String?, preferredStyle: UIAlertControllerStyle, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) {
-        self.init(title: "提示", message: message, preferredStyle: preferredStyle, confirmHandler: confirmHandler, cancelHandler: cancelHandler);
-    }
+
     
     /**
      无事件响应的构造器 Alert
@@ -105,21 +93,9 @@ open class WKAlertController {
     /// - Returns: UIAlertController对象
     @discardableResult
     open static func alert(message: String?) -> UIAlertController {
-        return WKAlertController.alert(message: message) { (alertAction) in
+        return WKAlertController.alert(message: message, confirmHandler: { (action) in
             
-        }
-    }
-    
-    
-    /// 构造一个Alert 并且 展示show
-    ///
-    /// - Parameters:
-    ///   - message: 消息
-    ///   - confirmHandler: 回调
-    /// - Returns: alert对象
-    @discardableResult
-    open static func alert(message: String?, confirmHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
-        return WKAlertController.alert(title: "提示", message: message, confirmHandler: confirmHandler)
+        })
     }
     
     
@@ -145,7 +121,7 @@ open class WKAlertController {
     ///   - cancelHandler: 取消回调
     /// - Returns: alert对象
     @discardableResult
-    open static func alert(title: String?, message: String?, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+    open static func alert(title: String? = "提示", message: String?, confirmHandler: ((UIAlertAction) -> Void)?, cancelHandler: ((UIAlertAction) -> Void)? = nil) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert, confirmHandler: confirmHandler, cancelHandler: cancelHandler)
         WKAlertController.presentController?.present(alert, animated: true, completion: nil)
         return alert
@@ -153,30 +129,6 @@ open class WKAlertController {
     
     // MARK: - ActionSheet
     
-    /// 构造 actionSheet 并展示
-    ///
-    /// - Parameters:
-    ///   - message: 信息
-    ///   - defaluts: 按钮组
-    ///   - handler: 按钮回调
-    /// - Returns: actionSheet对象
-    @discardableResult
-    open static func actionSheet(message: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
-       return WKAlertController.actionSheet(title: "提示", message: message, cancel: nil, defaluts: defaluts, handler: handler)
-    }
-    
-    /// 构造 actionSheet 并展示
-    ///
-    /// - Parameters:
-    ///   - title: 标题
-    ///   - message: 信息
-    ///   - defaluts: 按钮组
-    ///   - handler: 按钮回调
-    /// - Returns: actionSheet对象
-    @discardableResult
-    open static func actionSheet(title: String?, message: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
-        return WKAlertController.actionSheet(title: title, message: message, cancel: nil, defaluts: defaluts, handler: handler)
-    }
     
     /// 构造 actionSheet 并展示
     ///
@@ -188,7 +140,7 @@ open class WKAlertController {
     ///   - handler: 按钮回调
     /// - Returns: actionSheet对象
     @discardableResult
-    open static func actionSheet(title: String?, message: String?, cancel: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+    open static func actionSheet(title: String?, message: String?, cancel: String? = nil, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
         return WKAlertController.actionSheet(title: title, message: message, cancel: cancel, destructive: nil, defaluts: defaluts, handler: handler)
     }
     
@@ -204,7 +156,7 @@ open class WKAlertController {
     ///   - handler: 按钮回调
     /// - Returns: actionSheet对象
     @discardableResult
-    open static func actionSheet(title: String?, message: String?, cancel: String?, destructive: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
+    open static func actionSheet(title: String? = "提示", message: String?, cancel: String? = nil, destructive: String? = nil, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .actionSheet, cancel: cancel, destructive: destructive, defaluts: defaluts, handler: handler)
         WKAlertController.presentController?.present(alert, animated: true, completion: nil)
         return alert

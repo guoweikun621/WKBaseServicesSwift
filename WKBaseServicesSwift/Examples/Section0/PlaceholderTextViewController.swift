@@ -20,6 +20,7 @@ class PlaceholderTextViewController: UIViewController {
         textView.textChangedClosure = {
             debugPrint("\($1)")
         }
+
     }
 
 

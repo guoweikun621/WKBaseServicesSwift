@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="-154" y="131"/>
         </scene>
-        <!--Placeholder Text View Controller-->
+        <!--Placeholder Text-->
         <scene sceneID="2Di-9n-sP0">
             <objects>
-                <viewController id="sCG-Dm-Xvx" customClass="PlaceholderTextViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Placeholder Text" hidesBottomBarWhenPushed="YES" id="sCG-Dm-Xvx" customClass="PlaceholderTextViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oz8-W8-fYc"/>
                         <viewControllerLayoutGuide type="bottom" id="qlb-vv-7If"/>
@@ -60,7 +60,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="kw4-J2-9VX"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="请输入相应的内容"/>
@@ -91,7 +91,7 @@
         <!--Horizontal Menu-->
         <scene sceneID="m4f-eD-9pT">
             <objects>
-                <viewController title="Horizontal Menu" id="swO-nE-qNd" customClass="HorizontalMenuViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Horizontal Menu" hidesBottomBarWhenPushed="YES" id="swO-nE-qNd" customClass="HorizontalMenuViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="n6u-8j-6Lb"/>
                         <viewControllerLayoutGuide type="bottom" id="6Si-Da-HEK"/>

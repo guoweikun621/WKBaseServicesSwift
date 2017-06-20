@@ -14,7 +14,7 @@ class HorizontalMenuViewController: UIViewController {
     
     var idx: Int?
     
-    let menus = ["全部", "随便", "都行", "看你", "其它"]
+    let menus = ["全部", "随便", "都行", "看你", "其它", "临时", "备注"]
     
 
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class HorizontalMenuViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         menuView.menuItems = menus
-        menuView.selectedIndex = Int(arc4random_uniform(4))
+        menuView.selectedIndex = 0
         print("guoweikun".md5)
     }
 
