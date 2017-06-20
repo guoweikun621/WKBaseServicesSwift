@@ -1,115 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="OT4-i5-TOE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="i7k-wI-PsA">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--WKBaseServcies-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main View Controller-->
+        <scene sceneID="fNC-MR-mqn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="WKBaseServicesSwift" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kvu-cE-G94">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainTableCell" id="4oU-YI-lP1">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4oU-YI-lP1" id="vkm-tp-xFn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="n1w-JX-Dp1"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="IF0-RO-yfr"/>
-                                </connections>
-                            </tableView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Kvu-cE-G94" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="89F-aC-SeY"/>
-                            <constraint firstItem="Kvu-cE-G94" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Gxo-Yk-Z5h"/>
-                            <constraint firstItem="Kvu-cE-G94" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Qso-Sx-XTw"/>
-                            <constraint firstAttribute="trailing" secondItem="Kvu-cE-G94" secondAttribute="trailing" id="hMJ-rn-cIo"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="WKBaseServcies" id="VSu-DF-hcc"/>
-                    <connections>
-                        <outlet property="tableView" destination="Kvu-cE-G94" id="xVe-dh-p4Y"/>
-                        <segue destination="ZAS-lx-svC" kind="show" identifier="HorizontalMenuSegue" id="Ypn-ts-2LV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="936.79999999999995" y="59.820089955022496"/>
-        </scene>
-        <!--Horizontal Menu View Controller-->
-        <scene sceneID="uqo-v5-L9L">
-            <objects>
-                <viewController id="ZAS-lx-svC" customClass="HorizontalMenuViewController" customModule="WKBaseServicesSwift" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="GKw-qV-BYQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="9X8-B1-zU6"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g8L-zo-nNe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dmd-Lm-9wW" customClass="WKHorizontalMenuView" customModule="WKBaseServicesSwift">
-                                <rect key="frame" x="0.0" y="179" width="375" height="44"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="VF1-Rt-l6Y"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Dmd-Lm-9wW" secondAttribute="trailing" id="TqB-w0-cr2"/>
-                            <constraint firstItem="Dmd-Lm-9wW" firstAttribute="leading" secondItem="g8L-zo-nNe" secondAttribute="leading" id="yHz-JJ-AUu"/>
-                            <constraint firstItem="Dmd-Lm-9wW" firstAttribute="top" secondItem="GKw-qV-BYQ" secondAttribute="bottom" constant="115" id="zqS-Hu-R4M"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="menuView" destination="Dmd-Lm-9wW" id="nhP-B8-AfL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ru-Ol-Ntj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1759.2" y="57.121439280359823"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="mlg-uD-ftg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OT4-i5-TOE" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u2h-Si-VDd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                <tabBarController id="i7k-wI-PsA" customClass="MainViewController" customModule="WKBaseServicesSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W40-gK-eHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cF8-aV-ykX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ypH-3Y-JCv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0p-gl-db5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2.3999999999999999" y="59.820089955022496"/>
+            <point key="canvasLocation" x="-1269" y="-167"/>
+        </scene>
+        <!--Section0-->
+        <scene sceneID="jht-yo-CxM">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Section0" storyboardName="Section0" id="s4b-dV-xxi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="plj-yj-VHe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7G5-pQ-ZKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-571" y="-293"/>
+        </scene>
+        <!--Section1-->
+        <scene sceneID="J6b-1z-GLZ">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Section1" storyboardName="Section1" id="Iy9-ou-ct4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="oBQ-1J-sXD"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XdO-zy-0Xs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-570" y="-70"/>
         </scene>
     </scenes>
 </document>

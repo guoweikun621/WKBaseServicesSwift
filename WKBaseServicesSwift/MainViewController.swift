@@ -8,63 +8,32 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
-    
-    let exampleList = ["HorizontalMenuView"]
+class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
-        super.viewDidLoad();
+        super.viewDidLoad()
         
-//        let time = "2017-01-04 15:25".dateValue(formatterStyle: "yyyy-MM-dd HH:mm")
-//        let str = time?.formtter(formatterStyle: "yyyy-MM-dd HH:mm")
-//        WKAlertController.alert(message: str)
-        
-        
-//        let amount = NSDecimalNumber(value: 20.98)
-//        print(amount.rmbString())
-        
-        view.backgroundColor = UIColor.color(hexString: "f3f3f3")
-
-        let result = RegularExp.validate(regExp: .phone, value: "23158888")
-        if result {
-            print("Regular Exp is Success !!! ")
-        }
-        else {
-            print("Regular Exp is Failuer !!! ")
-        }
+        setupView()
     }
     
-    // MARK: - UITableView Delegate And DataSource
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return exampleList.count
-    }
+    var tabMenu = [UIViewController]()
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MainTableCell")!
-        cell.textLabel?.text = exampleList[indexPath.row]
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let row = indexPath.row
+    func setupView() {
+        let section0 = self.storyboard?.instantiateViewController(withIdentifier: "Section0")
+        section0?.title = "Section0"
+        let section1 = self.storyboard?.instantiateViewController(withIdentifier: "Section1")
+        section1?.title = "Section1"
         
-        if row == 0 {
-            performSegue(withIdentifier: "HorizontalMenuSegue", sender: nil)
+        if let s0 = section0, let s1 = section1 {
+            tabMenu.append(contentsOf: [s0, s1])
         }
+        
+        self.setViewControllers(tabMenu, animated: false)
     }
     
     // Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let identifier = segue.identifier
-        let controller = segue.destination
-        
-        // HorizontalMenuSegue
-        if identifier == "HorizontalMenuSegue" {
-            let menuController = controller as! HorizontalMenuViewController
-            menuController.idx = Int(arc4random_uniform(5))
-        }
+
     }
 }
 
