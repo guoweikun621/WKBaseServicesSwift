@@ -9,11 +9,7 @@
 import UIKit
 
 extension UIColor {
-    
-//    public static func color(hexString: String) -> UIColor! {
-//        return UIColor.color(hexString: hexString, alpha: 1.0)
-//    }
-    
+
     public static func color(hexString: String, alpha: CGFloat = 1.0) -> UIColor! {
         var hex = hexString.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         hex = hex.lowercased()

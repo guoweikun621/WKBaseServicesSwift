@@ -15,7 +15,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isEqualZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero) == .orderedSame
+        return compare(NSDecimalNumber.zero) == .orderedSame
     }
     
     /**
@@ -24,7 +24,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isLessThanZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero) == .orderedAscending
+        return compare(NSDecimalNumber.zero) == .orderedAscending
     }
     
     /**
@@ -33,7 +33,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isLessThanAndEqualZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero) != .orderedDescending
+        return compare(NSDecimalNumber.zero) != .orderedDescending
     }
     
     /**
@@ -42,7 +42,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isGreaterThanZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero) == .orderedDescending
+        return compare(NSDecimalNumber.zero) == .orderedDescending
     }
     
     /**
@@ -51,7 +51,7 @@ extension NSDecimalNumber {
      - returns: true or false
      */
     public func isGreaterThanAndEqualZero() -> Bool {
-        return self.compare(NSDecimalNumber.zero) != .orderedAscending
+        return compare(NSDecimalNumber.zero) != .orderedAscending
     }
     
     /// 人民币格式化
