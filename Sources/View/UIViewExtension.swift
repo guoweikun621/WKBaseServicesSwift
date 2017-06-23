@@ -215,7 +215,18 @@ extension UIView {
         
         return line
     }
+    
+    /**
+     在视图左边线上加分隔线
+     
+     - parameter color:  分隔线颜色
 
+     - returns: 分隔线
+     */
+    @discardableResult
+    public func addLeftLine(color: UIColor) -> UIView {
+        return self.addLeftLine(color: color, top: 0.0, bottom: 0.0)
+    }
     
     /**
      在视图左边线上加分隔线
@@ -227,10 +238,22 @@ extension UIView {
      - returns: 分隔线
      */
     @discardableResult
-    public func addLeftLine(color: UIColor, top: CGFloat = 0.0, bottom: CGFloat = 0.0) -> UIView {
+    public func addLeftLine(color: UIColor, top: CGFloat, bottom: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: top, trailing: bottom, direction: .Leading)
     }
     
+    
+    /**
+     在视图右边线上加分隔线
+     
+     - parameter color:  分隔线颜色
+     
+     - returns: 分隔线
+     */
+    @discardableResult
+    public func addRightLine(color: UIColor) -> UIView {
+        return self.addRightLine(color: color, top: 0.0, bottom: 0.0)
+    }
     
     /**
      在视图右边线上加分隔线
@@ -242,10 +265,22 @@ extension UIView {
      - returns: 分隔线
      */
     @discardableResult
-    public func addRightLine(color: UIColor, top: CGFloat = 0.0, bottom: CGFloat = 0.0) -> UIView {
+    public func addRightLine(color: UIColor, top: CGFloat, bottom: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: top, trailing: bottom, direction: .Trailing)
     }
     
+    
+    /**
+     在视图上边线上加分隔线
+     
+     - parameter color:   分隔线颜色
+
+     - returns: 分隔线
+     */
+    @discardableResult
+    public func addTopLine(color: UIColor) -> UIView {
+        return self.addTopLine(color: color, leading: 0.0, trailing: 0.0)
+    }
     
     /**
      在视图上边线上加分隔线
@@ -257,10 +292,22 @@ extension UIView {
      - returns: 分隔线
      */
     @discardableResult
-    public func addTopLine(color: UIColor, leading: CGFloat = 0.0, trailing: CGFloat = 0.0) -> UIView {
+    public func addTopLine(color: UIColor, leading: CGFloat, trailing: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: leading, trailing: trailing, direction: .Top)
     }
+    
+    /**
+     在视图下边线上加分隔线
+     
+     - parameter color:   分隔线颜色
 
+     - returns: 分隔线
+     */
+    @discardableResult
+    public func addBottomLine(color: UIColor) -> UIView {
+        return self.addBottomLine(color: color, leading: 0.0, trailing: 0.0)
+    }
+    
     /**
      在视图下边线上加分隔线
      
@@ -271,7 +318,7 @@ extension UIView {
      - returns: 分隔线
      */
     @discardableResult
-    public func addBottomLine(color: UIColor, leading: CGFloat = 0.0, trailing: CGFloat = 0.0) -> UIView {
+    public func addBottomLine(color: UIColor, leading: CGFloat, trailing: CGFloat) -> UIView {
         return self.addSeparatorLine(color: color, leading: leading, trailing: trailing, direction: .Bottom)
     }
     
