@@ -83,7 +83,7 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
     }
 }
 
-open class WKAlertController {
+open class WKAlertController: UIViewController {
     static var presentController: UIViewController? = {
         let appDelegate = UIApplication.shared.delegate! as UIApplicationDelegate
         if let window = appDelegate.window {
@@ -231,5 +231,12 @@ open class WKAlertController {
         }
         
         return alert
+    }
+}
+
+
+extension UIAlertController {
+    open func addAction(title: String?, style: UIAlertActionStyle = .default, handler: ((UIAlertAction) -> Void)? = nil) {
+        addAction(UIAlertAction(title: title, style: style, handler: handler))
     }
 }
