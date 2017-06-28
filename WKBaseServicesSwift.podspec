@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "WKBaseServicesSwift"
-  s.version      = "3.0.4"
+  s.version      = "3.0.5"
   s.summary      = "WKBaseServicesSwift是一个swift的基础的扩展服务框架"
   s.homepage     = "https://github.com/guoweikun621/WKBaseServicesSwift"
   s.license      = "MIT"
