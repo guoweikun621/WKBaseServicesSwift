@@ -20,3 +20,4 @@ swift3.0 请用master 3.x
 * DateComponentsExtension
 * WKHorizontalMenuView
 * WKPlaceholderTextView
+* WKCountDownButton
