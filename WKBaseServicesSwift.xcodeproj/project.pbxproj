@@ -10,6 +10,7 @@
 		2B4041DB78C21F4057CF2039 /* Pods_WKBaseServicesSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */; };
 		C809D8BD1E4C119600CEAA1D /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BC1E4C119600CEAA1D /* IntExtension.swift */; };
 		C809D8BF1E4C120A00CEAA1D /* DateComponentsEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */; };
+		C82A9A6A1F03414300387995 /* WKCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A9A691F03414300387995 /* WKCountDownButton.swift */; };
 		C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575231D3CCCF2007C936A /* AppDelegate.swift */; };
 		C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84575251D3CCCF2007C936A /* MainViewController.swift */; };
 		C84575291D3CCCF2007C936A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C84575271D3CCCF2007C936A /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		8CFCBD9E1E8FB3AAB740AB34 /* Pods-WKBaseServicesSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.release.xcconfig"; sourceTree = "<group>"; };
 		C809D8BC1E4C119600CEAA1D /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponentsEx.swift; sourceTree = "<group>"; };
+		C82A9A691F03414300387995 /* WKCountDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCountDownButton.swift; sourceTree = "<group>"; };
 		C84575201D3CCCF2007C936A /* WKBaseServicesSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKBaseServicesSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C84575231D3CCCF2007C936A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C84575251D3CCCF2007C936A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				C8AA35A41D951B4600AA5CB1 /* UIViewExtension.swift */,
 				C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */,
 				C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */,
+				C82A9A691F03414300387995 /* WKCountDownButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				C8DD08651DEE593B0094771C /* WKPlaceholderTextView.swift in Sources */,
 				C84FCC9D1EF8D5C1006AFE30 /* Section1TableViewController.swift in Sources */,
 				C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */,
+				C82A9A6A1F03414300387995 /* WKCountDownButton.swift in Sources */,
 				C8AA35AE1D951B4600AA5CB1 /* UIViewExtension.swift in Sources */,
 				C8AA35AA1D951B4600AA5CB1 /* UIColorExtension.swift in Sources */,
 				C84FCC9B1EF8D5B3006AFE30 /* Section0TableViewController.swift in Sources */,

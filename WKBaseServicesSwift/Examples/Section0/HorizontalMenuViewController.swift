@@ -11,6 +11,7 @@ import UIKit
 class HorizontalMenuViewController: UIViewController {
     
     @IBOutlet weak var menuView: WKHorizontalMenuView!
+    @IBOutlet weak var countDownButton: WKCountDownButton!
     
     var idx: Int?
     
@@ -24,8 +25,13 @@ class HorizontalMenuViewController: UIViewController {
         menuView.menuItems = menus
         menuView.selectedIndex = 0
         print("guoweikun".md5)
+        
+        
     }
 
+    @IBAction func countDownAction(_ sender: WKCountDownButton) {
+        sender.fire()
+    }
     
 
 }

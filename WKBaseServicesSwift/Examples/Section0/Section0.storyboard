@@ -127,21 +127,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QqJ-hu-iXn" customClass="WKCountDownButton" customModule="WKBaseServicesSwift" customModuleProvider="target">
+                                <rect key="frame" x="120" y="122" width="135" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="135" id="hYC-Hf-c4W"/>
+                                    <constraint firstAttribute="height" constant="40" id="ojT-69-mQe"/>
+                                </constraints>
+                                <state key="normal" title="获取验证码">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.56862745100000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="retryTitle" value="再一次"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="identifyKey" value="1111"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="countDownAction:" destination="swO-nE-qNd" eventType="touchUpInside" id="zdU-e1-2y0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d2T-w0-snW" firstAttribute="leading" secondItem="kal-0i-kIC" secondAttribute="leading" id="0Un-bS-vKk"/>
+                            <constraint firstItem="QqJ-hu-iXn" firstAttribute="centerX" secondItem="kal-0i-kIC" secondAttribute="centerX" id="5rX-0d-dkI"/>
                             <constraint firstAttribute="trailing" secondItem="d2T-w0-snW" secondAttribute="trailing" id="blK-xb-jJ3"/>
+                            <constraint firstItem="QqJ-hu-iXn" firstAttribute="top" secondItem="d2T-w0-snW" secondAttribute="bottom" constant="8" id="n4V-Hz-8au"/>
                             <constraint firstItem="d2T-w0-snW" firstAttribute="top" secondItem="n6u-8j-6Lb" secondAttribute="bottom" id="qLX-RH-fEP"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countDownButton" destination="QqJ-hu-iXn" id="8j6-qE-N92"/>
                         <outlet property="menuView" destination="d2T-w0-snW" id="9RW-cW-7fR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAM-GE-hsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="743" y="-247"/>
+            <point key="canvasLocation" x="741.60000000000002" y="-247.82608695652175"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Jib-VB-xj7">
