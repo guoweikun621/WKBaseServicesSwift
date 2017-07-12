@@ -105,9 +105,9 @@ open class App: NSObject {
      
      - returns: Caches路径
      */
-    public static func cachesDirectory() -> String {
+    public static func cachesDirectory() -> URL? {
         let paths = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)
-        return (paths.last?.absoluteString)!
+        return paths.last
     }
     
     /**
@@ -115,9 +115,9 @@ open class App: NSObject {
      
      - returns: Document 路径
      */
-    public static func documentDirectory() -> String {
+    public static func documentDirectory() -> URL? {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return (paths.last?.absoluteString)!
+        return paths.last
     }
     
     /**
@@ -125,9 +125,9 @@ open class App: NSObject {
      
      - returns: Library路径
      */
-    public static func libraryDirectory() -> String? {
+    public static func libraryDirectory() -> URL? {
         let paths = FileManager.default.urls(for: .libraryDirectory, in: .userDomainMask)
-        return paths.last?.absoluteString
+        return paths.last
     }
     
     
