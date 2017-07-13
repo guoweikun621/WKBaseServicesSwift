@@ -85,9 +85,9 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
 
 open class WKAlertController: UIViewController {
     static var presentController: UIViewController? = {
-        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let appDelegate = UIApplication.shared.delegate
         if let window = appDelegate?.window {
-            let controller = window.rootViewController
+            let controller = window?.rootViewController
             if controller == nil {
                 fatalError("初始化window.rootViewController")
             }
