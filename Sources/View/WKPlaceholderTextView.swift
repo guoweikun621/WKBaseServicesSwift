@@ -25,7 +25,7 @@ open class WKPlaceholderTextView: UITextView {
     
     
     /// 可输入字数回调闭包
-    public var textChangedClosure: ((_ textView: UITextView, _ canInputCount: Int) -> Void)?
+    public var textChangedClosure: ((_ textView: WKPlaceholderTextView, _ canInputCount: Int) -> Void)?
     
     /// 占位符
     @IBInspectable open var placeholder: String? {
