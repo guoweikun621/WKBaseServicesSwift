@@ -67,6 +67,7 @@ open class WKPlaceholderTextView: UITextView {
         placeholderLabel.textColor = UIColor.color(hexString: "cccccc")
         placeholderLabel.textAlignment = self.textAlignment
         placeholderLabel.clipsToBounds = false
+        placeholderLabel.numberOfLines = 3
         
         addSubview(placeholderLabel)
                 
