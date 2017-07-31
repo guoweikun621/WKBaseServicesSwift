@@ -26,7 +26,7 @@ class HorizontalMenuViewController: UIViewController {
         menuView.selectedIndex = 0
         print("guoweikun".md5)
         
-        
+        self.navigationController?.navigationBar.setBgColor(UIColor.purple)
     }
 
     @IBAction func countDownAction(_ sender: WKCountDownButton) {

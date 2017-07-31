@@ -34,6 +34,7 @@
 		C8AA35AE1D951B4600AA5CB1 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A41D951B4600AA5CB1 /* UIViewExtension.swift */; };
 		C8AA35AF1D951B4600AA5CB1 /* WKCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */; };
 		C8B46E921DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */; };
+		C8B8B8261F2F1C3B00BF55F6 /* UINavigationBarEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B8B8251F2F1C3B00BF55F6 /* UINavigationBarEx.swift */; };
 		C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */; };
 		C8DD08651DEE593B0094771C /* WKPlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */; };
 		C8EDCC791D9E33B7006F9916 /* WKBaseServices.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */; };
@@ -71,6 +72,7 @@
 		C8AA35A41D951B4600AA5CB1 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCheckBox.swift; sourceTree = "<group>"; };
 		C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKQRCodeGenerator.swift; sourceTree = "<group>"; };
+		C8B8B8251F2F1C3B00BF55F6 /* UINavigationBarEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarEx.swift; sourceTree = "<group>"; };
 		C8DD08621DED76060094771C /* WKHorizontalMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKHorizontalMenuView.swift; sourceTree = "<group>"; };
 		C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKPlaceholderTextView.swift; sourceTree = "<group>"; };
 		C8EDCC781D9E33B7006F9916 /* WKBaseServices.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = WKBaseServices.bundle; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				C8AA35A51D951B4600AA5CB1 /* WKCheckBox.swift */,
 				C8DD08641DEE593B0094771C /* WKPlaceholderTextView.swift */,
 				C82A9A691F03414300387995 /* WKCountDownButton.swift */,
+				C8B8B8251F2F1C3B00BF55F6 /* UINavigationBarEx.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			files = (
 				C8AA35A91D951B4600AA5CB1 /* StringExtension.swift in Sources */,
 				C8AA35A61D951B4600AA5CB1 /* DateExtension.swift in Sources */,
+				C8B8B8261F2F1C3B00BF55F6 /* UINavigationBarEx.swift in Sources */,
 				C8AA35A81D951B4600AA5CB1 /* LocalExtension.swift in Sources */,
 				C8796BA71EF240CF00B70EA2 /* RegularEx.swift in Sources */,
 				C8DD08651DEE593B0094771C /* WKPlaceholderTextView.swift in Sources */,

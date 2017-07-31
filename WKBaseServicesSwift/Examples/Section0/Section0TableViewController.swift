@@ -16,11 +16,14 @@ class Section0TableViewController: UITableViewController {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
-
+        self.clearsSelectionOnViewWillAppear = false
+        
     }
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.setDefalutBgColor()
+    }
     
     
     // MARK: - Navigation
