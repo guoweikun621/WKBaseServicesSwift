@@ -26,13 +26,20 @@ open class WKHorizontalMenuView: UIView {
     var underlineView: UIView!
     
     
-    /// 选中索引
+    /// 选中索引, 触发事件
     open var selectedIndex: Int = 0 {
         didSet {
-            updateSelectItem(oldIndex: oldValue)
+            updateSelectItem(oldIndex: oldValue, isTriggerEvent: true)
         }
     }
     
+    
+    /// 仅切换选择Item，不触发事件
+    open var showSelectedIndex: Int = 0 {
+        didSet {
+            updateSelectItem(oldIndex: oldValue, isTriggerEvent: false)
+        }
+    }
     
     /// 菜单列表数组
     open var menuItems: [String] = [String]() {
@@ -226,7 +233,7 @@ open class WKHorizontalMenuView: UIView {
         self.selectedIndex = index
     }
     
-    func updateSelectItem(oldIndex: Int) {
+    func updateSelectItem(oldIndex: Int, isTriggerEvent: Bool) {
         if menuItems.count == 0 {
             return
         }
@@ -247,8 +254,10 @@ open class WKHorizontalMenuView: UIView {
         }
 
         // 处理回调方法
-        didSelctedItem?(self, oldIndex, selectedIndex)
-        delegate?.didSelectItem?(menu: self, oldIndex: oldIndex, selectedIndex: selectedIndex)
+        if isTriggerEvent {
+            didSelctedItem?(self, oldIndex, selectedIndex)
+            delegate?.didSelectItem?(menu: self, oldIndex: oldIndex, selectedIndex: selectedIndex)
+        }
     }
 }
 
