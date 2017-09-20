@@ -14,6 +14,10 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         
         setupView()
+        if Device.isPhoneX() {
+            debugPrint("screen bounds is = \(UIScreen.main.bounds)")
+        }
+
     }
     
     var tabMenu = [UIViewController]()

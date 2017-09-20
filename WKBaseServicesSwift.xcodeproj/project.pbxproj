@@ -22,6 +22,8 @@
 		C84FCC9B1EF8D5B3006AFE30 /* Section0TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84FCC9A1EF8D5B3006AFE30 /* Section0TableViewController.swift */; };
 		C84FCC9D1EF8D5C1006AFE30 /* Section1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84FCC9C1EF8D5C1006AFE30 /* Section1TableViewController.swift */; };
 		C84FCC9F1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84FCC9E1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift */; };
+		C8654D011F724FAF00E8378E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8654D001F724FAF00E8378E /* Device.swift */; };
+		C8654D031F72600F00E8378E /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8654D021F72600F00E8378E /* NextViewController.swift */; };
 		C8796BA71EF240CF00B70EA2 /* RegularEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8796BA61EF240CF00B70EA2 /* RegularEx.swift */; };
 		C8AA35A61D951B4600AA5CB1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35991D951B4600AA5CB1 /* DateExtension.swift */; };
 		C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberEx.swift */; };
@@ -60,6 +62,8 @@
 		C84FCC9A1EF8D5B3006AFE30 /* Section0TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section0TableViewController.swift; sourceTree = "<group>"; };
 		C84FCC9C1EF8D5C1006AFE30 /* Section1TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section1TableViewController.swift; sourceTree = "<group>"; };
 		C84FCC9E1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextViewController.swift; sourceTree = "<group>"; };
+		C8654D001F724FAF00E8378E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		C8654D021F72600F00E8378E /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
 		C8796BA61EF240CF00B70EA2 /* RegularEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularEx.swift; sourceTree = "<group>"; };
 		C8AA35991D951B4600AA5CB1 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberEx.swift; sourceTree = "<group>"; };
@@ -155,6 +159,7 @@
 				C84FCC961EF8D2F7006AFE30 /* Section0.storyboard */,
 				C84FCC9A1EF8D5B3006AFE30 /* Section0TableViewController.swift */,
 				C84FCC9E1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift */,
+				C8654D021F72600F00E8378E /* NextViewController.swift */,
 			);
 			path = Section0;
 			sourceTree = "<group>";
@@ -210,6 +215,7 @@
 				C8AA35A01D951B4600AA5CB1 /* AppInfo.swift */,
 				C8B46E911DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift */,
 				C8796BA61EF240CF00B70EA2 /* RegularEx.swift */,
+				C8654D001F724FAF00E8378E /* Device.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -397,11 +403,13 @@
 				C809D8BF1E4C120A00CEAA1D /* DateComponentsEx.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
 				C809D8BD1E4C119600CEAA1D /* IntExtension.swift in Sources */,
+				C8654D031F72600F00E8378E /* NextViewController.swift in Sources */,
 				C8AA35AF1D951B4600AA5CB1 /* WKCheckBox.swift in Sources */,
 				C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberEx.swift in Sources */,
 				C84FCC9F1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift in Sources */,
 				C8AA35AB1D951B4600AA5CB1 /* UIImageExtension.swift in Sources */,
 				C8AA35AC1D951B4600AA5CB1 /* AppInfo.swift in Sources */,
+				C8654D011F724FAF00E8378E /* Device.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

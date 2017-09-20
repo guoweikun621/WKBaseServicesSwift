@@ -16,7 +16,7 @@ public enum BoxType {
 @IBDesignable
 open class WKCheckBox: UIControl {
     /// 代理
-    @IBOutlet public weak var delegate: WKCheckBoxDelegate?;
+    @IBOutlet public weak var delegate: WKCheckBoxDelegate?
     
     /// 回调方式
     public var clickAction: ((_ box: WKCheckBox, _ on: Bool) -> Void)?

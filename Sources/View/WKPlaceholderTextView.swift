@@ -10,9 +10,7 @@ import UIKit
 
 @IBDesignable
 open class WKPlaceholderTextView: UITextView {
-    
 
-    
     private var placeholderLabel: UILabel!
     
     
