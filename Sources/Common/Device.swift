@@ -58,7 +58,7 @@ open class Device: NSObject {
             return .iPhone5E
         case (375, 667), (667, 375):
             return .iPhone6
-        case (375, 736), (736, 375):
+        case (414, 736), (736, 414):
             return .iPhone6Plus
         case (375, 812), (812, 375):
             return .iPhoneX
