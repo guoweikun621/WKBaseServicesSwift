@@ -24,6 +24,7 @@
 		C84FCC9F1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84FCC9E1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift */; };
 		C8654D011F724FAF00E8378E /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8654D001F724FAF00E8378E /* Device.swift */; };
 		C8654D031F72600F00E8378E /* NextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8654D021F72600F00E8378E /* NextViewController.swift */; };
+		C8654D051F73843A00E8378E /* WKBaseServicesSwift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C8654D041F73843A00E8378E /* WKBaseServicesSwift.podspec */; };
 		C8796BA71EF240CF00B70EA2 /* RegularEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8796BA61EF240CF00B70EA2 /* RegularEx.swift */; };
 		C8AA35A61D951B4600AA5CB1 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA35991D951B4600AA5CB1 /* DateExtension.swift */; };
 		C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberEx.swift */; };
@@ -64,6 +65,7 @@
 		C84FCC9E1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextViewController.swift; sourceTree = "<group>"; };
 		C8654D001F724FAF00E8378E /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		C8654D021F72600F00E8378E /* NextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextViewController.swift; sourceTree = "<group>"; };
+		C8654D041F73843A00E8378E /* WKBaseServicesSwift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WKBaseServicesSwift.podspec; sourceTree = SOURCE_ROOT; };
 		C8796BA61EF240CF00B70EA2 /* RegularEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularEx.swift; sourceTree = "<group>"; };
 		C8AA35991D951B4600AA5CB1 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		C8AA359A1D951B4600AA5CB1 /* NSDecimalNumberEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDecimalNumberEx.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		C830204E1D49E54100AC9142 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C8654D041F73843A00E8378E /* WKBaseServicesSwift.podspec */,
 				C845752A1D3CCCF2007C936A /* Assets.xcassets */,
 				C84575231D3CCCF2007C936A /* AppDelegate.swift */,
 				C845752C1D3CCCF2007C936A /* LaunchScreen.storyboard */,
@@ -317,6 +320,7 @@
 				C845752E1D3CCCF2007C936A /* LaunchScreen.storyboard in Resources */,
 				C84FCC971EF8D2F7006AFE30 /* Section0.storyboard in Resources */,
 				C845752B1D3CCCF2007C936A /* Assets.xcassets in Resources */,
+				C8654D051F73843A00E8378E /* WKBaseServicesSwift.podspec in Resources */,
 				C8EDCC791D9E33B7006F9916 /* WKBaseServices.bundle in Resources */,
 				C84FCC991EF8D304006AFE30 /* Section1.storyboard in Resources */,
 				C84575291D3CCCF2007C936A /* Main.storyboard in Resources */,
