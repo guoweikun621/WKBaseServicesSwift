@@ -2,8 +2,8 @@
 
 Swift常用扩展。
 
-swift2.3 请用2.x
-swift3.0 请用master 3.x
+swift4.0 iOS9+ ~> 4.0.0
+swift3.0 iOS8+ ~> 3.2.0
 
 ##Feature:
 
