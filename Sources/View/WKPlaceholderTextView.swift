@@ -69,12 +69,12 @@ open class WKPlaceholderTextView: UITextView {
         
         addSubview(placeholderLabel)
                 
-        NotificationCenter.default.addObserver(self, selector: #selector(textChanged), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(_:)), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
         
         setNeedsUpdateConstraints()
     }
 
-    func textChanged(notification: NSNotification) {
+    @objc func textChanged(_ notification: NSNotification) {
         placeholderLabel.isHidden = self.text.lenght > 0
         
         let toBeString = self.text ?? ""
@@ -94,7 +94,7 @@ open class WKPlaceholderTextView: UITextView {
                 if len < 0 {
                     len = 0
                     let idx = toBeString.index(toBeString.startIndex, offsetBy: maxTextCount)
-                    self.text = toBeString.substring(to: idx)
+                    self.text = String(toBeString[..<idx])
                 }
             }
         }
@@ -102,7 +102,7 @@ open class WKPlaceholderTextView: UITextView {
             if len < 0 {
                 len = 0
                 let idx = toBeString.index(toBeString.startIndex, offsetBy: maxTextCount)
-                text = toBeString.substring(to: idx)
+                text = String(toBeString[..<idx])
             }
         }
         canInputMaxCount = max(0, len)
