@@ -44,10 +44,10 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
     ///   - handler: 按钮回调方法
     public convenience init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, cancel: String?, destructive: String?, defaluts: [String]?, handler: ((UIAlertAction) -> Void)?) {
         self.init(title: title, message: message, preferredStyle: preferredStyle)
-        if (cancel != nil) && (cancel?.lenght)! > 0 {
+        if (cancel != nil) && (cancel?.count)! > 0 {
             self.addAction(UIAlertAction(title: cancel, style: .cancel, handler: handler))
         }
-        if (destructive != nil) && (destructive?.lenght)! > 0 {
+        if (destructive != nil) && (destructive?.count)! > 0 {
             self.addAction(UIAlertAction(title: destructive, style: .destructive, handler: handler))
         }
         if let titles = defaluts {

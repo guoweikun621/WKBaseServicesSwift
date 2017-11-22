@@ -19,7 +19,7 @@ extension UIColor {
         if hexString.hasPrefix("#") {
             hex = (hex as NSString).substring(from: 1)
         }
-        if hex.characters.count < 6 {
+        if hex.count < 6 {
             return UIColor.black
         }
         

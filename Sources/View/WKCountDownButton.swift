@@ -67,7 +67,7 @@ public class WKCountDownButton: UIButton {
             self?.isEnabled = true
             self?.overlayLabel.isHidden = true
             self?.titleLabel?.alpha = 1
-            if ((self?.retryTitle.lenght ?? 0) > 0) {
+            if ((self?.retryTitle.count ?? 0) > 0) {
                 self?.setTitle(self?.retryTitle, for: .normal)
             }
             

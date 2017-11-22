@@ -6,5 +6,5 @@ target 'WKBaseServicesSwift' do
   use_frameworks!
 
   # Pods for WKBaseServicesSwift
-  pod 'CryptoSwift', '~> 0.7.2'
+  pod 'CryptoSwift', '~> 0.8'
 end

@@ -11,14 +11,6 @@ import CryptoSwift
 
 extension String {
     
-    /// 字符串长度
-    public var lenght: Int {
-        get {
-            return self.characters.count
-        }
-    }
-    
-    
     /// url 转码
     public var urlEscaped: String {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
@@ -95,4 +87,12 @@ extension String {
     }
     
 
+    // MARK: Deprecated
+    /// 字符串长度
+    @available(*, deprecated, message: "请使用 String 的 count 属性")
+    public var lenght: Int {
+        get {
+            return self.characters.count
+        }
+    }
 }

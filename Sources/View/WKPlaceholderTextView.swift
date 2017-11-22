@@ -75,13 +75,13 @@ open class WKPlaceholderTextView: UITextView {
     }
 
     @objc func textChanged(_ notification: NSNotification) {
-        placeholderLabel.isHidden = self.text.lenght > 0
+        placeholderLabel.isHidden = self.text.count > 0
         
         let toBeString = self.text ?? ""
         
         // 输入语言
         let lang = self.textInputMode?.primaryLanguage
-        var len = maxTextCount - toBeString.lenght
+        var len = maxTextCount - toBeString.count
         
         if lang == "zh-Hans" { // 简体中文
             // 获取高亮部分
