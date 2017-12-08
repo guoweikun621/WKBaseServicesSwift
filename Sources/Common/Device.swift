@@ -27,8 +27,7 @@ open class Device: NSObject {
     public static var iPhoneName: String {
         return ProcessInfo.processInfo.hostName
     }
-    
-    
+
     
     /// 设备类型
     ///

@@ -29,9 +29,7 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
             self.addAction(UIAlertAction(title: "确定", style: .default, handler: confirmHandler))
         }
     }
-    
-    
-    
+
     /// 便利构造器
     ///
     /// - Parameters:
@@ -83,6 +81,13 @@ extension UIAlertController: UIPopoverPresentationControllerDelegate {
     }
 }
 
+extension UIAlertController {
+    open func addAction(title: String?, style: UIAlertActionStyle = .default, handler: ((UIAlertAction) -> Void)? = nil) {
+        addAction(UIAlertAction(title: title, style: style, handler: handler))
+    }
+}
+
+@available(*, deprecated, message: "WKAlertController is Deprecated")
 open class WKAlertController: UIViewController {
     static var presentController: UIViewController? = {
         let appDelegate = UIApplication.shared.delegate
@@ -235,8 +240,3 @@ open class WKAlertController: UIViewController {
 }
 
 
-extension UIAlertController {
-    open func addAction(title: String?, style: UIAlertActionStyle = .default, handler: ((UIAlertAction) -> Void)? = nil) {
-        addAction(UIAlertAction(title: title, style: style, handler: handler))
-    }
-}

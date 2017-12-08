@@ -10,7 +10,6 @@ import UIKit
 
 open class WKQRCodeGenerator: NSObject {
     
-    
     /// 生成二维码
     ///
     /// - Parameters:
