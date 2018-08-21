@@ -257,7 +257,7 @@ extension Date {
      */
     public func formtter(formatterStyle: String) -> String {
         let formater = DateFormatter()
-        formater.locale = Locale.cnLocal()
+        formater.locale = Locale.current
         formater.timeZone = TimeZone.current
         formater.dateFormat = formatterStyle
         return formater.string(from: self)

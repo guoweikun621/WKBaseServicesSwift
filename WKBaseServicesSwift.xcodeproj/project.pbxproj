@@ -264,7 +264,6 @@
 				C845751D1D3CCCF2007C936A /* Frameworks */,
 				C845751E1D3CCCF2007C936A /* Resources */,
 				C51E607D3994F51494553E8E /* [CP] Embed Pods Frameworks */,
-				4C5F8D64738B44374303FAEC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -288,7 +287,7 @@
 				TargetAttributes = {
 					C845751F1D3CCCF2007C936A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 75S72XSE7T;
+						DevelopmentTeam = A4ZVHKBMNS;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Manual;
 					};
@@ -330,21 +329,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4C5F8D64738B44374303FAEC /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		5477BC749229B1CACF462142 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -551,14 +535,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 75S72XSE7T;
+				DEVELOPMENT_TEAM = A4ZVHKBMNS;
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoweikun.WKBaseServicesSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fb9c3517-d93e-4ba1-84a2-671b21a5c925";
-				PROVISIONING_PROFILE_SPECIFIER = CommonDevelopment;
+				PROVISIONING_PROFILE = "5a6c9ae2-df88-47db-ae04-a6b4c2c8f95b";
+				PROVISIONING_PROFILE_SPECIFIER = Development_Guo;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
