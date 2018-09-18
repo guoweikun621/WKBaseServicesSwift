@@ -288,7 +288,7 @@
 					C845751F1D3CCCF2007C936A = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = A4ZVHKBMNS;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -546,7 +546,7 @@
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -568,7 +568,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = CommonDevelopment;
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

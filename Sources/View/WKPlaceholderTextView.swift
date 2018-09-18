@@ -68,8 +68,12 @@ open class WKPlaceholderTextView: UITextView {
         placeholderLabel.numberOfLines = 3
         
         addSubview(placeholderLabel)
-                
-        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(_:)), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        if #available(iOS 11, *) {
+            
+        } else {
+            
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(_:)), name: UITextView.textDidChangeNotification, object: nil)
         
         setNeedsUpdateConstraints()
     }
