@@ -18,6 +18,20 @@ class Section0TableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
         
+        var originStudent = [Student(name: "Sam", studentId: "1000", age: 10),
+                             Student(name: "Lily", studentId: "1001", age: 12),
+                             Student(name: "Susan", studentId: "1002", age: 11)]
+        let newStudent = [Student(name: "Sam", studentId: "1000", age: 13),
+                          Student(name: "DaXiong", studentId: "1003", age: 9),
+                          Student(name: "Susan", studentId: "1002", age: 14)]
+        originStudent.fl_merge(newStudent) { (current, new) -> Student in
+            return current
+        }
+        
+        let ss = Set(newStudent)
+        let temp = originStudent.filter { ss.contains($0) }
+        
+        debugPrint(originStudent.debugDescription)
     }
 
     override func viewWillAppear(_ animated: Bool) {

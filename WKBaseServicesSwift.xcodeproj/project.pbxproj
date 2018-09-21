@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173F16072155042100A6AC07 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F16062155042100A6AC07 /* ArrayExtension.swift */; };
+		173F16092155047500A6AC07 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F16082155047500A6AC07 /* ArrayTest.swift */; };
 		2B4041DB78C21F4057CF2039 /* Pods_WKBaseServicesSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */; };
 		C809D8BD1E4C119600CEAA1D /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BC1E4C119600CEAA1D /* IntExtension.swift */; };
 		C809D8BF1E4C120A00CEAA1D /* DateComponentsEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		173F16062155042100A6AC07 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		173F16082155047500A6AC07 /* ArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
 		57AB939616C3BBFBFADD2536 /* Pods-WKBaseServicesSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKBaseServicesSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFCBD9E1E8FB3AAB740AB34 /* Pods-WKBaseServicesSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 			children = (
 				C84FCC921EF8D2E5006AFE30 /* Section0 */,
 				C84FCC941EF8D2E5006AFE30 /* Section1 */,
+				173F16082155047500A6AC07 /* ArrayTest.swift */,
 			);
 			path = Examples;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 				C8AA359E1D951B4600AA5CB1 /* UIImageExtension.swift */,
 				C809D8BC1E4C119600CEAA1D /* IntExtension.swift */,
 				C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */,
+				173F16062155042100A6AC07 /* ArrayExtension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -282,14 +288,13 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1000;
 				ORGANIZATIONNAME = "郭伟坤";
 				TargetAttributes = {
 					C845751F1D3CCCF2007C936A = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = A4ZVHKBMNS;
 						LastSwiftMigration = 1000;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -381,6 +386,7 @@
 				C84FCC9D1EF8D5C1006AFE30 /* Section1TableViewController.swift in Sources */,
 				C8DD08631DED76060094771C /* WKHorizontalMenuView.swift in Sources */,
 				C82A9A6A1F03414300387995 /* WKCountDownButton.swift in Sources */,
+				173F16092155047500A6AC07 /* ArrayTest.swift in Sources */,
 				C8AA35AE1D951B4600AA5CB1 /* UIViewExtension.swift in Sources */,
 				C8AA35AA1D951B4600AA5CB1 /* UIColorExtension.swift in Sources */,
 				C84FCC9B1EF8D5B3006AFE30 /* Section0TableViewController.swift in Sources */,
@@ -388,6 +394,7 @@
 				C8B46E921DC71F6D00B0B2D1 /* WKQRCodeGenerator.swift in Sources */,
 				C84575261D3CCCF2007C936A /* MainViewController.swift in Sources */,
 				C8AA35AD1D951B4600AA5CB1 /* UIAlertControllerEx.swift in Sources */,
+				173F16072155042100A6AC07 /* ArrayExtension.swift in Sources */,
 				C809D8BF1E4C120A00CEAA1D /* DateComponentsEx.swift in Sources */,
 				C84575241D3CCCF2007C936A /* AppDelegate.swift in Sources */,
 				C809D8BD1E4C119600CEAA1D /* IntExtension.swift in Sources */,
@@ -436,12 +443,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -491,12 +500,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -535,14 +546,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = A4ZVHKBMNS;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoweikun.WKBaseServicesSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "5a6c9ae2-df88-47db-ae04-a6b4c2c8f95b";
-				PROVISIONING_PROFILE_SPECIFIER = Development_Guo;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -558,14 +570,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 75S72XSE7T;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WKBaseServicesSwift/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.guoweikun.WKBaseServicesSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "fb9c3517-d93e-4ba1-84a2-671b21a5c925";
-				PROVISIONING_PROFILE_SPECIFIER = CommonDevelopment;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_INCLUDE_PATHS = "${SRCROOT}/Sources";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 4.2;
