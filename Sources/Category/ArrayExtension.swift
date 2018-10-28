@@ -14,7 +14,7 @@ extension Array {
     ///
     /// - Parameter filter: 去重方式Closure
     /// - Returns: 返回已去重的数组
-    func fl_filterRepeat<E: Hashable>(_ filter: (Element) -> E) -> [Element] {
+    func wk_filterRepeat<E: Hashable>(_ filter: (Element) -> E) -> [Element] {
         var result = [Element]()
         var keySet: Set<E> = []
         for value in self {
@@ -37,7 +37,7 @@ extension Array where Array.Iterator.Element: Hashable {
     /// - Parameters:
     ///   - other: 被合并的数组
     ///   - combine: 冲突元素Closure， （currentElement, newElement）-> changeElement
-    mutating func fl_merge(_ other: [Element], uniquingKeysWith combine: (Element, Element) -> Element) {
+    mutating func wk_merge(_ other: [Element], uniquingKeysWith combine: (Element, Element) -> Element) {
         let selfSet = Set<Element>(self)
         other.forEach { (ele) in
             if selfSet.contains(ele) {

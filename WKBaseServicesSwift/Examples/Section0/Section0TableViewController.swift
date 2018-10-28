@@ -24,7 +24,7 @@ class Section0TableViewController: UITableViewController {
         let newStudent = [Student(name: "Sam", studentId: "1000", age: 13),
                           Student(name: "DaXiong", studentId: "1003", age: 9),
                           Student(name: "Susan", studentId: "1002", age: 14)]
-        originStudent.fl_merge(newStudent) { (current, new) -> Student in
+        originStudent.wk_merge(newStudent) { (current, new) -> Student in
             return current
         }
         
