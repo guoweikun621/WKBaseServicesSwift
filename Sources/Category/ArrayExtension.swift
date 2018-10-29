@@ -41,7 +41,11 @@ extension Array where Array.Iterator.Element: Hashable {
         let selfSet = Set<Element>(self)
         other.forEach { (ele) in
             if selfSet.contains(ele) {
+                #if swift(>=4.2)
                 guard let currentElement = (selfSet.filter { $0 == ele }).first, let idx = firstIndex(of: currentElement) else { return }
+                #else
+                guard let currentElement = (selfSet.filter { $0 == ele }).first, let idx = index(of: currentElement) else { return }
+                #endif
                 let changeElement = combine(currentElement, ele)
                 replaceSubrange(idx...idx, with: [changeElement])
             }

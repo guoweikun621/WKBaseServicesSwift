@@ -73,7 +73,12 @@ open class WKPlaceholderTextView: UITextView {
         } else {
             
         }
-        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(_:)), name: UITextView.textDidChangeNotification, object: nil)
+        #if swift(>=4.2)
+        let notificationName = UITextView.textDidChangeNotification
+        #else
+        let notificationName = NSNotification.Name.UITextViewTextDidChange
+        #endif
+        NotificationCenter.default.addObserver(self, selector: #selector(textChanged(_:)), name: notificationName, object: nil)
         
         setNeedsUpdateConstraints()
     }

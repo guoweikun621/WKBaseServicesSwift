@@ -26,7 +26,7 @@ extension String {
      */
     public func dateValue(formatterStyle: String) -> Date? {
         let formatter = DateFormatter()
-        formatter.locale = Locale.cnLocal()
+        formatter.locale = Locale.current
         formatter.calendar = Calendar.current
         formatter.timeZone = TimeZone.current
         formatter.dateFormat = formatterStyle
