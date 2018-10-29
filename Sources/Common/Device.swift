@@ -10,7 +10,7 @@ import UIKit
 
 open class Device: NSObject {
     
-    
+    public static let `default` = Device()
     /// 当前系统版本
     public static var operatingSystemVersion: OperatingSystemVersion {
         return ProcessInfo.processInfo.operatingSystemVersion
