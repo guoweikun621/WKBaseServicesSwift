@@ -111,7 +111,7 @@ open class WKCheckBox: UIControl {
         on ? onStrokeColor.set() : offStrokeColor.set()
         if on {
             let checkBezier = UIBezierPath()
-            checkBezier.move(to: CGPoint(x: self.width * 0.13, y: self.bounds.size.height * 0.45))
+            checkBezier.move(to: CGPoint(x: self.bounds.size.width * 0.13, y: self.bounds.size.height * 0.45))
             checkBezier.addLine(to: CGPoint(x: self.bounds.size.width * 0.43, y: self.bounds.size.height * 0.73))
             checkBezier.addLine(to: CGPoint(x: self.bounds.size.width * 0.83, y: self.bounds.size.height * 0.3))
             checkBezier.lineWidth = lineWidth;

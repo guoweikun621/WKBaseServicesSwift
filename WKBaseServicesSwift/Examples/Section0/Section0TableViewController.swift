@@ -29,14 +29,13 @@ class Section0TableViewController: UITableViewController {
         }
         
         let ss = Set(newStudent)
-        let temp = originStudent.filter { ss.contains($0) }
+        _ = originStudent.filter { ss.contains($0) }
         
         debugPrint(originStudent.debugDescription)
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.setDefalutBgColor()
     }
     
     

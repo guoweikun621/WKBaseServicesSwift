@@ -68,11 +68,7 @@ open class WKPlaceholderTextView: UITextView {
         placeholderLabel.numberOfLines = 3
         
         addSubview(placeholderLabel)
-        if #available(iOS 11, *) {
-            
-        } else {
-            
-        }
+        
         #if swift(>=4.2)
         let notificationName = UITextView.textDidChangeNotification
         #else
@@ -125,15 +121,10 @@ open class WKPlaceholderTextView: UITextView {
         
         let container = self.textContainer
         
-        var constrants = [NSLayoutConstraint]()
-        constrants.append(NSLayoutConstraint(item: placeholderLabel, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: container.lineFragmentPadding))
-        constrants.append(NSLayoutConstraint(item: placeholderLabel, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: -container.lineFragmentPadding))
-        constrants.append(NSLayoutConstraint(item: placeholderLabel, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 8))
-        constrants.append(NSLayoutConstraint(item: placeholderLabel, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: -8))
-        
-        constrants.append(NSLayoutConstraint(item: placeholderLabel, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .width, multiplier: 1.0, constant: self.width - container.lineFragmentPadding * 2))
-        
-        addConstraints(constrants)
+        placeholderLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: container.lineFragmentPadding).isActive = true
+        placeholderLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -container.lineFragmentPadding).isActive = true
+        placeholderLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 8).isActive = true
+        placeholderLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -8).isActive = true
         
         super.updateConstraints()
     }

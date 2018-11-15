@@ -131,10 +131,12 @@ open class WKHorizontalMenuView: UIView {
     @IBInspectable open var isUnderSeparator: Bool = true {
         didSet {
             if isUnderSeparator {
-                self.addBottomLine(color: UIColor.color(hexString: "cccccc"))
+                addSeparatorLines([.bottom]) { (view, _) in
+                    view.defaultConfig.color = UIColor.color(hexString: "cccccc")
+                }
             }
             else {
-                self.clearSeparatorLine()
+                removeAllSeparatorLine()
             }
         }
     }
@@ -160,7 +162,7 @@ open class WKHorizontalMenuView: UIView {
         scrollView.contentOffset = CGPoint.zero
         addSubview(scrollView)
         
-        underlineView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: self.height - underlineHeight), size: CGSize(width: self.itemWidth, height: underlineHeight)))
+        underlineView = UIView(frame: CGRect(origin: CGPoint(x: 0, y: self.bounds.size.height - underlineHeight), size: CGSize(width: self.itemWidth, height: underlineHeight)))
         underlineView.backgroundColor = underLineColor
         scrollView.addSubview(underlineView)
     }
@@ -168,7 +170,7 @@ open class WKHorizontalMenuView: UIView {
     var itemWidth: CGFloat {
         let count = self.menuItems.count == 0 ? CGFloat(1.0) : CGFloat(self.menuItems.count)
         
-        let itemW = self.width / count
+        let itemW = self.bounds.size.width / count
         return config.scrollEnable ? 80.0 : itemW
     }
     
@@ -185,7 +187,7 @@ open class WKHorizontalMenuView: UIView {
         var idx = 0
         
         for title in menuItems {
-            let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: itemWidth, height: self.height))
+            let item = HorizontalMenuItemView(frame: CGRect(x: x, y: 0, width: itemWidth, height: self.bounds.size.height))
             item.titleLabel.text = title
             if idx == selectedIndex {
                 item.titleLabel.font = UIFont.systemFont(ofSize: selectFontSize)
@@ -204,7 +206,7 @@ open class WKHorizontalMenuView: UIView {
             itemViews.append(item)
         }
         underlineView.backgroundColor = underLineColor
-        underlineView.size = CGSize(width: itemWidth, height: underlineHeight)
+        underlineView.bounds.size = CGSize(width: itemWidth, height: underlineHeight)
         scrollView.contentSize = CGSize(width: x, height: 0)
     }
     
@@ -214,13 +216,13 @@ open class WKHorizontalMenuView: UIView {
         
         var x: CGFloat = 0.0
         for item in itemViews {
-            item.frame = CGRect(x: x, y: 0, width: itemWidth, height: self.height)
+            item.frame = CGRect(x: x, y: 0, width: itemWidth, height: self.bounds.size.height)
             item.itemWidth = itemWidth
             x += itemWidth
         }
         let underX: CGFloat = itemWidth * CGFloat(selectedIndex)
         
-        underlineView.frame = CGRect(origin: CGPoint(x: underX, y: self.height-self.underlineHeight), size: CGSize(width: itemWidth, height: underlineHeight))
+        underlineView.frame = CGRect(origin: CGPoint(x: underX, y: self.bounds.size.height-self.underlineHeight), size: CGSize(width: itemWidth, height: underlineHeight))
         scrollView.contentSize = CGSize(width: x, height: 0)
         scrollView.contentOffset = CGPoint.zero
         scrollView.contentInset = UIEdgeInsets.zero
@@ -244,7 +246,7 @@ open class WKHorizontalMenuView: UIView {
         let newItem = itemViews[selectedIndex] as HorizontalMenuItemView
         
         UIView.animate(withDuration: 0.4, animations: { [weak self, newItem, oldItem] in
-            self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.left, y: newItem.height - (self?.underlineHeight)!), size: CGSize(width: newItem.itemWidth!, height: (self?.underlineHeight)!))
+            self?.underlineView.frame = CGRect(origin: CGPoint(x: newItem.bounds.origin.x, y: newItem.bounds.size.height - (self?.underlineHeight)!), size: CGSize(width: newItem.itemWidth!, height: (self?.underlineHeight)!))
             newItem.titleLabel.font = UIFont.systemFont(ofSize: (self?.selectFontSize)!)
             newItem.titleLabel.textColor = self?.selectTextColor
             oldItem.titleLabel.font = UIFont.systemFont(ofSize: (self?.textFontSize)!)
