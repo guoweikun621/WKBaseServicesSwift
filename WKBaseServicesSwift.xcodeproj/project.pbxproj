@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		173F16072155042100A6AC07 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F16062155042100A6AC07 /* ArrayExtension.swift */; };
 		173F16092155047500A6AC07 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F16082155047500A6AC07 /* ArrayTest.swift */; };
+		17E7C7A221A3CAC300BB49B4 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7C7A121A3CAC300BB49B4 /* Optional+Extension.swift */; };
 		2B4041DB78C21F4057CF2039 /* Pods_WKBaseServicesSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */; };
 		C809D8BD1E4C119600CEAA1D /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BC1E4C119600CEAA1D /* IntExtension.swift */; };
 		C809D8BF1E4C120A00CEAA1D /* DateComponentsEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		173F16062155042100A6AC07 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		173F16082155047500A6AC07 /* ArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
+		17E7C7A121A3CAC300BB49B4 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 		57AB939616C3BBFBFADD2536 /* Pods-WKBaseServicesSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKBaseServicesSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CFCBD9E1E8FB3AAB740AB34 /* Pods-WKBaseServicesSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				C809D8BC1E4C119600CEAA1D /* IntExtension.swift */,
 				C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */,
 				173F16062155042100A6AC07 /* ArrayExtension.swift */,
+				17E7C7A121A3CAC300BB49B4 /* Optional+Extension.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				C8AA35A71D951B4600AA5CB1 /* NSDecimalNumberEx.swift in Sources */,
 				C84FCC9F1EF8ECEC006AFE30 /* PlaceholderTextViewController.swift in Sources */,
 				C8AA35AB1D951B4600AA5CB1 /* UIImageExtension.swift in Sources */,
+				17E7C7A221A3CAC300BB49B4 /* Optional+Extension.swift in Sources */,
 				C8AA35AC1D951B4600AA5CB1 /* AppInfo.swift in Sources */,
 				C8654D011F724FAF00E8378E /* Device.swift in Sources */,
 			);
