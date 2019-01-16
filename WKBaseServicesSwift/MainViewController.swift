@@ -34,10 +34,5 @@ class MainViewController: UITabBarController {
         
         self.setViewControllers(tabMenu, animated: false)
     }
-    
-    // Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-    }
 }
 
