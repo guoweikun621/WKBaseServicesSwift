@@ -10,7 +10,6 @@
 		173F16072155042100A6AC07 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F16062155042100A6AC07 /* ArrayExtension.swift */; };
 		173F16092155047500A6AC07 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173F16082155047500A6AC07 /* ArrayTest.swift */; };
 		17E7C7A221A3CAC300BB49B4 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E7C7A121A3CAC300BB49B4 /* Optional+Extension.swift */; };
-		2B4041DB78C21F4057CF2039 /* Pods_WKBaseServicesSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */; };
 		C809D8BD1E4C119600CEAA1D /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BC1E4C119600CEAA1D /* IntExtension.swift */; };
 		C809D8BF1E4C120A00CEAA1D /* DateComponentsEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */; };
 		C82A9A6A1F03414300387995 /* WKCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C82A9A691F03414300387995 /* WKCountDownButton.swift */; };
@@ -47,9 +46,6 @@
 		173F16062155042100A6AC07 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		173F16082155047500A6AC07 /* ArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
 		17E7C7A121A3CAC300BB49B4 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
-		57AB939616C3BBFBFADD2536 /* Pods-WKBaseServicesSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.debug.xcconfig"; sourceTree = "<group>"; };
-		7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WKBaseServicesSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CFCBD9E1E8FB3AAB740AB34 /* Pods-WKBaseServicesSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WKBaseServicesSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift.release.xcconfig"; sourceTree = "<group>"; };
 		C809D8BC1E4C119600CEAA1D /* IntExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
 		C809D8BE1E4C120A00CEAA1D /* DateComponentsEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateComponentsEx.swift; sourceTree = "<group>"; };
 		C82A9A691F03414300387995 /* WKCountDownButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WKCountDownButton.swift; sourceTree = "<group>"; };
@@ -89,7 +85,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B4041DB78C21F4057CF2039 /* Pods_WKBaseServicesSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,18 +94,8 @@
 		3BC5382734092001A677169B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7E9EA6A2535F498D52862E9F /* Pods_WKBaseServicesSwift.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6A8406D5151EB7D35057F71A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				57AB939616C3BBFBFADD2536 /* Pods-WKBaseServicesSwift.debug.xcconfig */,
-				8CFCBD9E1E8FB3AAB740AB34 /* Pods-WKBaseServicesSwift.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		C830204E1D49E54100AC9142 /* Supporting Files */ = {
@@ -131,7 +116,6 @@
 				C8AA35971D951B4600AA5CB1 /* Sources */,
 				C84575221D3CCCF2007C936A /* WKBaseServicesSwift */,
 				C84575211D3CCCF2007C936A /* Products */,
-				6A8406D5151EB7D35057F71A /* Pods */,
 				3BC5382734092001A677169B /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -259,11 +243,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C84575321D3CCCF2007C936A /* Build configuration list for PBXNativeTarget "WKBaseServicesSwift" */;
 			buildPhases = (
-				5477BC749229B1CACF462142 /* [CP] Check Pods Manifest.lock */,
 				C845751C1D3CCCF2007C936A /* Sources */,
 				C845751D1D3CCCF2007C936A /* Frameworks */,
 				C845751E1D3CCCF2007C936A /* Resources */,
-				C51E607D3994F51494553E8E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -282,7 +264,7 @@
 			attributes = {
 				CLASSPREFIX = "";
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "郭伟坤";
 				TargetAttributes = {
 					C845751F1D3CCCF2007C936A = {
@@ -294,10 +276,9 @@
 			};
 			buildConfigurationList = C845751B1D3CCCF2007C936A /* Build configuration list for PBXProject "WKBaseServicesSwift" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -327,45 +308,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5477BC749229B1CACF462142 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WKBaseServicesSwift-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C51E607D3994F51494553E8E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WKBaseServicesSwift/Pods-WKBaseServicesSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C845751C1D3CCCF2007C936A /* Sources */ = {
@@ -427,6 +369,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -484,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -533,7 +477,6 @@
 		};
 		C84575331D3CCCF2007C936A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57AB939616C3BBFBFADD2536 /* Pods-WKBaseServicesSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -559,7 +502,6 @@
 		};
 		C84575341D3CCCF2007C936A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CFCBD9E1E8FB3AAB740AB34 /* Pods-WKBaseServicesSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;

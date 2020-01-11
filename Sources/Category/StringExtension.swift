@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CryptoSwift
 
 extension String {
     
@@ -54,35 +53,5 @@ extension String {
         //再转换为不带声调的拼音
         CFStringTransform(str as CFMutableString, nil, kCFStringTransformStripDiacritics, false);
         return str.lowercased;
-    }
-    
-    
-    /// Base64
-    public var base64: String! {
-        let data = self.data(using: .utf8)!
-        return data.base64EncodedString(options: .lineLength64Characters)
-    }
-    
-    /// MD5 加密
-    public var md5: String! {
-        return md5()
-    }
-    
-    
-    /// sha1 加密
-    public var sha1: String! {
-        return sha1()
-    }
-    
-    
-    /// sha256 加密
-    public var sha256String: String! {
-        return sha256()
-    }
-    
-    
-    /// sha512 加密
-    public var sha512String: String! {
-        return sha512()
     }
 }
