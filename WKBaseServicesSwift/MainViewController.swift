@@ -14,9 +14,6 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
         
         setupView()
-        if Device.currentDeviceType() == .iPhoneX {
-            debugPrint("screen bounds is = \(UIScreen.main.bounds)")
-        }
 
     }
     

@@ -85,14 +85,4 @@ extension String {
     public var sha512String: String! {
         return sha512()
     }
-    
-
-    // MARK: Deprecated
-    /// 字符串长度
-    @available(*, deprecated, message: "请使用 String 的 count 属性")
-    public var lenght: Int {
-        get {
-            return self.characters.count
-        }
-    }
 }

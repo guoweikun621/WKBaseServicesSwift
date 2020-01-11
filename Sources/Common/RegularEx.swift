@@ -70,8 +70,4 @@ open class RegularExp: NSObject {
     public class func validatePhone(value: String?) -> Bool {
         return RegularExp.validate(regExp: .phone, value: value)
     }
-    
-    
-    
-    
 }

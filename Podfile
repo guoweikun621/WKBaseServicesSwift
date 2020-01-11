@@ -1,4 +1,4 @@
-# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '9.0'
 
 target 'WKBaseServicesSwift' do
@@ -6,5 +6,5 @@ target 'WKBaseServicesSwift' do
   use_frameworks!
 
   # Pods for WKBaseServicesSwift
-  pod 'CryptoSwift', '~> 0.13'
+  pod 'CryptoSwift', '~> 1.0'
 end

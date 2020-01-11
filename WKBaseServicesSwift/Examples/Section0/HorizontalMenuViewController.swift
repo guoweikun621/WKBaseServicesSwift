@@ -10,7 +10,6 @@ import UIKit
 
 class HorizontalMenuViewController: UIViewController {
     
-    @IBOutlet weak var menuView: WKHorizontalMenuView!
     @IBOutlet weak var countDownButton: WKCountDownButton!
     
     var idx: Int?
@@ -22,8 +21,6 @@ class HorizontalMenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        menuView.menuItems = menus
-        menuView.selectedIndex = 0
         print("guoweikun".md5)
         
     }
